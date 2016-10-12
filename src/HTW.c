@@ -1,9 +1,9 @@
 /*
  ============================================================================
- Name        : Hello-World.c
- Author      : 
+ Name        : HTW.c
+ Author      : Ricardo Jimenez Tuero
  Version     :
- Copyright   : Your copyright notice
+ Copyright   : HTW B1IKT WS1617
  Description : Hello World in C, Ansi-style
  ============================================================================
  */
@@ -12,6 +12,6 @@
 #include <stdlib.h>
 
 int main(void) {
-	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	puts("All hail t3h World!"); /* prints All hail t3h World! */
 	return EXIT_SUCCESS;
 }
