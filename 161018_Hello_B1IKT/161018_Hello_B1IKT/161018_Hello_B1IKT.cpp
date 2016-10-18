@@ -6,6 +6,7 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	puts("Hallo B1IKT!\n");
 	return 0;
 }
 

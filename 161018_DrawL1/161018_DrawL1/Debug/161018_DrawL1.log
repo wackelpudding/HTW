@@ -1,0 +1,15 @@
+﻿Der Buildvorgang wurde am 18.10.2016 12:19:01 gestartet.
+     1>Projekt "C:\Users\s0558882\Source\Repos\HTW\161018_DrawL1\161018_DrawL1\161018_DrawL1.vcxproj" auf Knoten "2", Build Ziel(e).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\161018_DrawL1.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt 161018_DrawL1.cpp
+         161018_DrawL1.cpp
+     1>c:\users\s0558882\source\repos\htw\161018_drawl1\161018_drawl1\161018_drawl1.cpp(9): warning C4129: ' ': Nicht erkannte Folge von Escapesequenz
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\s0558882\Source\Repos\HTW\161018_DrawL1\Debug\161018_DrawL1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\s0558882\Source\Repos\HTW\161018_DrawL1\Debug\161018_DrawL1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\s0558882\Source\Repos\HTW\161018_DrawL1\Debug\161018_DrawL1.lib" /MACHINE:X86 Debug\161018_DrawL1.obj
+         Debug\stdafx.obj
+         161018_DrawL1.vcxproj -> C:\Users\s0558882\Source\Repos\HTW\161018_DrawL1\Debug\161018_DrawL1.exe
+     1>Die Erstellung des Projekts "C:\Users\s0558882\Source\Repos\HTW\161018_DrawL1\161018_DrawL1\161018_DrawL1.vcxproj" ist abgeschlossen, Build Ziel(e).
+
+Build erfolgreich.
+
+Verstrichene Zeit 00:00:00.54
