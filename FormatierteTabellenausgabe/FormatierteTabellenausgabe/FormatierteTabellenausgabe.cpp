@@ -35,15 +35,22 @@ Verwenden Sie dazu scanf().
 #include "stdafx.h"
 
 void welcome();
+bool choice();
+void PartOne();
+void PartTwo();
 
-const double T1_M1 = 10.0, T1_M2 = 20.0, T2_M1 = 300.0, T2_M2 = 100;
+const double T1_M1 = 10.00;
+const double T1_M2 = 20.00;
+const double T2_M1 = 300.00;
+const double T2_M2 = 100.00;
 
-double M1, M2, Choise;
-
+double M1, M2, Mw;
+int Choice;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
 	welcome();
+	choice();
 	return 0;
 }
 
@@ -55,8 +62,35 @@ void welcome()
 
 
 
-void choise() //Auswahl zwischen Teil1 v Teil2
+bool choice() //Auswahl zwischen Teil1 v Teil2
 {
-	printf("\n\nBitte treffen Sie ihre Wahl, welche Teil Sie ausführen wollen: ");
+	while (true)
+	{
+		printf("\n\nBitte treffen Sie ihre Wahl, welche Teil Sie ausfuehren wollen: ");
+		scanf_s("%ld", &Choice);
+		switch (Choice)
+		{
+		case 1:
+			PartOne();
+			return false;
+		case 2:
+			PartTwo();
+			return false;
+		default:
+			printf("\n1 oder 2 sind die einzig gueltigen Eingaben.\n");
+			
+		} Choice;
+	}
+	
 
+}
+
+void PartOne()
+{
+	printf("\nDieser Teil %ld ist noch nicht fertig\n\n", Choice);
+}
+
+void PartTwo()
+{
+	printf("\nDieser Teil %ld ist noch nicht fertig\n\n",Choice);
 }
