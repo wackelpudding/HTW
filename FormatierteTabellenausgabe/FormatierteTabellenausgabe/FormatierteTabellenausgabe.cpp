@@ -39,12 +39,16 @@ bool choice();
 void PartOne();
 void PartTwo();
 
+
+// Ein paar Konstanten fuer Teil1
 const double T1_M1 = 10.00;
 const double T1_M2 = 20.00;
 const double T2_M1 = 300.00;
 const double T2_M2 = 100.00;
 
-double M1, M2, Mw;
+//Die Variablen für Teil 2
+double M1_M1, M1_M2, M1_Mw;
+double M2_M1, M2_M2, M2_Mw;
 int Choice;
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -85,12 +89,30 @@ bool choice() //Auswahl zwischen Teil1 v Teil2
 
 }
 
-void PartOne()
+void PartOne() //Auswahl nummer "1"
 {
-	printf("\nDieser Teil %ld ist noch nicht fertig\n\n", Choice);
+	double T1_MW = (T1_M1 + T1_M2) / 2; //errechnung MW von T1
+	double T2_MW = (T2_M1 + T2_M2) / 2; //errechnung MW T2
+
+	printf("\n # Messwert | Messung 1 | Messung 2 | Mittelwert\n");
+	printf("------------|-----------|-----------|-----------\n");
+	printf("     1      | %9.2lf | %9.2lf | %9.2lf \n",T1_M1, T1_M2, T1_MW);
+	printf("            |           |           |            \n");
+	printf("     2      | %9.2lf | %9.2lf | %9.2lf \n", T2_M1, T2_M2, T2_MW);
+	printf("            |           |           |            \n");
 }
 
-void PartTwo()
+void PartTwo() //Auswahl Nummer "2"
 {
-	printf("\nDieser Teil %ld ist noch nicht fertig\n\n",Choice);
+	printf("\n\n Willkommen in Teil %ld des Programms, hier haben sie \ndie Moeglichkeit zwei eigene Wertepaare einzugeben.\n\n");
+	int Pairs = 2;
+	
+
+	for (Pairs; Pairs > 0; Pairs--)
+	{
+		printf("Bitte geben Sie Wert 1 von Paar %ld ein", Pairs);
+	}
+
+	//printf("\n\n # Messwert | Messung 1 | Messung 2 | Mittelwert\n");
+
 }
