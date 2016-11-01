@@ -20,6 +20,7 @@ void drawl3()		//define previously declared funktion
 int _tmain(int argc, _TCHAR* argv[])
 {
 	drawl1l3();
+	drawl1l3();
 	return 0;
 }
 
