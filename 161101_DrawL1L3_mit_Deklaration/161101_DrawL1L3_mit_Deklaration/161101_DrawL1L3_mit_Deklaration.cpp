@@ -14,10 +14,15 @@ void drawl3()
 	printf("  ________\n |\n |\n |\n\ |\n |\n\ |\n\n");
 }
 
-int _tmain(int argc, _TCHAR* argv[])
+void drawl1l3()
 {
 	drawl1();
 	drawl3();
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	drawl1l3();
 	return 0;
 }
 
