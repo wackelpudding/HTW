@@ -25,14 +25,36 @@ Formel:
  
  */
 
-#include "stdafx.h"
+#include "stdafx.h" //preprozessor
+
+void greeting(); //declare greeting func defined later
+void calc();
 
 
+const double MmPerInch = 25.4; // declare constant variable for calc inch -> mm
+
+double Inch, Mm;
 
 
-
-int _tmain(int argc, _TCHAR* argv[])
+int _tmain(int argc, _TCHAR* argv[])	//let's roll
 {
+	greeting();
+	calc();
 	return 0;
 }
 
+void greeting() // send a warm welcome to the DAU executing this
+{
+	printf("\n\n Konvertierung von Inch in mm\n");
+	printf("\nHallo DAU, da du anscheint zu faul bist einen Taschenrechner\nzu benutzen Rechne ich 'inch' in 'mm' fuer dich um.\n\n");
+}
+
+void calc()
+{
+	printf("Also... einmal Inch bitte: ");
+	scanf_s("%lf", &Inch);
+
+	Mm = Inch * MmPerInch;
+
+	printf("\n\nSo Pie mal Daumen sollten deine %.3lf inch \nso ziemlich genau %.3lf mm sein...\n\n", Inch, Mm);
+}
