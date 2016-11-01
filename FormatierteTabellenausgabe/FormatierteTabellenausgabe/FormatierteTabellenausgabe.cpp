@@ -1,4 +1,4 @@
-// FormatierteTabellenausgabe.cpp : Definiert den Einstiegspunkt für die Konsolenanwendung.
+// FormatierteTabellenausgabe.cpp : Definiert den Einstiegspunkt fï¿½r die Konsolenanwendung.
 //
 
 /*
@@ -32,10 +32,10 @@ Verwenden Sie dazu scanf().
 
 */
 
-#include "stdafx.h"
+#include "stdio.h"
 
 void welcome();
-bool choice();
+void choice();
 void PartOne();
 void PartTwo();
 
@@ -46,12 +46,12 @@ const double T1_M2 = 20.00;
 const double T2_M1 = 300.00;
 const double T2_M2 = 100.00;
 
-//Die Variablen für Teil 2
+//Die Variablen fï¿½r Teil 2
 double M1_M1, M1_M2, M1_Mw;
 double M2_M1, M2_M2, M2_Mw;
 int Choice;
 
-int _tmain(int argc, _TCHAR* argv[])
+int main()
 {
 	welcome();
 	choice();
@@ -60,32 +60,36 @@ int _tmain(int argc, _TCHAR* argv[])
 
 void welcome()
 {
-	printf("\nHallo, diese Programm ist für die Berechnung von 2 Mittelwerten.\n");
+	printf("\nHallo, diese Programm ist fuer die Berechnung von 2 Mittelwerten.\n");
 	printf("Teil 1 wird mit Konstanten generiert, Teil 2 mit\nvom Benutzer eingegebenen Daten.");
 }
 
 
 
-bool choice() //Auswahl zwischen Teil1 v Teil2
+void choice() //Auswahl zwischen Teil1 v Teil2
 {
-	while (true)
+	int bla = 1;
+
+	while (bla == 1)
 	{
 		printf("\n\nBitte treffen Sie ihre Wahl, welche Teil Sie ausfuehren wollen: ");
-		scanf_s("%ld", &Choice);
+		scanf_s("%d", &Choice);
 		switch (Choice)
 		{
 		case 1:
 			PartOne();
-			return false;
+			bla = 0;
+			break;
 		case 2:
 			PartTwo();
-			return false;
+			bla = 0;
+			break;
 		default:
 			printf("\n1 oder 2 sind die einzig gueltigen Eingaben.\n");
-			
-		} Choice;
+			break;
+		}
 	}
-	
+
 
 }
 
@@ -104,15 +108,26 @@ void PartOne() //Auswahl nummer "1"
 
 void PartTwo() //Auswahl Nummer "2"
 {
-	printf("\n\n Willkommen in Teil %ld des Programms, hier haben sie \ndie Moeglichkeit zwei eigene Wertepaare einzugeben.\n\n");
-	int Pairs = 2;
-	
+	printf("\n\n Willkommen in Teil %d des Programms, hier haben sie \ndie Moeglichkeit zwei eigene Wertepaare einzugeben.\n\n",Choice);
 
-	for (Pairs; Pairs > 0; Pairs--)
-	{
-		printf("Bitte geben Sie Wert 1 von Paar %ld ein", Pairs);
-	}
 
-	//printf("\n\n # Messwert | Messung 1 | Messung 2 | Mittelwert\n");
+	printf("Bitte geben Sie Wert 1 von Paar 1 ein: ");
+	scanf_s("%lf",&M1_M1);
+	printf("\nBitte geben Sie Wert 2 von Paar 1 ein: ");
+	scanf_s("%lf",&M1_M2);
+	printf("Bitte geben Sie Wert 1 von Paar 2 ein: ");
+	scanf_s("%lf",&M2_M1);
+	printf("\nBitte geben Sie Wert 2 von Paar 2 ein: ");
+	scanf_s("%lf",&M2_M2);
+
+	M1_Mw = (M1_M1 + M1_M2)/2;
+	M2_Mw = (M2_M1 + M2_M2)/2;
+
+	printf("\n\n # Messwert | Messung 1 | Messung 2 | Mittelwert\n");
+	printf("------------|-----------|-----------|-----------\n");
+	printf("     1      | %9.2lf | %9.2lf | %9.2lf \n",M1_M1, M1_M2, M1_Mw);
+	printf("            |           |           |            \n");
+	printf("     2      | %9.2lf | %9.2lf | %9.2lf \n", M2_M1, M2_M2, M2_Mw);
+	printf("            |           |           |            \n");
 
 }
