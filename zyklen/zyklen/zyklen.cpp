@@ -17,26 +17,29 @@ void PartOne(){
 	int VorZaehler = 1;
 	while (VorZaehler < 20)
 	{
-		printf("Der vorpruefende Zaehler ist nun bei: %d\n", VorZaehler);
+		printf("%d ", VorZaehler);
 		VorZaehler = VorZaehler + 2;
 	}
+	printf("\n");
 }
 
 void PartTwo(){
 	int NachZaehler = 1;
 	do
 	{
-		printf("Der nachpruefende Zaehler it nun bei: %d\n", NachZaehler);
+		printf("%d ", NachZaehler);
 		NachZaehler = NachZaehler + 2;
 	} 
 	while (NachZaehler < 20);
+	printf("\n");
 }
 
 void PartThree(){
 	for (int i = 1; i < 20; i = i + 2)
 	{
-		printf("Der zyklen Zaehler ist derzeit bei: %d\n", i);
+		printf("%d ", i);
 	}
+	printf("\n");
 }
 
 void PartFour(){
@@ -57,12 +60,13 @@ void PartFour(){
 
 	for (int i = Lower; i < Upper; i = i + Step)
 	{
-		printf("%d\n", i);
+		printf("%d ", i);
 	}
+	printf("\n");
 }
 
 
-void choice() //Auswahl zwischen Teil1 v Teil2 v 3
+void choice() //Auswahl zwischen Teil1 v Teil2 v Teil3
 {
 	int Choice;
 	int bla = 1;

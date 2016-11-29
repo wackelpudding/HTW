@@ -72,16 +72,18 @@ void choice() //Auswahl zwischen Teil1 v Teil2
 
 	while (bla == 1)
 	{
-		printf("\n\nBitte treffen Sie ihre Wahl, welche Teil Sie ausfuehren wollen: ");
+		printf("\n\nBitte treffen Sie ihre Wahl, welche Teil Sie ausfuehren wollen(0 zum beenden): ");
 		scanf_s("%d", &Choice);
 		switch (Choice)
 		{
 		case 1:
 			PartOne();
-			bla = 0;
 			break;
 		case 2:
 			PartTwo();
+			break;
+		case 0:
+			printf("\n\nDas Programm wird nun beendet...\n\n");
 			bla = 0;
 			break;
 		default:
