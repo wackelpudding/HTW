@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{451A5591-AA76-4918-93F6-C70483B52340}</ProjectGuid>
+    <ProjectGuid>{9014690E-6220-41F7-9898-7D08CE07242F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>FormatierteTabellenausgabe</RootNamespace>
   </PropertyGroup>
