@@ -81,6 +81,7 @@ void Start(){
 				break;
 			default:
 				printf("Ihre Eingabe war: %d\n\n", Choice);
+				bool = 1;
 				break;
 			}
 	} while (bool == 1);
