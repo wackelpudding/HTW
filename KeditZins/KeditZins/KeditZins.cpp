@@ -4,10 +4,9 @@
 
 #include "stdafx.h"
 
-
 int Jahre;
-float KreditRahmen, ZinsSatz, ZinsSumme, Rate, Zinsen;
-float OrgKredit, OrgRate;
+float KreditRahmen, ZinsSatz, ZinsSumme, Rate, Zinsen; // Variblen zur allg. Befehlsverarbeitung..
+float OrgKredit, OrgRate; // Zwischenspeicher für Originalwerte
 
 float zinsrechnung(float KreditRahmen, float ZinsSatz){
 	return (KreditRahmen * ZinsSatz / 100);
@@ -29,7 +28,7 @@ void DatenAufnahme(){
 
 	Zinsen = zinsrechnung(KreditRahmen, ZinsSatz);
 	printf("\n\nAuf Grunder eingegebenen Daten ergibt sich jaehrliche Zinsen von: %.2f GELD\n\n", Zinsen);
-	//Die Raten d�rfen nicht kleiner als die Zinsen gewaehlt werden.. Kundenfreundlichkeit.. pah!
+	//Die Raten daerfen nicht kleiner als die Zinsen gewaehlt werden.. Kundenfreundlichkeit.. pah!
 	do
 	{
 		printf("\nBitte geben Sie die Rate ein (groesser als Zinsen!): ");
@@ -86,7 +85,7 @@ void Start(){
 				printf("Ihre Eingabe war: %d\n\n", Choice);
 				break;
 			}
-	} while (bool == 1);
+	} while (bool == 1); // wenn hier kein Abbruch erfolgt fängt die Schleife wieder oben bei do an ..
 
 
 
