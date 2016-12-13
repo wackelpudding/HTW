@@ -1,7 +1,8 @@
-// KeditZins.cpp : Definiert den Einstiegspunkt f�r die Konsolenanwendung.
-//
+// KeditZins.cpp
+// Ricardo Jimenez Tuero - B1IKT - Grundlagen der Programmierung
 
-#include "stdafx.h
+#include "stdafx.h""
+
 
 int Jahre;
 float KreditRahmen, ZinsSatz, ZinsSumme, Rate, Zinsen;
@@ -16,14 +17,14 @@ float kreditrechnung(float KreditRahmen, float Zinsen, float Rate){
 }
 
 void DatenAufnahme(){
-	printf("Guten Tag,\n um ihnen Ihren Kreditzins \nund die Laufzeit zu berechnen ben�tige ich folgende Daten:\n");
+	printf("Guten Tag,\n um ihnen Ihren Kreditzins und die Laufzeit zu berechnen\nbenoetige ich folgende Daten:\n");
 	printf("- Kreditrahmen\n- aktueller Zinssatz\n- Wunschrate\n\n");
 
-	// Aufnahme der Grundlegenden Daten die keiner tieferen Pr�fung erfordern.
+	// Aufnahme der Grundlegenden Daten die keiner tieferen Pruefung erfordern.
 	printf("Kreditrahmen in GELD (XXX.XX): ");
-	scanf("%f", &KreditRahmen);
+	scanf_s("%f", &KreditRahmen);
 	printf("\nZinssatz (XXX.XX%%): ");
-	scanf("%f", &ZinsSatz);
+	scanf_s("%f", &ZinsSatz);
 
 	Zinsen = zinsrechnung(KreditRahmen, ZinsSatz);
 	printf("\n\nAuf Grunder eingegebenen Daten ergibt sich jaehrliche Zinsen von: %.2f GELD\n\n", Zinsen);
@@ -31,7 +32,7 @@ void DatenAufnahme(){
 	do
 	{
 		printf("\nBitte geben Sie die Rate ein (groesser als Zinsen!): ");
-		scanf("%f", &Rate);
+		scanf_s("%f", &Rate);
 	} while (Rate <= Zinsen);
 }
 
@@ -71,7 +72,7 @@ void Start(){
 
 		//Abfrage, ob beendet werden soll.
 		printf("\nMoechten Sie das Programm erneut ausführen? Ja(1)/ Nein(0): ");
-		scanf("%d", &Choice);
+		scanf_s("%d", &Choice);
 		switch(Choice)
 			{
 			case 0:
@@ -81,7 +82,6 @@ void Start(){
 				break;
 			default:
 				printf("Ihre Eingabe war: %d\n\n", Choice);
-				bool = 1;
 				break;
 			}
 	} while (bool == 1);
