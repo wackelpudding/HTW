@@ -17,7 +17,7 @@ float kreditrechnung(float KreditRahmen, float Zinsen, float Rate){
 }
 
 void DatenAufnahme(){
-	printf("Guten Tag,\n um ihnen Ihren Kreditzins \nund die Laufzeit zu berechnen benoetige ich folgende Daten:\n");
+	printf("Guten Tag,\n\num ihnen Ihren Kreditzins und die Laufzeit zu berechnen\nbenoetige ich folgende Daten:\n\n");
 	printf("- Kreditrahmen\n- aktueller Zinssatz\n- Wunschrate\n\n");
 
 	// Aufnahme der Grundlegenden Daten die keiner tieferen Pruefung erfordern.
@@ -63,7 +63,7 @@ void DatenAusgabe(){
 
 void Start(){
 	printf("Dieses Programm dient zur Berechnung des Kreditzinses und der Laufzeit Ihres Wunschkredites.\n\n");
-	int bool = 1;
+	int boolean = 1;
 	int Choice;
 
 	do { // mindestens einmal durchlaufen
@@ -72,20 +72,20 @@ void Start(){
 		DatenAusgabe();
 
 		//Abfrage, ob beendet werden soll.
-		printf("\nMoechten Sie das Programm erneut ausführen? Ja(1)/ Nein(0): ");
+		printf("\nMoechten Sie das Programm erneut ausfuehren? Ja(1)/ Nein(0): ");
 		scanf_s("%d", &Choice);
 		switch(Choice)
 			{
 			case 0:
 				printf("Ihre Eingabe war: %d", Choice);
-				printf("\n\nDas Programm wird beendet....");
-				bool = 0;
+				printf("\n\nDas Programm wird beendet....\n");
+				boolean = 0;
 				break;
 			default:
 				printf("Ihre Eingabe war: %d\n\n", Choice);
 				break;
 			}
-	} while (bool == 1); // wenn hier kein Abbruch erfolgt fängt die Schleife wieder oben bei do an ..
+	} while (boolean == 1); // wenn hier kein Abbruch erfolgt fängt die Schleife wieder oben bei do an ..
 
 
 
