@@ -56,9 +56,9 @@ void PartFour(){
 	printf("\n\nBitte geben Sie die Schrittweite ein: ");
 	scanf_s("%d", &Step);
 
-	printf("\n\n\nDie Schleife laeuft nun von %d bis %d mit einer Schrittweite von %d\n\n", Upper, Lower, Step);
+	printf("\n\n\nDie Schleife laeuft nun von %d bis %d mit einer Schrittweite von %d\n\n", Lower, Upper, Step);
 
-	for (int i = Lower; i < Upper; i = i + Step)
+	for (int i = Lower; i <= Upper; i = i + Step)
 	{
 		printf("%d ", i);
 	}
