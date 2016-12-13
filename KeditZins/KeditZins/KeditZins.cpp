@@ -67,6 +67,7 @@ void Start(){
 	int Choice;
 
 	do { // mindestens einmal durchlaufen
+		ZinsSumme = 0;
 		DatenAufnahme();
 		Berechnung();
 		DatenAusgabe();
