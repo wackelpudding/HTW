@@ -23,9 +23,9 @@ void DatenAufnahme(){
 
 	// Aufnahme der Grundlegenden Daten die keiner tieferen Pruefung erfordern.
 	printf("Kreditrahmen in GELD (XXX.XX): ");
-	scanf("%f", &KreditRahmen);
+	scanf_s("%f", &KreditRahmen);
 	printf("\nZinssatz (XXX.XX%%): ");
-	scanf("%f", &ZinsSatz);
+	scanf_s("%f", &ZinsSatz);
 
 	Zinsen = zinsrechnung(KreditRahmen, ZinsSatz);
 	printf("\n\nAuf Grunder eingegebenen Daten ergibt sich jaehrliche Zinsen von: %.2f GELD\n\n", Zinsen);
@@ -33,7 +33,7 @@ void DatenAufnahme(){
 	do
 	{
 		printf("\nBitte geben Sie die Rate ein (groesser als Zinsen!): ");
-		scanf("%f", &Rate);
+		scanf_s("%f", &Rate);
 	} while (Rate <= Zinsen);
 }
 
@@ -74,7 +74,7 @@ void Start(){
 
 		//Abfrage, ob beendet werden soll.
 		printf("\nMoechten Sie das Programm erneut ausführen? Ja(1)/ Nein(0): ");
-		scanf("%d", &Choice);
+		scanf_s("%d", &Choice);
 		switch(Choice)
 			{
 			case 0:
