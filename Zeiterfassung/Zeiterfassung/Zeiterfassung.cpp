@@ -77,7 +77,7 @@ void Berechnung()
 	if (Begin < End)
 	{
 		Time = Worktime(Begin, End);
-		if (Time > (3600 * 6))
+		if (Time >= (3600 * 6))
 		{
 			Pause = 1;
 			Time -= 1800;
