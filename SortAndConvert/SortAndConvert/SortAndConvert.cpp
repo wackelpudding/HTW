@@ -12,24 +12,18 @@ void Ausgabe();
 int Choice; //Fuer die Auswahl des Zifferntypes
 int Zahlen[3]; //Array fuer die drei Zahlen
 
+void welcome(){
+	printf("\nHallo, dieses Programm ist fuer das Sortieren von drei eingebenen Zahlen.");
+	printf("\nDie Zahlen koennen oktal, dezimal oder hexadezimal eingeben werden.\n");
+}
+
 int main()
 {
-	//welcome();
+	welcome();
 	Start();
 	return 0;
 }
 
-/*
-    		Tabelle
-
-	printf("\n\n # Messwert | Messung 1 | Messung 2 | Mittelwert\n");
-	printf("------------|-----------|-----------|-----------\n");
-	printf("     1      | %9.2lf | %9.2lf | %9.2lf \n", M1_M1, M1_M2, M1_Mw);
-	printf("            |           |           |            \n");
-	printf("     2      | %9.2lf | %9.2lf | %9.2lf \n", M2_M1, M2_M2, M2_Mw);
-	printf("            |           |           |            \n");
-
- */
 
 void Start(){
 	int bla = 1;
@@ -70,6 +64,7 @@ void DatenAufnahme(){
 		printf("(mit fuehrender '0' -> 010 fuer eine oktale 10) mit Komma getrennt: ");
 		scanf_s("%o,%o,%o", Zahlen,Zahlen+1,Zahlen+2);
 	} else if (Choice == 2) {
+		printf("(wie gewohnt) mit Kommas getrennt: ");
 		scanf_s("%d,%d,%d", Zahlen,Zahlen+1,Zahlen+2);
 	} else {
 		printf("(beginnent mit '0x' -> 0x10 fuer eine hexadezimale 10) mit Komma getrennt: ");
