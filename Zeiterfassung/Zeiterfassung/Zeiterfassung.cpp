@@ -1,7 +1,7 @@
 // Zeiterfassung.cpp : Definiert den Einstiegspunkt fuer die Konsolenanwendung.
 //
 
-#include "stdafx.h"
+#include "stdio.h"
 
 //declarations of functions
 int HourMinutes2Seconds(int, int);
@@ -10,16 +10,21 @@ void DatenErfassung();
 void Berechnung();
 void DatenAusgabe();
 void Start();
-//void Welcome();
+void Welcome();
 
 //init of some needed variables
 int End, Begin, Seconds, wStartM, wStartH;
 int wEndM, wEndH, Time, Hours, Minutes, Pause;
 int errorstate = 0;
 
+void Welcome(){
+	printf("Hallo, dieses Programm erfasst Ihre Arbeitsbeginn und Arbeitsende\nund gibt anschließend die gearbeitete Zeit in Minuten aus.\neventuell anfallende Pausen werden automatisch abgezogen.\n\n");
+	printf("Achtung: Arbeitszeiten über die Nacht werden nicht geduldet!\n\n");
+}
+
 int main()
 {
-	//Welcome();
+	Welcome();
 	Start();
 	return 0;
 }
