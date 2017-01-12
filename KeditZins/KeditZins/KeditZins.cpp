@@ -56,7 +56,7 @@ void Berechnung(){
 
 void DatenAusgabe(){
 	printf("\n\nKreditrahmen: %9.2f GELD\n", OrgKredit);
-	printf("Monatliche Rate: %9.2f GELD\n", OrgRate);
+	printf("Jaehrliche Rate: %9.2f GELD\n", OrgRate);
 	printf("Gesamte Laufdauer: %9.2d Jahre\n", Jahre);
 	printf("Zinssumme: %9.2f GELD\n\n", ZinsSumme);
 }
