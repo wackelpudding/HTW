@@ -1,7 +1,7 @@
 // Zeiterfassung.cpp : Definiert den Einstiegspunkt fuer die Konsolenanwendung.
 //
 
-#include "stdio.h"
+#include "stdafx.h"
 
 //declarations of functions
 int HourMinutes2Seconds(int, int);
