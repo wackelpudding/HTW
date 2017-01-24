@@ -77,7 +77,7 @@ void True(){
 
 
 
-	if (a != 0 || b != 0){
+	if (a == 0 ^ b == 0){
 		printf("\n Wahr! -  Zahl1 oder Zahl 2 ist '0' \n\n");
 	}
 	if (a == 0 && b == 0 ){
@@ -96,4 +96,22 @@ void True(){
 		printf("\n Wahr! -  Die Differenz von beiden Zahlen ist kleiner als 5! \n\n");
 	}
 	
+}
+
+void False(){
+	if !(a == b){
+		printf("\n Falsch! -  Zahl1 oder Zahl 2 sind verschieden!\n\n");
+	}
+	if !(b <= a){
+		printf("\n Falsch! -  Zahl2 ist kleiner gleich \n\n");
+	}
+	if !(a == b){
+		printf("\n Falsch! -  Zahl1 oder Zahl 2 sind verschieden!\n\n");
+	}
+	if !(a == b){
+		printf("\n Falsch! -  Zahl1 oder Zahl 2 sind verschieden!\n\n");
+	}
+	if !(a == b){
+		printf("\n Falsch! -  Zahl1 oder Zahl 2 sind verschieden!\n\n");
+	}
 }
