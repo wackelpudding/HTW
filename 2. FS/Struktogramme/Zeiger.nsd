@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root text="&#34;Mein erstes Struktogramm&#34;" comment="" type="program" style="nice">
+ <children>
+
+<instruction text="&#34;Weise I den Wert '5' und J den Wert '10' zu.&#34;" comment="" color="FFFFFF"></instruction>
+<instruction text="&#34;Gib die Variablen I &#38; J aus.&#34;" comment="" color="FFFFFF"></instruction>
+<call text="&#34;Führe Funktion no_swap mit den Parametern I &#38; J aus.&#34;" comment="" color="FFFFFF"></call>
+<instruction text="&#34;Gib die Variablen I &#38; J aus.&#34;" comment="" color="FFFFFF"></instruction>
+<call text="&#34;Führe Funktion do_swap mit den Parametern I &#38; J aus.&#34;" comment="" color="FFFFFF"></call>
+<instruction text="&#34;Gib die Variablen I &#38; J aus.&#34;" comment="" color="FFFFFF"></instruction>
+ </children>
+</root>
