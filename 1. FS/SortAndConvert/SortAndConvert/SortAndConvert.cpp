@@ -11,6 +11,7 @@ void Ausgabe();
 
 int Choice; //Fuer die Auswahl des Zifferntypes
 int Zahlen[3]; //Array fuer die drei Zahlen
+int Error = 0;
 
 void welcome(){
 	printf("\nHallo, dieses Programm ist fuer das Sortieren von drei eingebenen Zahlen.");
@@ -36,15 +37,30 @@ void Start(){
 			{
 			case 1:
 				//Oktal
-				DatenAufnahme();
+				do
+				{
+					DatenAufnahme();
+				} while (Error == 1);
+				Sort();
+				Ausgabe();
 				break;
 			case 2:
 				//Dezimal
-				DatenAufnahme();
+				do
+				{
+					DatenAufnahme();
+				} while (Error == 1);
+				Sort();
+				Ausgabe();
 				break;
 			case 3:
 				//Hex
-				DatenAufnahme();
+				do
+				{
+					DatenAufnahme();
+				} while (Error == 1);
+				Sort();
+				Ausgabe();
 				break;
 			case 0:
 				printf("\n\nDas Programm wird nun beendet...\n\n");
@@ -58,22 +74,37 @@ void Start(){
 }
 
 void DatenAufnahme(){
-
 	printf("\nBitte geben Sie Ihre drei Zahlen wie gewaehlt ein\n");
 	if (Choice == 1){
 		printf("(mit fuehrender '0' -> 010 fuer eine oktale 10) mit Komma getrennt: ");
-		scanf_s("%o,%o,%o", Zahlen,Zahlen+1,Zahlen+2);
-	} else if (Choice == 2) {
-		printf("(wie gewohnt) mit Kommas getrennt: ");
-		scanf_s("%d,%d,%d", Zahlen,Zahlen+1,Zahlen+2);
-	} else {
-		printf("(beginnent mit '0x' -> 0x10 fuer eine hexadezimale 10) mit Komma getrennt: ");
-		scanf_s("%x,%x,%x", Zahlen,Zahlen+1,Zahlen+2);
+		if (scanf_s("%o,%o,%o", Zahlen, Zahlen + 1, Zahlen + 2) == 3){
+			Error = 0;
+		}
+		else {
+			printf("\nEine oder alle Zahlen sind nicht oktal!\nBitte versuchen Sie es erneut!\n");
+			Error = 1;
+		}
 	}
-
-	Sort();
-	Ausgabe();
-
+	else if (Choice == 2) {
+		printf("(wie gewohnt) mit Kommas getrennt: ");
+		if (scanf_s("%d,%d,%d", Zahlen, Zahlen + 1, Zahlen + 2) == 3){
+			Error = 0;
+		}
+		else {
+			printf("\nEine oder alle Zahlen sind nicht dezimal!\nBitte versuchen Sie es erneut!\n");
+			Error = 1;
+		}
+	}
+	else {
+		printf("(beginnent mit '0x' -> 0x10 fuer eine hexadezimale 10) mit Komma getrennt: ");
+		if (scanf_s("%x,%x,%x", Zahlen, Zahlen + 1, Zahlen + 2) == 3){
+			Error = 0;
+		}
+		else {
+			printf("\nEine oder alle Zahlen sind nicht hexadezimal!\nBitte versuchen Sie es erneut!\n");
+			Error = 1;
+		}
+	}
 }
 
 int Wechsel (const void * Zahl1, const void * Zahl2)
