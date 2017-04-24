@@ -1,4 +1,4 @@
-// swap.cpp : Definiert den Einstiegspunkt für die Konsolenanwendung.
+// swap.cpp : Definiert den Einstiegspunkt fï¿½r die Konsolenanwendung.
 //
 
 #include "stdafx.h"
@@ -19,7 +19,7 @@ int main()
 	choice();
 }
 
-void swap(int *z1, int *z2) {
+void swap(int* z1, int* z2) {
 
 	int temp;
 
@@ -30,26 +30,15 @@ void swap(int *z1, int *z2) {
 
 void welcome()
 {
-	printf("\nHallo, diese Programm ist fuer das Ausgeben von 3 Zaehlreihen\n");
-	printf("Teil 1: vorpruefende Schleife .\n");
-	printf("Teil 2: nachpruefende Schleife.\n");
-	printf("Teil 3: Zaehlzyklus..\n");
-	printf("Teil 4: Zaehlzyklus mit eigenen Werte.\n\n\n");
+	printf("\nHallo, diese Programm ist fuer das Sortieren via BubbleSort und erwartet 5 Zahlen zur eingabe\n");
 }
 
-void PartOne() {
-	DatenAufnahme();
-	printf("\n");
-	BubbleSort(Zahlen);
-	Ausgabe(Zahlen);
-}
+void BubbleSort(int *a) {
 
-void BubbleSort(int* a[]) {
-	
-	for (int i = 0; i < 5; i++) {
-		for (int j = 0; j < 5; j++) {
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
 			if (a[j] > a[j + 1]){
-				swap(a[j],a[(j+1)]);
+				swap(&a[j],&a[(j+1)]);
 			}
 		}
 	}
@@ -62,6 +51,7 @@ void DatenAufnahme() {
 		printf("\nBitte geben Sie Ihre 5 Zahlen mit Komma getrennt ein: ");
 		if (scanf_s("%d,%d,%d,%d,%d", Zahlen, Zahlen + 1, Zahlen + 2, Zahlen + 3, Zahlen + 4) == 5) {
 			Error = 0;
+			//Ausgabe(Zahlen);
 		}
 			else {
 				printf("\nEine oder alle Zahlen sind nicht oktal!\nBitte versuchen Sie es erneut!\n");
@@ -81,7 +71,7 @@ void choice() //Auswahl zwischen Teil1 v Teil2 v Teil3
 
 	while (bla == 1)
 	{
-		printf("\n\nBitte drücken Sie '1' (Enter) und geben Sie danach zwei Zahlen zum tauschen ein (0 zum Beenden): ");
+		printf("\n\nBitte druecken Sie '1' (Enter) und geben Sie danach 5 Zahlen zum sortieren ein (0 zum Beenden): ");
 		scanf_s("%d", &Choice);
 		switch (Choice)
 		{
@@ -101,8 +91,15 @@ void choice() //Auswahl zwischen Teil1 v Teil2 v Teil3
 
 }
 
-void Ausgabe(int* array[]) {
+void Ausgabe(int array[]) {
 	for (int i = 0; i < 5; i++) {
-		printf("\n%c, ", array[i]);
+		printf("\n%d", array[i]);
 	}
+}
+
+void PartOne() {
+	DatenAufnahme();
+	printf("\n");
+	BubbleSort(Zahlen);
+	Ausgabe(Zahlen);
 }
