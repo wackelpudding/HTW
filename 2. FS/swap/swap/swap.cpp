@@ -35,14 +35,12 @@ void welcome()
 
 void BubbleSort(int *a) {
 
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
-			if (a[j] > a[j + 1]){
-				swap(&a[j],&a[(j+1)]);
-			}
+	for (int j = 0; j < 4; j++) {
+		if (a[j] > a[j + 1]){
+			swap(&a[j],&a[(j+1)]);
 		}
 	}
-}
+	}
 
 void DatenAufnahme() {
 	int Error = 0;
