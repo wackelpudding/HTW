@@ -54,7 +54,7 @@ void DatenAufnahme() {
 			//Ausgabe(Zahlen);
 		}
 			else {
-				printf("\nEine oder alle Zahlen sind nicht oktal!\nBitte versuchen Sie es erneut!\n");
+				printf("\nBitte geben Sie genau 5 Zahlen ein!\nBitte versuchen Sie es erneut!\n");
 				Error = 1;
 			}
 	} while (Error == 1);
@@ -98,6 +98,7 @@ void Ausgabe(int array[]) {
 }
 
 void PartOne() {
+	welcome();
 	DatenAufnahme();
 	printf("\n");
 	BubbleSort(Zahlen);
