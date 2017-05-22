@@ -151,6 +151,7 @@ void QuickSort(int liste[], int links, int rechts) {
 	}
 }
 
+//Ausgabe des benutzten Array. Einzeilig, mit Tabs getrennt
 void Ausgabe(int array[], int l) {
 	for (int i = 0; i < l; i++) {
 		printf("%d\t", array[i]);
