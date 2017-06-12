@@ -1,4 +1,4 @@
-// SearchOfSorted.cpp : Definiert den Einstiegspunkt für die Konsolenanwendung.
+// SearchOfSorted.cpp : Definiert den Einstiegspunkt fï¿½r die Konsolenanwendung.
 //
 
 #include "stdafx.h"
@@ -20,7 +20,7 @@ int main()
 {
 	welcome();
 	choice();
-	
+
 	return 0;
 }
 
@@ -57,19 +57,19 @@ void choice() //Auswahl zwischen Teil1 v Teil2
 		case 1:
 			DatenAufnahme();
 			printf("\n");
-			sol = SearchOfSorted(SortedListe, zahl, 0, laenge);
+			sol = SearchOfSorted(SortedListe, zahl, 0, laenge); //Aufruf der Sortierung und Speicherung des Ergebnisses in einer Variable
 			if (sol > 0) {
-				printf("\nDas gesuchte Element steht an Stelle %d der Liste.\n\n", sol);
+				printf("\nDas gesuchte Element steht an Stelle %d der Liste.\n\n", sol); //Wenn in der Liste wird hier noch der Platz ausgegeben
 			}
 			else {
-				printf("\nDas gesuchte Element ist nicht in der Liste.\n\n");
+				printf("\nDas gesuchte Element ist nicht in der Liste.\n\n"); //Ausgabe wenn das Element nicht in der List ist
 			}
 			break;
 		case 0:
 			bla = 0;
 			break;
 		default:
-			printf("\n1 ist die einzig gueltigen Eingabe.\n");
+			printf("\n1 ist die einzig gueltigen Eingabe.\n"); //Fehlermeldung bei falscher Case eingabe
 			break;
 		}
 	}
@@ -77,24 +77,37 @@ void choice() //Auswahl zwischen Teil1 v Teil2
 
 }
 
+//Durchsuchen einer sortierten Liste
 int SearchOfSorted(int SL[], int tar, int limit, int len ) {
-	int p = pivot(len, limit);
-	printf("\nDas aktuelle Pivotelement ist: %d\t", p);
-	printf("\nDas aktuelle len ist: %d\t", len);
+	int p = pivot(len, limit); //ermittlung des Pivot elements und speichern in einer variable
+	printf("\nDas aktuelle Pivotelement ist: %d\t", p); // Ausgabe aktuelles Pivotelement
+	printf("\nDas aktuelle 'rechts' ist: %d\t", len);	// Ausgabe aktuelle "rechte" Grenze
 
-	if (SL[p] == tar) return p + 1;
-	if (p == len) return -1;
-	
+	if (SL[p] == tar) return p + 1; // Wenn Das Pivotelement das Ziel ist, wird dessen Wertigkeit um eins erhoeht, um der Stelle in der iste zu entsprechen.
+	if (p == len) return -1; // Wenn das Ende der Liste erreicht ist, soll ein "Fehler" zurrueckgegeben werden
+
+
+	/*
+	 * If-Else fÃ¼r den Vergleich ob das element Groesser oder kleiner ist
+	 * 		Groesser als Ziel
+	 * 				- Gebe den Vergleich aus und mach einen Rekursiven selbstaufruf,
+	 * 				  wobei das Pivotelement reduziert um 1 als neues rechts (groesse der Liste) und
+	 * 				  "links" bleibt.
+	 *
+	 * 		Kleiner als Ziel
+	 * 				Gebe den Vergleich aus und fuehre einen rekursiven Selbstaufruf auf,
+	 * 				wo nun die linke untergrenze das Pivotelement erhoeht um eins darstellt und die rechte grenze beibehalten wird
+	 */
 	if (SL[p] > tar)
 	{
 		printf("\n%d > %d", SL[p], tar);
-		SearchOfSorted(SL, tar, limit, p-1);
+		return SearchOfSorted(SL, tar, limit, p-1);
 
 	}
 	else
 	{
 		printf("\n%d < %d", SL[p], tar);
-		SearchOfSorted(SL, tar, p+1, len);
+		return SearchOfSorted(SL, tar, p+1, len);
 	}
 
 
@@ -106,6 +119,7 @@ int pivot(int j, int l) {
 	return ((l + j) / 2);
 }
 
+//simple Datenaufnahme mit einer Ausgabe und einer Datenaufnahme
 void DatenAufnahme() {
 		printf("Bitte geben Sie die gesuchte Zahlein: ");
 		scanf_s("%d", &zahl);
