@@ -41,9 +41,6 @@
 */
 
 #include "mcc_generated_files/mcc.h"
-#include "blinkbuzz.h"
-#include "wechselblinker.h"
-
 
 /*
                          Main application
@@ -57,34 +54,25 @@ void main(void)
     // Use the following macros to:
 
     // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_GlobalInterruptEnable();
 
     // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();
 
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-
+    
+    ausgabe(zaehler);
+    
+    
     while (1)
     {
-        
-        if (!TASTER1_GetValue() || !TASTER2_GetValue()){
-        int Taster1 = TASTER1_GetValue();
-        int Taster2 = TASTER2_GetValue();
-        
-        if (Taster2){
-            blinkbuzz();
-        }
-        if (Taster1){
-            wechselblinker();
-            }
-    }
+        // Add your application code
     }
 }
-    
 /**
  End of File
 */

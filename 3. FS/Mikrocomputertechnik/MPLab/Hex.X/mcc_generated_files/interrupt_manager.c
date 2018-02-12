@@ -1,21 +1,26 @@
 /**
-  Generated Main Source File
+  Generated Interrupt Manager Source File
 
-  Company:
+  @Company:
     Microchip Technology Inc.
 
-  File Name:
-    main.c
+  @File Name:
+    interrupt_manager.c
 
-  Summary:
-    This is the main file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+  @Summary:
+    This is the Interrupt Manager file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
-  Description:
-    This header file provides implementations for driver APIs for all modules selected in the GUI.
+  @Description:
+    This header file provides implementations for global interrupt handling.
+    For individual peripheral handlers please see the peripheral driver for
+    all modules selected in the GUI.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.55
         Device            :  PIC16F1937
-        Driver Version    :  2.00
+        Driver Version    :  1.02
+    The generated drivers are tested against the following:
+        Compiler          :  XC8 1.43 or later
+        MPLAB 	          :  MPLAB X 4.00
 */
 
 /*
@@ -40,51 +45,21 @@
     TERMS.
 */
 
-#include "mcc_generated_files/mcc.h"
-#include "blinkbuzz.h"
-#include "wechselblinker.h"
+#include "interrupt_manager.h"
+#include "mcc.h"
 
-
-/*
-                         Main application
- */
-void main(void)
+void interrupt INTERRUPT_InterruptManager (void)
 {
-    // initialize the device
-    SYSTEM_Initialize();
-
-    // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
-    // Use the following macros to:
-
-    // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
-
-    // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
-
-    // Disable the Global Interrupts
-    //INTERRUPT_GlobalInterruptDisable();
-
-    // Disable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptDisable();
-
-    while (1)
+    // interrupt handler
+    if(INTCONbits.TMR0IE == 1 && INTCONbits.TMR0IF == 1)
     {
-        
-        if (!TASTER1_GetValue() || !TASTER2_GetValue()){
-        int Taster1 = TASTER1_GetValue();
-        int Taster2 = TASTER2_GetValue();
-        
-        if (Taster2){
-            blinkbuzz();
-        }
-        if (Taster1){
-            wechselblinker();
-            }
+        TMR0_ISR();
     }
+    if(INTCONbits.IOCIE == 1 && INTCONbits.IOCIF == 1)
+    {
+        PIN_MANAGER_IOC();
     }
 }
-    
 /**
  End of File
 */
