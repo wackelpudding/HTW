@@ -64,10 +64,7 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-    
-    ausgabe(zaehler);
-    
-    
+
     while (1)
     {
         // Add your application code

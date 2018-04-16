@@ -44,8 +44,9 @@
 */
 
 #include <xc.h>
+#include "pin_manager.h"
 #include "stdbool.h"
-#include "mcc.h"
+#include "../hexcounter.h"
 
 
 void (*IOCBF1_InterruptHandler)(void);
@@ -138,8 +139,12 @@ void PIN_MANAGER_IOC(void)
 void IOCBF1_ISR(void) {
 
     // Add custom IOCBF1 code
-    runterzaehlen();
+    zaehler -= 1;
+        if (zaehler < 0){
+            zaehler += 1;
+        } 
     ausgabe(zaehler);
+
     // Call the interrupt handler for the callback registered at runtime
     if(IOCBF1_InterruptHandler)
     {
@@ -169,8 +174,12 @@ void IOCBF1_DefaultInterruptHandler(void){
 void IOCBF2_ISR(void) {
 
     // Add custom IOCBF2 code
-    hochzaehlen();
+    zaehler += 1;
+    if (zaehler > 15){
+        zaehler -= 1;
+    }
     ausgabe(zaehler);
+    
     // Call the interrupt handler for the callback registered at runtime
     if(IOCBF2_InterruptHandler)
     {
