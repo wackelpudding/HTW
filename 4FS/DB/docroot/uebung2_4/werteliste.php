@@ -12,24 +12,59 @@
      <h1>Übungsaufgabe 2 - Werteliste <br /></h1>
    </header>
    <?php
-    if ($_POST['winkel_low'] == "" AND $_POST['winkel_high'] == "") {
-      $winkel_low = $_POST['winkel_low'];
+    if ($_POST['winkel_high'] != "")
+    {
       $winkel_high = $_POST['winkel_high'];
-      if (is_numeric($winkel_low) AND is_numeric($winkel_high)) {
-        if ($winkel_low >= 0 AND $winkel_high <= 360) {
+      if (is_numeric($winkel_high))
+      {
+        if ($winkel_high <= 360)
+        {
           $high_validated = TRUE;
         }
         else {
-          echo "Ungültige Winkel!";
+          echo "Ungültiger oberer Winkel!<br />";
         }
       }
       else {
-        echo "Keine Zahlen eingegeben.";
+        echo "Keine Zahl für den oberen Winkel eingegeben.<br />";
       }
     }
     else {
-      echo "Keine Eingabe erfolgt";
+      echo "Keine Eingabe für den oberen Winkel erfolgt.<br />";
     }
+
+    if ($_POST['winkel_low'] != "")
+    {
+      $winkel_low = $_POST['winkel_low'];
+      if (is_numeric($winkel_low))
+      {
+        if ($winkel_low >= 0)
+        {
+          $low_validated = TRUE;
+        }
+        else {
+          echo "Ungültiger unterer Winkel!<br />";
+        }
+      }
+      else {
+        echo "Keine Zahl für den unteren Winkel eingegeben.<br />";
+      }
+    }
+    else {
+      echo "Keine Eingabe für den unteren Winkel erfolgt.<br />";
+    }
+
+    if ($winkel_low >= $winkel_high)
+    {
+      echo "Unterer Winkel muss kleiner als der obere Winkel sein!";
+      $high_validated = false;
+      $low_validated = false;
+    }
+
+    if ($high_validated AND $low_validated) {
+      
+    }
+
     ?>
  </body>
 <p></p>
