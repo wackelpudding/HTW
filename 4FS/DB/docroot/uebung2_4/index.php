@@ -12,13 +12,13 @@
      <h1>Übungsaufgabe 2 <br /></h1>
    </header>
    <form action="werteliste.php" method="post">
-   Minimaler Winker:<br /> <input type="text" name="winkel_low" /><br />
-   Maximaler Winkel:<br /><input type="text" name="winkel_high" /><br />
-   <input type="Submit" value="Werteliste berechnen" />
+   Unterer Winker:<br /> <input type="text" name="winkel_low" /><br />
+   Oberer Winkel:<br /><input type="text" name="winkel_high" /><br />
+   <input class="submit" type="Submit" value="Werteliste berechnen" />
    </form>
  </body>
 <p></p>
  <footer class="footer_lb">
-   <p><?php echo "Aktuelle Serverzeit: ".date("H:i:s")." Uhr am ".date("d.m.Y").".";?><p>
+   <?php echo "Aktuelle Serverzeit: ".date("H:i:s")." Uhr am ".date("d.m.Y").".<br />";?>
  </footer>
 </html>
