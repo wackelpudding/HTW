@@ -9,12 +9,14 @@
  </head>
  <body>
    <header class="header_lb">
-     <h1>Übungsaufgabe 2 <br /></h1>
+     <h1>Übungsaufgabe 3 - Artikelsuche <br /></h1>
    </header>
-   <form action="werteliste.php" method="post">
-   Unterer Winker:<br /> <input type="text" name="winkel_low" /><br />
-   Oberer Winkel:<br /><input type="text" name="winkel_high" /><br />
-   <input class="submit" type="Submit" value="Werteliste berechnen" />
+   <form action="query.php" method="post">
+     <table class="no_style">
+   <tr><td>Artikelbezeichnung:</td><td><input type="text" name="winkel_low" /></td></tr>
+   <tr><td>Mindestpreis:</td><td><input type="text" name="winkel_high" /></td></tr>
+   <tr><td></td><td><input class="submit" type="Submit" value="suchen" /></td></tr>
+ </table>
    </form>
  </body>
 <p></p>
