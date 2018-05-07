@@ -1,24 +1,24 @@
 /**
-  @Generated PIC10 / PIC12 / PIC16 / PIC18 MCUs Header File
+  TMR6 Generated Driver File
 
-  @Company:
+  @Company
     Microchip Technology Inc.
 
-  @File Name:
-    mcc.h
+  @File Name
+    tmr6.c
 
-  @Summary:
-    This is the mcc.h file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+  @Summary
+    This is the generated driver implementation file for the TMR6 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
-  @Description:
-    This header file provides implementations for driver APIs for all modules selected in the GUI.
+  @Description
+    This source file provides APIs for TMR6.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65.2
         Device            :  PIC16F1937
-        Driver Version    :  2.00
+        Driver Version    :  2.01
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.45 or later
-        MPLAB             :  MPLAB X 4.15
+        Compiler          :  XC8 1.45
+        MPLAB 	          :  MPLAB X 4.15
 */
 
 /*
@@ -44,62 +44,81 @@
     SOFTWARE.
 */
 
-#ifndef MCC_H
-#define	MCC_H
+/**
+  Section: Included Files
+*/
+
 #include <xc.h>
-#include "pin_manager.h"
-#include <stdint.h>
-#include <stdbool.h>
-#include "interrupt_manager.h"
 #include "tmr6.h"
-#include "tmr4.h"
-#include "tmr1.h"
-#include "tmr2.h"
-#include "tmr0.h"
-#include "eusart.h"
-
-#define _XTAL_FREQ  500000
-
 
 /**
- * @Param
-    none
- * @Returns
-    none
- * @Description
-    Initializes the device to the default states configured in the
- *                  MCC GUI
- * @Example
-    SYSTEM_Initialize(void);
- */
-void SYSTEM_Initialize(void);
+  Section: Global Variables Definitions
+*/
 
 /**
- * @Param
-    none
- * @Returns
-    none
- * @Description
-    Initializes the oscillator to the default states configured in the
- *                  MCC GUI
- * @Example
-    OSCILLATOR_Initialize(void);
- */
-void OSCILLATOR_Initialize(void);
-/**
- * @Param
-    none
- * @Returns
-    none
- * @Description
-    Initializes the WDT module to the default states configured in the
- *                  MCC GUI
- * @Example
-    WDT_Initialize(void);
- */
-void WDT_Initialize(void);
+  Section: TMR6 APIs
+*/
 
-#endif	/* MCC_H */
+void TMR6_Initialize(void)
+{
+    // Set TMR6 to the options selected in the User Interface
+
+    // PR6 255; 
+    PR6 = 0xFF;
+
+    // TMR6 0; 
+    TMR6 = 0x00;
+
+    // Clearing IF flag.
+    PIR3bits.TMR6IF = 0;
+
+    // T6CKPS 1:1; T6OUTPS 1:1; TMR6ON on; 
+    T6CON = 0x04;
+}
+
+void TMR6_StartTimer(void)
+{
+    // Start the Timer by writing to TMRxON bit
+    T6CONbits.TMR6ON = 1;
+}
+
+void TMR6_StopTimer(void)
+{
+    // Stop the Timer by writing to TMRxON bit
+    T6CONbits.TMR6ON = 0;
+}
+
+uint8_t TMR6_ReadTimer(void)
+{
+    uint8_t readVal;
+
+    readVal = TMR6;
+
+    return readVal;
+}
+
+void TMR6_WriteTimer(uint8_t timerVal)
+{
+    // Write to the Timer6 register
+    TMR6 = timerVal;
+}
+
+void TMR6_LoadPeriodRegister(uint8_t periodVal)
+{
+   PR6 = periodVal;
+}
+
+bool TMR6_HasOverflowOccured(void)
+{
+    // check if  overflow has occurred by checking the TMRIF bit
+    bool status = PIR3bits.TMR6IF;
+    if(status)
+    {
+        // Clearing IF flag.
+        PIR3bits.TMR6IF = 0;
+    }
+    return status;
+}
 /**
- End of File
+  End of File
 */
