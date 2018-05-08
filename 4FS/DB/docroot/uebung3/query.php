@@ -21,7 +21,7 @@
 
    $pdo = new PDO("mysql:host=$host;dbname=$dbname","$user", "$pw");
 
-
+   $preis = 0;
    $name = $_POST['name'];
    $preis = $_POST['preis'];
 
@@ -31,13 +31,23 @@
       $query = $pdo->prepare("SELECT * FROM artikel WHERE Artikelbezeichnung LIKE ? AND Preis >= ?");
       $query ->execute(array($artikel,$preis));
       $query_rows = $query->rowCount();
-   }
-   if ($name == "" AND $preis == Null) {
+   } elseif (condition) {
+     // code...
+   }  elseif (condition) {
+     // code...
+   } elseif ($name == "" AND $preis == Null) {
      $query = $pdo->prepare("SELECT * FROM artikel");
      $query ->execute();
+   } else {
+     $error = TRUE;
+   }
+   
+
+   if (isset($error)) {
+     echo "<section><div class='div_alert'>Es ist ein Fehler aufgetreten.</div></section>";
    }
 
-
+if (!$error) {
 
    echo "<section><div class='div_table'>";
    echo "<table class='table_format'>";
@@ -50,7 +60,7 @@
    echo "</table></div></section>";
 
    echo "<form action='index.php' method='post'><input class='submit' type='Submit' value='Zurrück' /></form>";
-
+}
    $pdo = null;
    ?>
  </body>
