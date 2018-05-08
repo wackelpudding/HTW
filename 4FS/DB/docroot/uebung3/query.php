@@ -21,46 +21,52 @@
 
    $pdo = new PDO("mysql:host=$host;dbname=$dbname","$user", "$pw");
 
-   $preis = 0;
    $name = $_POST['name'];
    $preis = $_POST['preis'];
 
    $artikel = "%$name%";
 
-   if (($name != "" AND $preis != "") AND is_numeric($preis)) {
+   if (($name != "" AND $preis != NULL) AND is_numeric($preis)) {
       $query = $pdo->prepare("SELECT * FROM artikel WHERE Artikelbezeichnung LIKE ? AND Preis >= ?");
       $query ->execute(array($artikel,$preis));
       $query_rows = $query->rowCount();
-   } elseif (condition) {
-     // code...
-   }  elseif (condition) {
-     // code...
-   } elseif ($name == "" AND $preis == Null) {
+   } elseif ($name != "" AND $preis == NULL) {
+     $query = $pdo->prepare("SELECT * FROM artikel WHERE Artikelbezeichnung LIKE ?");
+     $query ->execute(array($artikel));
+     $query_rows = $query->rowCount();
+   }  elseif (($name == "" AND $preis != NULL) AND is_numeric($preis)) {
+     $query = $pdo->prepare("SELECT * FROM artikel WHERE Preis >= ?");
+     $query ->execute(array($preis));
+     $query_rows = $query->rowCount();
+   } elseif ($name == "" AND $preis == NULL) {
      $query = $pdo->prepare("SELECT * FROM artikel");
      $query ->execute();
+     $query_rows = $query->rowCount();
    } else {
      $error = TRUE;
    }
-   
+
+   if (isset($query_rows) AND $query_rows == 0) {
+     $error = TRUE;
+   }
+
 
    if (isset($error)) {
-     echo "<section><div class='div_alert'>Es ist ein Fehler aufgetreten.</div></section>";
-   }
+     echo "<section><div class='div_alert'>Es ist ein Fehler aufgetreten, oder keine Daten gefunden.</div></section>";
+   } else {
 
-if (!$error) {
+       echo "<section><div class='div_table'>";
+       echo "<table class='table_format'>";
+       echo "<tr><th>Artikelnummer</th><th>Artikelbezeichnung</th><th>Herstellername</th><th>Preis in €</th></tr>";
 
-   echo "<section><div class='div_table'>";
-   echo "<table class='table_format'>";
-   echo "<tr><th>Artikelnummer</th><th>Artikelbezeichnung</th><th>Herstellername</th><th>Preis in €</th></tr>";
+       while ($row = $query->fetch())
+       {
+         echo "<tr><td>$row[Artikelnummer]</td><td>$row[Artikelbezeichnung]</td><td>$row[Herstellername]</td><td>$row[Preis]</td></tr>";
+       }
+       echo "</table></div></section>";
+    }
 
-   while ($row = $query->fetch())
-   {
-     echo "<tr><td>$row[Artikelnummer]</td><td>$row[Artikelbezeichnung]</td><td>$row[Herstellername]</td><td>$row[Preis]</td></tr>";
-   }
-   echo "</table></div></section>";
-
-   echo "<form action='index.php' method='post'><input class='submit' type='Submit' value='Zurrück' /></form>";
-}
+    echo "<form action='index.php' method='post'><input class='submit' type='Submit' value='Zurrück' /></form>";
    $pdo = null;
    ?>
  </body>
