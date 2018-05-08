@@ -14,27 +14,45 @@
    <br />
    <?php
 
-   $pdo = new PDO('mysql:host=141.45.91.40;dbname=s0558882_db',
-   's0558882', '99oe:qtr');
-   $query = $pdo->prepare("SELECT * FROM artikel");
+   $host = "141.45.91.40";
+   $dbname = "s0558882_db";
+   $user = "s0558882";
+   $pw = "99oe:qtr";
+
+   $pdo = new PDO("mysql:host=$host;dbname=$dbname","$user", "$pw");
 
 
+   $name = $_POST['name'];
+   $preis = $_POST['preis'];
 
-   $query ->execute();
+   $artikel = "%$name%";
+
+   if (($name != "" AND $preis != "") AND is_numeric($preis)) {
+      $query = $pdo->prepare("SELECT * FROM artikel WHERE Artikelbezeichnung LIKE ? AND Preis >= ?");
+      $query ->execute(array($artikel,$preis));
+      $query_rows = $query->rowCount();
+   }
+   if ($name == "" AND $preis == Null) {
+     $query = $pdo->prepare("SELECT * FROM artikel");
+     $query ->execute();
+   }
+
+
 
    echo "<section><div class='div_table'>";
-   echo "<table class='table_format'><tr><th>Artikelnummer</th><th>Artikelbezeichnung</th><th>Herstellername</th><th>Preis in €</th></tr>";
+   echo "<table class='table_format'>";
+   echo "<tr><th>Artikelnummer</th><th>Artikelbezeichnung</th><th>Herstellername</th><th>Preis in €</th></tr>";
 
    while ($row = $query->fetch())
    {
-     echo "<tr><td>",$row['Artikelnummer'],"</td><td>",$row['Artikelbezeichnung'],"</td><td>",$row['Herstellername'],"</td><td>",$row['Preis'],"</td></tr>";
+     echo "<tr><td>$row[Artikelnummer]</td><td>$row[Artikelbezeichnung]</td><td>$row[Herstellername]</td><td>$row[Preis]</td></tr>";
    }
-   echo "</table><div></section>";
+   echo "</table></div></section>";
 
+   echo "<form action='index.php' method='post'><input class='submit' type='Submit' value='Zurrück' /></form>";
 
-
-    echo "<form action='index.php' method='post'><input class='submit' type='Submit' value='Zurrück' /></form>";
-    ?>
+   $pdo = null;
+   ?>
  </body>
 <p></p>
  <footer class="footer_lb">

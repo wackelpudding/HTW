@@ -13,8 +13,8 @@
    </header>
    <form action="query.php" method="post">
      <table class="no_style">
-   <tr><td>Artikelbezeichnung:</td><td><input type="text" name="winkel_low" /></td></tr>
-   <tr><td>Mindestpreis:</td><td><input type="text" name="winkel_high" /></td></tr>
+   <tr><td>Artikelbezeichnung:</td><td><input type="text" name="name" /></td></tr>
+   <tr><td>Mindestpreis:</td><td><input type="text" name="preis" /></td></tr>
    <tr><td></td><td><input class="submit" type="Submit" value="suchen" /></td></tr>
  </table>
    </form>
