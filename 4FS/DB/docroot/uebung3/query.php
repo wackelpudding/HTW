@@ -50,7 +50,7 @@
      $error = TRUE;
    }
 
-
+   echo "<form action='index.php' method='post'><input class='submit' type='Submit' value='Zurrück' /></form><br />";
    if (isset($error)) {
      echo "<section><div class='div_alert'>Es ist ein Fehler aufgetreten, oder keine Daten gefunden.</div></section>";
    } else {
