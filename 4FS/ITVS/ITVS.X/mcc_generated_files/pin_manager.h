@@ -59,6 +59,62 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
+
+// get/set K2 aliases
+#define K2_TRIS                 TRISAbits.TRISA1
+#define K2_LAT                  LATAbits.LATA1
+#define K2_PORT                 PORTAbits.RA1
+#define K2_ANS                  ANSELAbits.ANSA1
+#define K2_SetHigh()            do { LATAbits.LATA1 = 1; } while(0)
+#define K2_SetLow()             do { LATAbits.LATA1 = 0; } while(0)
+#define K2_Toggle()             do { LATAbits.LATA1 = ~LATAbits.LATA1; } while(0)
+#define K2_GetValue()           PORTAbits.RA1
+#define K2_SetDigitalInput()    do { TRISAbits.TRISA1 = 1; } while(0)
+#define K2_SetDigitalOutput()   do { TRISAbits.TRISA1 = 0; } while(0)
+#define K2_SetAnalogMode()      do { ANSELAbits.ANSA1 = 1; } while(0)
+#define K2_SetDigitalMode()     do { ANSELAbits.ANSA1 = 0; } while(0)
+
+// get/set TEMP aliases
+#define TEMP_TRIS                 TRISAbits.TRISA3
+#define TEMP_LAT                  LATAbits.LATA3
+#define TEMP_PORT                 PORTAbits.RA3
+#define TEMP_ANS                  ANSELAbits.ANSA3
+#define TEMP_SetHigh()            do { LATAbits.LATA3 = 1; } while(0)
+#define TEMP_SetLow()             do { LATAbits.LATA3 = 0; } while(0)
+#define TEMP_Toggle()             do { LATAbits.LATA3 = ~LATAbits.LATA3; } while(0)
+#define TEMP_GetValue()           PORTAbits.RA3
+#define TEMP_SetDigitalInput()    do { TRISAbits.TRISA3 = 1; } while(0)
+#define TEMP_SetDigitalOutput()   do { TRISAbits.TRISA3 = 0; } while(0)
+#define TEMP_SetAnalogMode()      do { ANSELAbits.ANSA3 = 1; } while(0)
+#define TEMP_SetDigitalMode()     do { ANSELAbits.ANSA3 = 0; } while(0)
+
+// get/set IN0 aliases
+#define IN0_TRIS                 TRISAbits.TRISA4
+#define IN0_LAT                  LATAbits.LATA4
+#define IN0_PORT                 PORTAbits.RA4
+#define IN0_ANS                  ANSELAbits.ANSA4
+#define IN0_SetHigh()            do { LATAbits.LATA4 = 1; } while(0)
+#define IN0_SetLow()             do { LATAbits.LATA4 = 0; } while(0)
+#define IN0_Toggle()             do { LATAbits.LATA4 = ~LATAbits.LATA4; } while(0)
+#define IN0_GetValue()           PORTAbits.RA4
+#define IN0_SetDigitalInput()    do { TRISAbits.TRISA4 = 1; } while(0)
+#define IN0_SetDigitalOutput()   do { TRISAbits.TRISA4 = 0; } while(0)
+#define IN0_SetAnalogMode()      do { ANSELAbits.ANSA4 = 1; } while(0)
+#define IN0_SetDigitalMode()     do { ANSELAbits.ANSA4 = 0; } while(0)
+
+
+
+// get/set IN3 aliases
+#define IN3_TRIS                 TRISAbits.TRISA7
+#define IN3_LAT                  LATAbits.LATA7
+#define IN3_PORT                 PORTAbits.RA7
+#define IN3_SetHigh()            do { LATAbits.LATA7 = 1; } while(0)
+#define IN3_SetLow()             do { LATAbits.LATA7 = 0; } while(0)
+#define IN3_Toggle()             do { LATAbits.LATA7 = ~LATAbits.LATA7; } while(0)
+#define IN3_GetValue()           PORTAbits.RA7
+#define IN3_SetDigitalInput()    do { TRISAbits.TRISA7 = 1; } while(0)
+#define IN3_SetDigitalOutput()   do { TRISAbits.TRISA7 = 0; } while(0)
+
 // get/set RC6 procedures
 #define RC6_SetHigh()               do { LATCbits.LATC6 = 1; } while(0)
 #define RC6_SetLow()                do { LATCbits.LATC6 = 0; } while(0)

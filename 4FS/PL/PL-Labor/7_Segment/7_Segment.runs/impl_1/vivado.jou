@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue May 15 09:34:12 2018
+# Process ID: 144
+# Log file: I:/HTW/4. FS/PL-Labor/7_Segment/7_Segment.runs/impl_1/counter.vdi
+# Journal file: I:/HTW/4. FS/PL-Labor/7_Segment/7_Segment.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source counter.tcl -notrace

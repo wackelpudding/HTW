@@ -69,7 +69,7 @@ void PIN_MANAGER_Initialize(void)
     TRISx registers
     */
     TRISE = 0x0F;
-    TRISA = 0xFF;
+    TRISA = 0xFC;
     TRISB = 0xFF;
     TRISC = 0xBF;
     TRISD = 0xFF;
@@ -80,7 +80,7 @@ void PIN_MANAGER_Initialize(void)
     ANSELD = 0xFF;
     ANSELB = 0x3F;
     ANSELE = 0x07;
-    ANSELA = 0x3F;
+    ANSELA = 0x04;
 
     /**
     WPUx registers
@@ -102,6 +102,8 @@ void PIN_MANAGER_Initialize(void)
 
 
    
+    // Enable IOCI interrupt 
+    INTCONbits.IOCIE = 1; 
     
 }
   

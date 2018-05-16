@@ -56,12 +56,12 @@
 #pragma config BOREN = ON    // Brown-out Reset Enable->Brown-out Reset enabled
 #pragma config CLKOUTEN = OFF    // Clock Out Enable->CLKOUT function is disabled. I/O or oscillator function on the CLKOUT pin
 #pragma config IESO = ON    // Internal/External Switchover->Internal/External Switchover mode is enabled
-#pragma config FCMEN = ON    // Fail-Safe Clock Monitor Enable->Fail-Safe Clock Monitor is enabled
+#pragma config FCMEN = OFF    // Fail-Safe Clock Monitor Enable->Fail-Safe Clock Monitor is disabled
 
 // CONFIG2
 #pragma config WRT = OFF    // Flash Memory Self-Write Protection->Write protection off
 #pragma config VCAPEN = OFF    // Voltage Regulator Capacitor Enable->All VCAP pin functionality is disabled
 #pragma config PLLEN = OFF    // PLL Enable->4x PLL disabled
 #pragma config STVREN = ON    // Stack Overflow/Underflow Reset Enable->Stack Overflow or Underflow will cause a Reset
-#pragma config BORV = LO    // Brown-out Reset Voltage Selection->Brown-out Reset Voltage (Vbor), low trip point selected.
-#pragma config LVP = ON    // Low-Voltage Programming Enable->Low-voltage programming enabled
+#pragma config BORV = HI    // Brown-out Reset Voltage Selection->Brown-out Reset Voltage (Vbor), high trip point selected.
+#pragma config LVP = OFF    // Low-Voltage Programming Enable->High-voltage on MCLR/VPP must be used for programming

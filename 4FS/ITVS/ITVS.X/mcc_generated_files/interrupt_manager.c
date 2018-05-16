@@ -56,15 +56,35 @@ void interrupt INTERRUPT_InterruptManager (void)
     {
         TMR0_ISR();
     }
+    else if(INTCONbits.IOCIE == 1 && INTCONbits.IOCIF == 1)
+    {
+        PIN_MANAGER_IOC();
+    }
     else if(INTCONbits.PEIE == 1)
     {
-        if(PIE1bits.TXIE == 1 && PIR1bits.TXIF == 1)
+        if(PIE1bits.RCIE == 1 && PIR1bits.RCIF == 1)
+        {
+            EUSART_RxDefaultInterruptHandler();
+        } 
+        else if(PIE1bits.TXIE == 1 && PIR1bits.TXIF == 1)
         {
             EUSART_TxDefaultInterruptHandler();
         } 
-        else if(PIE1bits.RCIE == 1 && PIR1bits.RCIF == 1)
+        else if(PIE1bits.TMR1IE == 1 && PIR1bits.TMR1IF == 1)
         {
-            EUSART_RxDefaultInterruptHandler();
+            TMR1_ISR();
+        } 
+        else if(PIE1bits.TMR2IE == 1 && PIR1bits.TMR2IF == 1)
+        {
+            TMR2_ISR();
+        } 
+        else if(PIE3bits.TMR4IE == 1 && PIR3bits.TMR4IF == 1)
+        {
+            TMR4_ISR();
+        } 
+        else if(PIE3bits.TMR6IE == 1 && PIR3bits.TMR6IF == 1)
+        {
+            TMR6_ISR();
         } 
         else
         {
