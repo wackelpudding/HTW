@@ -1,55 +1,98 @@
-#include "onewire.h"
-#include "../../../xc8/v1.45/include/pic16f1937.h"
+#ifndef ONEWIRE_H
+#define DS18X20_H
+#include "mcc_generated_files/mcc.h"
+
+uint8_t ds18x20 [9];
 
 
-#define ONE_WIRE_PIN TEMP
+uint8_t ow_master_reset (void)
+{
+    uint8_t rec;
+    TEMP_LAT = 0;             // set the (I)O to low level
+    TEMP_TRIS = 0;            // config the DQ-IO as output (-> low)
+    __delay_us(490);        // delay of >480 us
+    TEMP_TRIS = 1;            // config the  DQ-IO as input (high-z -> pull up)
+    __delay_us(40);
+    rec = TEMP_GetValue();               // read the level (if low, slave available)
+    __delay_us(450);        // wait for end of slot
+    return (rec);
+}
 
+void ow_write_bit (uint8_t val)
+{
+	TEMP_LAT = 0;						// set the (I)O to low level
+    TEMP_TRIS = 0;                    // config the DQ-IO as output (-> low)
 
-void onewire_reset()  // OK if just using a single permanently connected device 
-{ 
-TEMP_SetLow(); 
-__delay_us( 500 ); // pull 1-wire low for reset pulse 
-output_float(ONE_WIRE_PIN); // float 1-wire high 
-__delay_us( 500 ); // wait-out remaining initialisation window. 
-output_float(ONE_WIRE_PIN); 
+    if(val)                    		// if the bit to transfer is a "1"
+    {
+        __delay_us(1);				// wait 1 us and..
+        TEMP_TRIS = 1;                // ..config the  DQ-IO as input (high-z -> pull up)
+    }
 
-} 
+    __delay_us(100);                // wait for end of slot
 
-void onewire_write(int data) 
-{ 
- int count; 
+    TEMP_TRIS = 1;                    // config the  DQ-IO as input (high-z -> pull up)
+}
 
- for (count=0; count<8; ++count) 
- { 
-  output_low(ONE_WIRE_PIN); 
-  __delay_us( 2 ); // pull 1-wire low to initiate write time-slot. 
-  output_bit(ONE_WIRE_PIN, shift_right(&data,1,0)); // set output bit on 1-wire 
-  __delay_us( 60 ); // wait until end of write slot. 
-  output_float(ONE_WIRE_PIN); // set 1-wire high again, 
-  __delay_us( 2 ); // for more than 1us minimum. 
- } 
-} 
+/*******************************************************************************
+One_Wire_Write_Byte
+--------------------------------------------------------------------------------
+This function will write a complete byte on the bus.
+*******************************************************************************/
 
-/*********************** read1wire() *********************************/ 
-/*This function reads the 8 -bit data via the 1-wire sensor. */ 
-/* */ 
-/*Parameters: */ 
-/*Returns: 8-bit (1-byte) data from sensor */ 
-/*********************************************************************/ 
+void ow_write_byte (uint8_t val)
+{
+    uint8_t i, mask = 1;
 
-int onewire_read() 
-{ 
- int count, data; 
+	// write the byte by sending eight bits (LSB first)
+    for (i=0; i<8; i++)
+    {
+            ow_write_bit(val & mask);
+            mask = (mask << 1);
+    }
+}
 
- for (count=0; count<8; ++count) 
- { 
-  output_low(ONE_WIRE_PIN); 
-  delay_us( 2 ); // pull 1-wire low to initiate read time-slot. 
-  output_float(ONE_WIRE_PIN); // now let 1-wire float high, 
-  delay_us( 8 ); // let device state stabilise, 
-  shift_right(&data,1,input(ONE_WIRE_PIN)); // and load result. 
-  delay_us( 120 ); // wait until end of read slot. 
- } 
+uint8_t ow_read_bit (void)
+{
+    uint8_t rec;
 
- return( data ); 
-} 
+									// perform a very short low impuls
+    TEMP_TRIS = 0;					// config the DQ-IO as output (-> low)
+    TEMP_TRIS = 1;                    // config the  DQ-IO as input (high-z -> pull up)
+
+    __delay_us(15);
+    rec = TEMP_GetValue();                       // read the level on DQ (this is the read bit)
+    __delay_us(105);                // wait for end of slot
+
+    return(rec);
+}
+
+/*******************************************************************************
+One_Wire_Read_Byte
+--------------------------------------------------------------------------------
+This function will read a complete byte from the bus.
+*******************************************************************************/
+
+uint8_t ow_read_byte (void)
+{
+    uint8_t value = 0 , i;
+
+    // read the byte by reading eight bits (LSB first)
+    for(i=0; i<8; i++)
+    {
+        if ( ow_read_bit() )
+        {
+            value |= 0x01 << i;
+        }
+    }
+
+    return(value);
+}
+
+    //send the skip rom command to the onewire bus
+void ow_skip_rom(void)
+{
+    ow_wr_byte(0xCC);
+}
+
+#endif

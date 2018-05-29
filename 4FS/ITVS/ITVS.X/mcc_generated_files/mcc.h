@@ -57,6 +57,7 @@
 #include "tmr2.h"
 #include "tmr0.h"
 #include "eusart.h"
+#include "../onewire.h"
 
 #define _XTAL_FREQ  500000
 
