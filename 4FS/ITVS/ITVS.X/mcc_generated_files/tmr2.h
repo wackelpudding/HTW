@@ -64,6 +64,7 @@
 /**
   Section: Macro Declarations
 */
+#define TMR2_INTERRUPT_TICKER_FACTOR    2
 
 /**
   Section: TMR2 APIs
@@ -307,6 +308,23 @@ void TMR2_LoadPeriodRegister(uint8_t periodVal);
 */
 void TMR2_ISR(void);
 
+/**
+  @Summary
+    CallBack function
+
+  @Description
+    This function is called from the timer ISR. User can write your code in this function.
+
+  @Preconditions
+    Initialize  the TMR2 module with interrupt before calling this function.
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
+ void TMR2_CallBack(void);
 /**
   @Summary
     Set Timer Interrupt Handler

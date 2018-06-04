@@ -1,5 +1,5 @@
 #ifndef ONEWIRE_H
-#define DS18X20_H
+#define ONEWIRE_H
 #include "mcc_generated_files/mcc.h"
 
 uint8_t ds18x20 [9];

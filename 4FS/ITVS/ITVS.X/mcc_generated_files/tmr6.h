@@ -64,6 +64,7 @@
 /**
   Section: Macro Declarations
 */
+#define TMR6_INTERRUPT_TICKER_FACTOR    2
 
 /**
   Section: TMR6 APIs
@@ -307,6 +308,23 @@ void TMR6_LoadPeriodRegister(uint8_t periodVal);
 */
 void TMR6_ISR(void);
 
+/**
+  @Summary
+    CallBack function
+
+  @Description
+    This function is called from the timer ISR. User can write your code in this function.
+
+  @Preconditions
+    Initialize  the TMR6 module with interrupt before calling this function.
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
+ void TMR6_CallBack(void);
 /**
   @Summary
     Set Timer Interrupt Handler

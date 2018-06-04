@@ -64,6 +64,7 @@
 /**
   Section: Macro Declarations
 */
+#define TMR4_INTERRUPT_TICKER_FACTOR    2
 
 /**
   Section: TMR4 APIs
@@ -307,6 +308,23 @@ void TMR4_LoadPeriodRegister(uint8_t periodVal);
 */
 void TMR4_ISR(void);
 
+/**
+  @Summary
+    CallBack function
+
+  @Description
+    This function is called from the timer ISR. User can write your code in this function.
+
+  @Preconditions
+    Initialize  the TMR4 module with interrupt before calling this function.
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
+ void TMR4_CallBack(void);
 /**
   @Summary
     Set Timer Interrupt Handler

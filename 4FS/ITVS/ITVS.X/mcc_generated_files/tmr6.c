@@ -65,8 +65,8 @@ void TMR6_Initialize(void)
 {
     // Set TMR6 to the options selected in the User Interface
 
-    // PR6 255; 
-    PR6 = 0xFF;
+    // PR6 243; 
+    PR6 = 0xF3;
 
     // TMR6 0; 
     TMR6 = 0x00;
@@ -80,8 +80,8 @@ void TMR6_Initialize(void)
     // Set Default Interrupt Handler
     TMR6_SetInterruptHandler(TMR6_DefaultInterruptHandler);
 
-    // T6CKPS 1:1; T6OUTPS 1:1; TMR6ON on; 
-    T6CON = 0x04;
+    // T6CKPS 1:64; T6OUTPS 1:16; TMR6ON on; 
+    T6CON = 0x7F;
 }
 
 void TMR6_StartTimer(void)
@@ -118,16 +118,31 @@ void TMR6_LoadPeriodRegister(uint8_t periodVal)
 
 void TMR6_ISR(void)
 {
+    static volatile unsigned int CountCallBack = 0;
 
     // clear the TMR6 interrupt flag
     PIR3bits.TMR6IF = 0;
 
+    // callback function - called every 2th pass
+    if (++CountCallBack >= TMR6_INTERRUPT_TICKER_FACTOR)
+    {
+        // ticker function call
+        TMR6_CallBack();
+
+        // reset ticker counter
+        CountCallBack = 0;
+    }
+}
+
+void TMR6_CallBack(void)
+{
+    // Add your custom callback code here
+    // this code executes every TMR6_INTERRUPT_TICKER_FACTOR periods of TMR6
     if(TMR6_InterruptHandler)
     {
         TMR6_InterruptHandler();
     }
 }
-
 
 void TMR6_SetInterruptHandler(void (* InterruptHandler)(void)){
     TMR6_InterruptHandler = InterruptHandler;

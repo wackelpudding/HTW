@@ -65,8 +65,8 @@ void TMR4_Initialize(void)
 {
     // Set TMR4 to the options selected in the User Interface
 
-    // PR4 255; 
-    PR4 = 0xFF;
+    // PR4 243; 
+    PR4 = 0xF3;
 
     // TMR4 0; 
     TMR4 = 0x00;
@@ -80,8 +80,8 @@ void TMR4_Initialize(void)
     // Set Default Interrupt Handler
     TMR4_SetInterruptHandler(TMR4_DefaultInterruptHandler);
 
-    // T4CKPS 1:1; T4OUTPS 1:1; TMR4ON on; 
-    T4CON = 0x04;
+    // T4CKPS 1:64; T4OUTPS 1:16; TMR4ON on; 
+    T4CON = 0x7F;
 }
 
 void TMR4_StartTimer(void)
@@ -118,16 +118,31 @@ void TMR4_LoadPeriodRegister(uint8_t periodVal)
 
 void TMR4_ISR(void)
 {
+    static volatile unsigned int CountCallBack = 0;
 
     // clear the TMR4 interrupt flag
     PIR3bits.TMR4IF = 0;
 
+    // callback function - called every 2th pass
+    if (++CountCallBack >= TMR4_INTERRUPT_TICKER_FACTOR)
+    {
+        // ticker function call
+        TMR4_CallBack();
+
+        // reset ticker counter
+        CountCallBack = 0;
+    }
+}
+
+void TMR4_CallBack(void)
+{
+    // Add your custom callback code here
+    // this code executes every TMR4_INTERRUPT_TICKER_FACTOR periods of TMR4
     if(TMR4_InterruptHandler)
     {
         TMR4_InterruptHandler();
     }
 }
-
 
 void TMR4_SetInterruptHandler(void (* InterruptHandler)(void)){
     TMR4_InterruptHandler = InterruptHandler;
