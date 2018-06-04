@@ -50,6 +50,7 @@
 
 #include <xc.h>
 #include "tmr0.h"
+#include "mcc.h"
 
 /**
   Section: Global Variables Definitions
@@ -125,6 +126,15 @@ void TMR0_ISR(void)
     }
 
     // add your TMR0 interrupt custom code
+    
+    INTERRUPT_PeripheralInterruptDisable();
+    INTERRUPT_GlobalInterruptDisable();
+    
+    
+    
+    INTERRUPT_PeripheralInterruptEnable();
+    INTERRUPT_GlobalInterruptEnable();
+    
 }
 
 void TMR0_CallBack(void)
