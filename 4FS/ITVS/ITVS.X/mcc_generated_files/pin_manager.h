@@ -59,20 +59,33 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
+// get/set K1 aliases
+#define K1_TRIS                 TRISAbits.TRISA1
+#define K1_LAT                  LATAbits.LATA1
+#define K1_PORT                 PORTAbits.RA1
+#define K1_ANS                  ANSELAbits.ANSA1
+#define K1_SetHigh()            do { LATAbits.LATA1 = 1; } while(0)
+#define K1_SetLow()             do { LATAbits.LATA1 = 0; } while(0)
+#define K1_Toggle()             do { LATAbits.LATA1 = ~LATAbits.LATA1; } while(0)
+#define K1_GetValue()           PORTAbits.RA1
+#define K1_SetDigitalInput()    do { TRISAbits.TRISA1 = 1; } while(0)
+#define K1_SetDigitalOutput()   do { TRISAbits.TRISA1 = 0; } while(0)
+#define K1_SetAnalogMode()      do { ANSELAbits.ANSA1 = 1; } while(0)
+#define K1_SetDigitalMode()     do { ANSELAbits.ANSA1 = 0; } while(0)
 
 // get/set K2 aliases
-#define K2_TRIS                 TRISAbits.TRISA1
-#define K2_LAT                  LATAbits.LATA1
-#define K2_PORT                 PORTAbits.RA1
-#define K2_ANS                  ANSELAbits.ANSA1
-#define K2_SetHigh()            do { LATAbits.LATA1 = 1; } while(0)
-#define K2_SetLow()             do { LATAbits.LATA1 = 0; } while(0)
-#define K2_Toggle()             do { LATAbits.LATA1 = ~LATAbits.LATA1; } while(0)
-#define K2_GetValue()           PORTAbits.RA1
-#define K2_SetDigitalInput()    do { TRISAbits.TRISA1 = 1; } while(0)
-#define K2_SetDigitalOutput()   do { TRISAbits.TRISA1 = 0; } while(0)
-#define K2_SetAnalogMode()      do { ANSELAbits.ANSA1 = 1; } while(0)
-#define K2_SetDigitalMode()     do { ANSELAbits.ANSA1 = 0; } while(0)
+#define K2_TRIS                 TRISAbits.TRISA2
+#define K2_LAT                  LATAbits.LATA2
+#define K2_PORT                 PORTAbits.RA2
+#define K2_ANS                  ANSELAbits.ANSA2
+#define K2_SetHigh()            do { LATAbits.LATA2 = 1; } while(0)
+#define K2_SetLow()             do { LATAbits.LATA2 = 0; } while(0)
+#define K2_Toggle()             do { LATAbits.LATA2 = ~LATAbits.LATA2; } while(0)
+#define K2_GetValue()           PORTAbits.RA2
+#define K2_SetDigitalInput()    do { TRISAbits.TRISA2 = 1; } while(0)
+#define K2_SetDigitalOutput()   do { TRISAbits.TRISA2 = 0; } while(0)
+#define K2_SetAnalogMode()      do { ANSELAbits.ANSA2 = 1; } while(0)
+#define K2_SetDigitalMode()     do { ANSELAbits.ANSA2 = 0; } while(0)
 
 // get/set TEMP aliases
 #define TEMP_TRIS                 TRISAbits.TRISA3
@@ -149,6 +162,17 @@
 #define TASTER2_SetAnalogMode()      do { ANSELBbits.ANSB1 = 1; } while(0)
 #define TASTER2_SetDigitalMode()     do { ANSELBbits.ANSB1 = 0; } while(0)
 
+// get/set LED1 aliases
+#define LED1_TRIS                 TRISCbits.TRISC3
+#define LED1_LAT                  LATCbits.LATC3
+#define LED1_PORT                 PORTCbits.RC3
+#define LED1_SetHigh()            do { LATCbits.LATC3 = 1; } while(0)
+#define LED1_SetLow()             do { LATCbits.LATC3 = 0; } while(0)
+#define LED1_Toggle()             do { LATCbits.LATC3 = ~LATCbits.LATC3; } while(0)
+#define LED1_GetValue()           PORTCbits.RC3
+#define LED1_SetDigitalInput()    do { TRISCbits.TRISC3 = 1; } while(0)
+#define LED1_SetDigitalOutput()   do { TRISCbits.TRISC3 = 0; } while(0)
+
 // get/set RC6 procedures
 #define RC6_SetHigh()               do { LATCbits.LATC6 = 1; } while(0)
 #define RC6_SetLow()                do { LATCbits.LATC6 = 0; } while(0)
@@ -164,6 +188,20 @@
 #define RC7_GetValue()              PORTCbits.RC7
 #define RC7_SetDigitalInput()       do { TRISCbits.TRISC7 = 1; } while(0)
 #define RC7_SetDigitalOutput()      do { TRISCbits.TRISC7 = 0; } while(0)
+
+// get/set LED2 aliases
+#define LED2_TRIS                 TRISEbits.TRISE1
+#define LED2_LAT                  LATEbits.LATE1
+#define LED2_PORT                 PORTEbits.RE1
+#define LED2_ANS                  ANSELEbits.ANSE1
+#define LED2_SetHigh()            do { LATEbits.LATE1 = 1; } while(0)
+#define LED2_SetLow()             do { LATEbits.LATE1 = 0; } while(0)
+#define LED2_Toggle()             do { LATEbits.LATE1 = ~LATEbits.LATE1; } while(0)
+#define LED2_GetValue()           PORTEbits.RE1
+#define LED2_SetDigitalInput()    do { TRISEbits.TRISE1 = 1; } while(0)
+#define LED2_SetDigitalOutput()   do { TRISEbits.TRISE1 = 0; } while(0)
+#define LED2_SetAnalogMode()      do { ANSELEbits.ANSE1 = 1; } while(0)
+#define LED2_SetDigitalMode()     do { ANSELEbits.ANSE1 = 0; } while(0)
 
 /**
    @Param

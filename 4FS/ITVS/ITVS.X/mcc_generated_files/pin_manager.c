@@ -49,6 +49,7 @@
 #include <xc.h>
 #include "pin_manager.h"
 #include "stdbool.h"
+#include "mcc.h"
 
 
 
@@ -71,10 +72,10 @@ void PIN_MANAGER_Initialize(void)
     /**
     TRISx registers
     */
-    TRISE = 0x0F;
-    TRISA = 0xFC;
+    TRISE = 0x0D;
+    TRISA = 0xF9;
     TRISB = 0xFF;
-    TRISC = 0xBF;
+    TRISC = 0xB7;
     TRISD = 0xFF;
 
     /**
@@ -82,8 +83,8 @@ void PIN_MANAGER_Initialize(void)
     */
     ANSELD = 0xFF;
     ANSELB = 0x3C;
-    ANSELE = 0x07;
-    ANSELA = 0x04;
+    ANSELE = 0x05;
+    ANSELA = 0x00;
 
     /**
     WPUx registers
@@ -148,6 +149,16 @@ void PIN_MANAGER_IOC(void)
 void IOCBF0_ISR(void) {
 
     // Add custom IOCBF0 code
+    
+    if (!LED1_GetValue()){
+            LED1_SetHigh();
+            __delay_ms(300);
+            K1_SetHigh();
+        }   else {
+            LED1_SetLow();
+            __delay_ms(300);        
+            K1_SetLow();
+        }
 
     // Call the interrupt handler for the callback registered at runtime
     if(IOCBF0_InterruptHandler)
@@ -178,6 +189,17 @@ void IOCBF0_DefaultInterruptHandler(void){
 void IOCBF1_ISR(void) {
 
     // Add custom IOCBF1 code
+   
+    if (!LED2_GetValue()){
+        LED2_SetHigh();
+        __delay_ms(300); 
+        K2_SetHigh();
+    }   else {
+
+        LED2_SetLow();
+        __delay_ms(300);
+        K2_SetLow();
+    }
 
     // Call the interrupt handler for the callback registered at runtime
     if(IOCBF1_InterruptHandler)

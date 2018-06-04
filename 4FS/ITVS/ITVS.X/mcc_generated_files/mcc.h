@@ -60,7 +60,6 @@
 
 #define _XTAL_FREQ  4000000
 
-
 /**
  * @Param
     none
