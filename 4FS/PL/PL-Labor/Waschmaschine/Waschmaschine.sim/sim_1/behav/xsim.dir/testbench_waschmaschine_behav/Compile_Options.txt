@@ -1,0 +1,1 @@
+-wto "38550b6138e1428d8dfe1044bde8d492" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "testbench_waschmaschine_behav" "xil_defaultlib.testbench_waschmaschine" -log "elaborate.log" 
