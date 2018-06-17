@@ -74,7 +74,7 @@ BEGIN
 
       -- add further stimuli here
 
-      wait for clock_period*1000;
+      wait for clock_period*100000;
 
       wait;
    end process;

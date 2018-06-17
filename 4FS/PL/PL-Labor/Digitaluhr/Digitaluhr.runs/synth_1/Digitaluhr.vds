@@ -2,52 +2,50 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Tue Jun 12 09:35:46 2018
-# Process ID: 5276
-# Log file: I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.runs/synth_1/Digitaluhr.vds
-# Journal file: I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.runs/synth_1\vivado.jou
+# Start of session at: Thu Jun 14 23:12:38 2018
+# Process ID: 2824
+# Log file: C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.runs/synth_1/Digitaluhr.vds
+# Journal file: C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Digitaluhr.tcl -notrace
 Command: synth_design -top Digitaluhr -part xc7z020clg484-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
-INFO: [Common 17-1223] The version limit for your license is '2015.08' and will expire in -1016 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 264.203 ; gain = 83.828
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 261.648 ; gain = 85.867
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Digitaluhr' [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:41]
-INFO: [Synth 8-3491] module 'Min1_Count' declared at 'I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Min1_Count.vhd:34' bound to instance 'Min1_Count_inst' of component 'Min1_Count' [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:117]
-INFO: [Synth 8-638] synthesizing module 'Min1_Count' [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Min1_Count.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'Min1_Count' (1#1) [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Min1_Count.vhd:42]
-INFO: [Synth 8-3491] module 'Min10_Count' declared at 'I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Min10_Count.vhd:34' bound to instance 'Min10_Count_inst' of component 'Min10_Count' [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:125]
-INFO: [Synth 8-638] synthesizing module 'Min10_Count' [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Min10_Count.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'Min10_Count' (2#1) [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Min10_Count.vhd:42]
-INFO: [Synth 8-3491] module 'Hour1_Count' declared at 'I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Hour1_Count.vhd:34' bound to instance 'Hour1_Count_inst' of component 'Hour1_Count' [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:133]
-INFO: [Synth 8-638] synthesizing module 'Hour1_Count' [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Hour1_Count.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'Hour1_Count' (3#1) [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Hour1_Count.vhd:45]
-INFO: [Synth 8-3491] module 'Hour10_Count' declared at 'I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Hour10_Count.vhd:34' bound to instance 'Hour10_Count_inst' of component 'Hour10_Count' [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:142]
-INFO: [Synth 8-638] synthesizing module 'Hour10_Count' [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Hour10_Count.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'Hour10_Count' (4#1) [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Hour10_Count.vhd:42]
-INFO: [Synth 8-3491] module 'Sec_Count' declared at 'I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Sec_Count.vhd:34' bound to instance 'Sec_Count_inst' of component 'Sec_Count' [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:150]
-INFO: [Synth 8-638] synthesizing module 'Sec_Count' [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Sec_Count.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'Sec_Count' (5#1) [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Sec_Count.vhd:42]
-INFO: [Synth 8-3491] module 'Decoder_7Seg' declared at 'I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:34' bound to instance 'Decoder_7Seg_inst' of component 'Decoder_7Seg' [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:158]
-INFO: [Synth 8-638] synthesizing module 'Decoder_7Seg' [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:48]
-WARNING: [Synth 8-614] signal 'counter' is read in the process but is not in the sensitivity list [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:94]
-INFO: [Synth 8-226] default block is never used [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:106]
-WARNING: [Synth 8-614] signal 'BCD_0' is read in the process but is not in the sensitivity list [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:104]
-WARNING: [Synth 8-614] signal 'Dec_Point' is read in the process but is not in the sensitivity list [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:104]
-WARNING: [Synth 8-614] signal 'BCD_1' is read in the process but is not in the sensitivity list [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:104]
-WARNING: [Synth 8-614] signal 'BCD_2' is read in the process but is not in the sensitivity list [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:104]
-WARNING: [Synth 8-614] signal 'BCD_3' is read in the process but is not in the sensitivity list [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:104]
-INFO: [Synth 8-256] done synthesizing module 'Decoder_7Seg' (6#1) [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:48]
-INFO: [Synth 8-3491] module 'Freq_Divider' declared at 'I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Freq_Divider.vhd:34' bound to instance 'Freq_Divider_inst' of component 'Freq_Divider' [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:173]
-INFO: [Synth 8-638] synthesizing module 'Freq_Divider' [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Freq_Divider.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'Freq_Divider' (7#1) [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Freq_Divider.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'Digitaluhr' (8#1) [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'Digitaluhr' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:41]
+INFO: [Synth 8-3491] module 'Min1_Count' declared at 'C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Min1_Count.vhd:34' bound to instance 'Min1_Count_inst' of component 'Min1_Count' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:117]
+INFO: [Synth 8-638] synthesizing module 'Min1_Count' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Min1_Count.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'Min1_Count' (1#1) [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Min1_Count.vhd:42]
+INFO: [Synth 8-3491] module 'Min10_Count' declared at 'C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Min10_Count.vhd:34' bound to instance 'Min10_Count_inst' of component 'Min10_Count' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:125]
+INFO: [Synth 8-638] synthesizing module 'Min10_Count' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Min10_Count.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'Min10_Count' (2#1) [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Min10_Count.vhd:42]
+INFO: [Synth 8-3491] module 'Hour1_Count' declared at 'C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Hour1_Count.vhd:34' bound to instance 'Hour1_Count_inst' of component 'Hour1_Count' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:133]
+INFO: [Synth 8-638] synthesizing module 'Hour1_Count' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Hour1_Count.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'Hour1_Count' (3#1) [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Hour1_Count.vhd:45]
+INFO: [Synth 8-3491] module 'Hour10_Count' declared at 'C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Hour10_Count.vhd:34' bound to instance 'Hour10_Count_inst' of component 'Hour10_Count' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'Hour10_Count' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Hour10_Count.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'Hour10_Count' (4#1) [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Hour10_Count.vhd:42]
+INFO: [Synth 8-3491] module 'Sec_Count' declared at 'C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Sec_Count.vhd:34' bound to instance 'Sec_Count_inst' of component 'Sec_Count' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:150]
+INFO: [Synth 8-638] synthesizing module 'Sec_Count' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Sec_Count.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'Sec_Count' (5#1) [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Sec_Count.vhd:42]
+INFO: [Synth 8-3491] module 'Decoder_7Seg' declared at 'C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:34' bound to instance 'Decoder_7Seg_inst' of component 'Decoder_7Seg' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'Decoder_7Seg' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:48]
+INFO: [Synth 8-226] default block is never used [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:107]
+WARNING: [Synth 8-614] signal 'BCD_0' is read in the process but is not in the sensitivity list [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:105]
+WARNING: [Synth 8-614] signal 'Dec_Point' is read in the process but is not in the sensitivity list [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:105]
+WARNING: [Synth 8-614] signal 'BCD_1' is read in the process but is not in the sensitivity list [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:105]
+WARNING: [Synth 8-614] signal 'BCD_2' is read in the process but is not in the sensitivity list [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:105]
+WARNING: [Synth 8-614] signal 'BCD_3' is read in the process but is not in the sensitivity list [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:105]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_7Seg' (6#1) [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:48]
+INFO: [Synth 8-3491] module 'Freq_Divider' declared at 'C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Freq_Divider.vhd:34' bound to instance 'Freq_Divider_inst' of component 'Freq_Divider' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:173]
+INFO: [Synth 8-638] synthesizing module 'Freq_Divider' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Freq_Divider.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Freq_Divider' (7#1) [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Freq_Divider.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Digitaluhr' (8#1) [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:41]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 298.488 ; gain = 118.113
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 296.902 ; gain = 121.121
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -57,47 +55,50 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:26 . Memory (MB): peak = 298.488 ; gain = 118.113
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 296.902 ; gain = 121.121
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/constrs_1/new/Digitaluhr.xdc]
-Finished Parsing XDC File [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/constrs_1/new/Digitaluhr.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/constrs_1/new/Digitaluhr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Digitaluhr_propImpl.xdc].
+Parsing XDC File [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/constrs_1/new/Digitaluhr.xdc]
+Finished Parsing XDC File [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/constrs_1/new/Digitaluhr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/constrs_1/new/Digitaluhr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Digitaluhr_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Digitaluhr_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 620.641 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 619.043 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:41 . Memory (MB): peak = 620.641 ; gain = 440.266
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:42 . Memory (MB): peak = 619.043 ; gain = 443.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:42 . Memory (MB): peak = 620.641 ; gain = 440.266
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:42 . Memory (MB): peak = 619.043 ; gain = 443.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:42 . Memory (MB): peak = 620.641 ; gain = 440.266
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:43 . Memory (MB): peak = 619.043 ; gain = 443.262
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "Enable_Out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "Enable_Out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "Enable_Out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "Enable_Out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "freq_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Enable_1kHz" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "freq_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Enable_Out" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+WARNING: [Synth 8-327] inferring latch for variable 'counter_reg' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:97]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:42 . Memory (MB): peak = 620.641 ; gain = 440.266
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:44 . Memory (MB): peak = 619.043 ; gain = 443.262
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -110,15 +111,15 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 2     
 	   2 Input      6 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 4     
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
 	                6 Bit    Registers := 1     
 	                4 Bit    Registers := 4     
-	                1 Bit    Registers := 6     
+	                1 Bit    Registers := 7     
 +---Muxes : 
 	   2 Input      4 Bit        Muxes := 4     
 	   4 Input      4 Bit        Muxes := 2     
@@ -183,7 +184,11 @@ Detailed RTL Component Info :
 Module Decoder_7Seg 
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     32 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   4 Input      4 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 1     
@@ -207,38 +212,41 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:43 . Memory (MB): peak = 620.641 ; gain = 440.266
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:45 . Memory (MB): peak = 619.043 ; gain = 443.262
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5545] ROM "Freq_Divider_inst/freq_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
-INFO: [Synth 8-5545] ROM "Freq_Divider_inst/Enable_Out" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "freq_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Enable_1kHz" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "freq_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Enable_Out" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:43 . Memory (MB): peak = 620.641 ; gain = 440.266
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:46 . Memory (MB): peak = 619.043 ; gain = 443.262
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:43 . Memory (MB): peak = 620.641 ; gain = 440.266
+Finished Parallel Reinference  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:46 . Memory (MB): peak = 619.043 ; gain = 443.262
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
+WARNING: [Synth 8-3332] Sequential element (\Hour10_Count_inst/Enable_Out_reg ) is unused and will be removed from module Digitaluhr.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3332] Sequential element (\Hour10_Count_inst/count_int_reg[3] ) is unused and will be removed from module Digitaluhr.
 WARNING: [Synth 8-3332] Sequential element (\Hour10_Count_inst/count_int_reg[2] ) is unused and will be removed from module Digitaluhr.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:44 . Memory (MB): peak = 620.641 ; gain = 440.266
+Finished Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:48 . Memory (MB): peak = 619.043 ; gain = 443.262
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:44 . Memory (MB): peak = 620.641 ; gain = 440.266
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:48 . Memory (MB): peak = 619.043 ; gain = 443.262
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:44 . Memory (MB): peak = 620.641 ; gain = 440.266
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:48 . Memory (MB): peak = 619.043 ; gain = 443.262
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -246,61 +254,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:01:01 . Memory (MB): peak = 620.641 ; gain = 440.266
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:01:10 . Memory (MB): peak = 619.043 ; gain = 443.262
 ---------------------------------------------------------------------------------
-Found timing loop:
-     0: i_4/i_8/O (GATE_2_8_AND)
-     1: i_4/i_8/I0 (GATE_2_8_AND)
-     2: i_4/i_81/O (INV)
-     3: i_4/i_81/I (INV)
-     4: i_4/i_8/O (GATE_2_8_AND)
-WARNING: [Synth 8-295] found timing loop. [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:63]
-Found timing loop:
-     0: i_4/i_8/O (GATE_2_8_AND)
-     1: i_4/i_8/I1 (GATE_2_8_AND)
-     2: i_4/i_114/O (BUF)
-     3: i_4/i_114/I (BUF)
-     4: i_4/i_113/O (GATE_2_7_NAND)
-     5: i_4/i_113/I0 (GATE_2_7_NAND)
-     6: i_4/i_10/O (GATE_2_8_AND)
-     7: i_4/i_10/I0 (GATE_2_8_AND)
-     8: i_4/i_9/O (GATE_2_6_XOR)
-     9: i_4/i_9/I0 (GATE_2_6_XOR)
-    10: i_4/i_8/O (GATE_2_8_AND)
-WARNING: [Synth 8-295] found timing loop. [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:63]
-Found timing loop:
-     0: i_4/i_10/O (GATE_2_8_AND)
-     1: i_4/i_10/I0 (GATE_2_8_AND)
-     2: i_4/i_9/O (GATE_2_6_XOR)
-     3: i_4/i_9/I0 (GATE_2_6_XOR)
-     4: i_4/i_8/O (GATE_2_8_AND)
-     5: i_4/i_8/I1 (GATE_2_8_AND)
-     6: i_4/i_114/O (BUF)
-     7: i_4/i_114/I (BUF)
-     8: i_4/i_113/O (GATE_2_7_NAND)
-     9: i_4/i_113/I0 (GATE_2_7_NAND)
-    10: i_4/i_10/O (GATE_2_8_AND)
-WARNING: [Synth 8-295] found timing loop. [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:63]
-Found timing loop:
-     0: i_4/i_114/O (BUF)
-     1: i_4/i_114/I (BUF)
-     2: i_4/i_113/O (GATE_2_7_NAND)
-     3: i_4/i_113/I0 (GATE_2_7_NAND)
-     4: i_4/i_10/O (GATE_2_8_AND)
-     5: i_4/i_10/I1 (GATE_2_8_AND)
-     6: i_4/i_114/O (BUF)
-WARNING: [Synth 8-295] found timing loop. [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:63]
-Found timing loop:
-     0: i_4/i_8/O (GATE_2_8_AND)
-     1: i_4/i_8/I1 (GATE_2_8_AND)
-     2: i_4/i_114/O (BUF)
-     3: i_4/i_114/I (BUF)
-     4: i_4/i_113/O (GATE_2_7_NAND)
-     5: i_4/i_113/I1 (GATE_2_7_NAND)
-     6: i_4/i_8/O (GATE_2_8_AND)
-WARNING: [Synth 8-295] found timing loop. [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:63]
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:01:01 . Memory (MB): peak = 620.641 ; gain = 440.266
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:10 . Memory (MB): peak = 619.043 ; gain = 443.262
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -311,77 +268,8 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-Found timing loop:
-     0: i_8/O (LUT2)
-     1: i_8/I1 (LUT2)
-     2: i_8/O (LUT2)
-WARNING: [Synth 8-295] found timing loop. [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:34]
-Found timing loop:
-     0: i_8/O (LUT2)
-     1: i_8/I1 (LUT2)
-     2: i_8/O (LUT2)
-WARNING: [Synth 8-295] found timing loop. [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:34]
-Found timing loop:
-     0: i_18/O (LUT4)
-     1: i_18/I3 (LUT4)
-     2: i_8/O (LUT2)
-     3: i_8/I1 (LUT2)
-     4: i_8/O (LUT2)
-WARNING: [Synth 8-295] found timing loop. [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:34]
-Found timing loop:
-     0: i_18/O (LUT4)
-     1: i_18/I3 (LUT4)
-     2: i_8/O (LUT2)
-     3: i_8/I1 (LUT2)
-     4: i_8/O (LUT2)
-WARNING: [Synth 8-295] found timing loop. [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:34]
-Found timing loop:
-     0: i_18/O (LUT4)
-     1: i_18/I3 (LUT4)
-     2: i_8/O (LUT2)
-     3: i_8/I1 (LUT2)
-     4: i_8/O (LUT2)
-WARNING: [Synth 8-295] found timing loop. [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:34]
-Found timing loop:
-     0: i_8/O (LUT2)
-     1: i_8/I1 (LUT2)
-     2: i_8/O (LUT2)
-WARNING: [Synth 8-295] found timing loop. [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:34]
-Found timing loop:
-     0: i_24/O (LUT4)
-     1: i_24/I3 (LUT4)
-     2: i_18/O (LUT4)
-     3: i_18/I3 (LUT4)
-     4: i_8/O (LUT2)
-     5: i_8/I1 (LUT2)
-     6: i_8/O (LUT2)
-WARNING: [Synth 8-295] found timing loop. [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:34]
-Found timing loop:
-     0: i_18/O (LUT4)
-     1: i_18/I3 (LUT4)
-     2: i_8/O (LUT2)
-     3: i_8/I1 (LUT2)
-     4: i_8/O (LUT2)
-WARNING: [Synth 8-295] found timing loop. [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:34]
-Found timing loop:
-     0: i_8/O (LUT2)
-     1: i_8/I1 (LUT2)
-     2: i_8/O (LUT2)
-WARNING: [Synth 8-295] found timing loop. [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:34]
-Found timing loop:
-     0: i_8/O (LUT2)
-     1: i_8/I1 (LUT2)
-     2: i_8/O (LUT2)
-WARNING: [Synth 8-295] found timing loop. [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:34]
-Found timing loop:
-     0: i_18/O (LUT3)
-     1: i_18/I2 (LUT3)
-     2: i_8/O (LUT2)
-     3: i_8/I1 (LUT2)
-     4: i_8/O (LUT2)
-WARNING: [Synth 8-295] found timing loop. [I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:34]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:01:02 . Memory (MB): peak = 620.641 ; gain = 440.266
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:01:10 . Memory (MB): peak = 619.043 ; gain = 443.262
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -399,7 +287,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:01:02 . Memory (MB): peak = 620.641 ; gain = 440.266
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:01:11 . Memory (MB): peak = 619.043 ; gain = 443.262
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -412,7 +300,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:01:02 . Memory (MB): peak = 620.641 ; gain = 440.266
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:01:11 . Memory (MB): peak = 619.043 ; gain = 443.262
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -424,13 +312,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:01:02 . Memory (MB): peak = 620.641 ; gain = 440.266
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:01:11 . Memory (MB): peak = 619.043 ; gain = 443.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:01:02 . Memory (MB): peak = 620.641 ; gain = 440.266
+Start Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:01:11 . Memory (MB): peak = 619.043 ; gain = 443.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:01:02 . Memory (MB): peak = 620.641 ; gain = 440.266
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:01:11 . Memory (MB): peak = 619.043 ; gain = 443.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -447,49 +335,52 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |     8|
-|3     |LUT1   |    36|
+|2     |CARRY4 |    16|
+|3     |LUT1   |    68|
 |4     |LUT2   |     8|
-|5     |LUT3   |     2|
-|6     |LUT4   |    20|
-|7     |LUT5   |    10|
-|8     |LUT6   |    47|
-|9     |FDCE   |    44|
-|10    |FDPE   |     8|
-|11    |FDRE   |     4|
-|12    |IBUF   |     2|
-|13    |OBUF   |    12|
+|5     |LUT3   |     3|
+|6     |LUT4   |    51|
+|7     |LUT5   |    36|
+|8     |LUT6   |    21|
+|9     |FDCE   |    70|
+|10    |FDPE   |    14|
+|11    |FDRE   |     5|
+|12    |LD     |     2|
+|13    |IBUF   |     2|
+|14    |OBUF   |    12|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+--------------------+-------------+------+
 |      |Instance            |Module       |Cells |
 +------+--------------------+-------------+------+
-|1     |top                 |             |   202|
-|2     |  Freq_Divider_inst |Freq_Divider |   120|
-|3     |  Hour10_Count_inst |Hour10_Count |     4|
-|4     |  Hour1_Count_inst  |Hour1_Count  |    19|
-|5     |  Min10_Count_inst  |Min10_Count  |    11|
-|6     |  Min1_Count_inst   |Min1_Count   |    11|
-|7     |  Sec_Count_inst    |Sec_Count    |    15|
+|1     |top                 |             |   309|
+|2     |  Decoder_7Seg_inst |Decoder_7Seg |   133|
+|3     |  Freq_Divider_inst |Freq_Divider |   112|
+|4     |  Hour10_Count_inst |Hour10_Count |     4|
+|5     |  Hour1_Count_inst  |Hour1_Count  |     8|
+|6     |  Min10_Count_inst  |Min10_Count  |    11|
+|7     |  Min1_Count_inst   |Min1_Count   |    11|
+|8     |  Sec_Count_inst    |Sec_Count    |    15|
 +------+--------------------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:01:02 . Memory (MB): peak = 620.641 ; gain = 440.266
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:01:11 . Memory (MB): peak = 619.043 ; gain = 443.262
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 620.641 ; gain = 85.266
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 620.641 ; gain = 440.266
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:47 . Memory (MB): peak = 619.043 ; gain = 88.199
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:01:12 . Memory (MB): peak = 619.043 ; gain = 443.262
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 2 instances were transformed.
+  LD => LDCE: 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-45 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
+48 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 620.641 ; gain = 410.727
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 620.641 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Jun 12 09:36:52 2018...
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:01:10 . Memory (MB): peak = 619.043 ; gain = 411.430
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.121 . Memory (MB): peak = 619.043 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 14 23:13:56 2018...

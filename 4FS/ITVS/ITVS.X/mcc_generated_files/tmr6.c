@@ -48,7 +48,7 @@
   Section: Included Files
 */
 
-#include <xc.h>
+#include "../input.h"
 #include "tmr6.h"
 
 /**
@@ -137,6 +137,7 @@ void TMR6_ISR(void)
 void TMR6_CallBack(void)
 {
     // Add your custom callback code here
+    out3 =  GetInput(3);
     // this code executes every TMR6_INTERRUPT_TICKER_FACTOR periods of TMR6
     if(TMR6_InterruptHandler)
     {

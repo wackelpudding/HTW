@@ -176,6 +176,8 @@ void TMR1_ISR(void)
 void TMR1_CallBack(void)
 {
     // Add your custom callback code here
+    
+    out0 =  GetInput(0);
     if(TMR1_InterruptHandler)
     {
         TMR1_InterruptHandler();

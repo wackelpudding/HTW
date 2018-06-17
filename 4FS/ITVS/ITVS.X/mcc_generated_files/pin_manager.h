@@ -115,6 +115,33 @@
 #define IN0_SetAnalogMode()      do { ANSELAbits.ANSA4 = 1; } while(0)
 #define IN0_SetDigitalMode()     do { ANSELAbits.ANSA4 = 0; } while(0)
 
+// get/set IN1 aliases
+#define IN1_TRIS                 TRISAbits.TRISA5
+#define IN1_LAT                  LATAbits.LATA5
+#define IN1_PORT                 PORTAbits.RA5
+#define IN1_ANS                  ANSELAbits.ANSA5
+#define IN1_SetHigh()            do { LATAbits.LATA5 = 1; } while(0)
+#define IN1_SetLow()             do { LATAbits.LATA5 = 0; } while(0)
+#define IN1_Toggle()             do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0)
+#define IN1_GetValue()           PORTAbits.RA5
+#define IN1_SetDigitalInput()    do { TRISAbits.TRISA5 = 1; } while(0)
+#define IN1_SetDigitalOutput()   do { TRISAbits.TRISA5 = 0; } while(0)
+#define IN1_SetAnalogMode()      do { ANSELAbits.ANSA5 = 1; } while(0)
+#define IN1_SetDigitalMode()     do { ANSELAbits.ANSA5 = 0; } while(0)
+
+// get/set IN2 aliases
+#define IN2_TRIS                 TRISAbits.TRISA6
+#define IN2_LAT                  LATAbits.LATA6
+#define IN2_PORT                 PORTAbits.RA6
+#define IN2_ANS                  ANSELAbits.ANSA6
+#define IN2_SetHigh()            do { LATAbits.LATA6 = 1; } while(0)
+#define IN2_SetLow()             do { LATAbits.LATA6 = 0; } while(0)
+#define IN2_Toggle()             do { LATAbits.LATA6 = ~LATAbits.LATA6; } while(0)
+#define IN2_GetValue()           PORTAbits.RA6
+#define IN2_SetDigitalInput()    do { TRISAbits.TRISA6 = 1; } while(0)
+#define IN2_SetDigitalOutput()   do { TRISAbits.TRISA6 = 0; } while(0)
+#define IN2_SetAnalogMode()      do { ANSELAbits.ANSA6 = 1; } while(0)
+#define IN2_SetDigitalMode()     do { ANSELAbits.ANSA6 = 0; } while(0)
 
 
 // get/set IN3 aliases

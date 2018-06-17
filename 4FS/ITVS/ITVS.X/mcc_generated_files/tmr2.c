@@ -48,8 +48,8 @@
   Section: Included Files
 */
 
-#include <xc.h>
 #include "tmr2.h"
+#include "../input.h"
 
 /**
   Section: Global Variables Definitions
@@ -137,6 +137,7 @@ void TMR2_ISR(void)
 void TMR2_CallBack(void)
 {
     // Add your custom callback code here
+    out1 =  GetInput(1);
     // this code executes every TMR2_INTERRUPT_TICKER_FACTOR periods of TMR2
     if(TMR2_InterruptHandler)
     {

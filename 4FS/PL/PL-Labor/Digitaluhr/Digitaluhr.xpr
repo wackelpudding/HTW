@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="I:/HTW/4. FS/PL-Labor/Digitaluhr/Digitaluhr.xpr">
+<Project Version="7" Minor="5" Path="C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="8e1f7cc52aed49c48b0b13f961ebed22"/>

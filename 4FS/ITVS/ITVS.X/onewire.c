@@ -92,7 +92,7 @@ uint8_t ow_read_byte (void)
     //send the skip rom command to the onewire bus
 void ow_skip_rom(void)
 {
-    ow_wr_byte(0xCC);
+    ow_write_byte(0xCC);
 }
 
 #endif

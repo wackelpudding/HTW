@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date             : Tue Jun 12 09:39:21 2018
-| Host             : DSK-G433-P09W7 running 64-bit Service Pack 1  (build 7601)
+| Date             : Thu Jun 14 23:16:22 2018
+| Host             : DESKTOP-QL5G02M running 64-bit major release  (build 9200)
 | Command          : report_power -file Digitaluhr_power_routed.rpt -pb Digitaluhr_power_summary_routed.pb
 | Design           : Digitaluhr
 | Device           : xc7z020clg484-1
@@ -30,9 +30,9 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 0.147  |
-| Dynamic (W)              | 0.023  |
-| Device Static (W)        | 0.124  |
+| Total On-Chip Power (W)  | 0.144  |
+| Dynamic (W)              | 0.021  |
+| Device Static (W)        | 0.123  |
 | Effective TJA (C/W)      | 11.5   |
 | Max Ambient (C)          | 83.3   |
 | Junction Temperature (C) | 26.7   |
@@ -50,15 +50,15 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      195 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      113 |     53200 |            0.21 |
-|   CARRY4       |    <0.001 |        8 |     13300 |            0.06 |
-|   Register     |    <0.001 |       56 |    106400 |            0.05 |
-|   Others       |     0.000 |        8 |       --- |             --- |
-| Signals        |    <0.001 |      132 |       --- |             --- |
-| I/O            |     0.021 |       14 |       200 |            7.00 |
-| Static Power   |     0.124 |          |           |                 |
-| Total          |     0.147 |          |           |                 |
+| Slice Logic    |     0.002 |      306 |       --- |             --- |
+|   LUT as Logic |     0.001 |      157 |     53200 |            0.30 |
+|   CARRY4       |    <0.001 |       16 |     13300 |            0.12 |
+|   Register     |    <0.001 |       91 |    106400 |            0.09 |
+|   Others       |     0.000 |       12 |       --- |             --- |
+| Signals        |     0.001 |      206 |       --- |             --- |
+| I/O            |     0.017 |       14 |       200 |            7.00 |
+| Static Power   |     0.123 |          |           |                 |
+| Total          |     0.144 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -68,9 +68,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.010 |       0.003 |      0.008 |
-| Vccaux    |       1.800 |     0.020 |       0.001 |      0.019 |
-| Vcco33    |       3.300 |     0.007 |       0.006 |      0.001 |
+| Vccint    |       1.000 |     0.011 |       0.004 |      0.008 |
+| Vccaux    |       1.800 |     0.019 |       0.001 |      0.019 |
+| Vcco33    |       3.300 |     0.006 |       0.005 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.001 |       0.000 |      0.001 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -144,7 +144,8 @@ Table of Contents
 +---------------------+-----------+
 | Name                | Power (W) |
 +---------------------+-----------+
-| Digitaluhr          |     0.023 |
+| Digitaluhr          |     0.021 |
+|   Decoder_7Seg_inst |     0.002 |
 |   Freq_Divider_inst |     0.002 |
 |   Hour10_Count_inst |    <0.001 |
 |   Hour1_Count_inst  |    <0.001 |
