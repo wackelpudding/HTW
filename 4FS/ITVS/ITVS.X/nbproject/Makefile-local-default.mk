@@ -14,16 +14,25 @@
 # You can invoke make with the values of the macros:
 # $ makeMP_CC="/opt/microchip/mplabc30/v3.30c/bin/pic30-gcc" ...  
 #
+<<<<<<< HEAD
 SHELL=cmd.exe
 PATH_TO_IDE_BIN=C:/Program Files (x86)/Microchip/MPLABX/v4.20/mplab_platform/platform/../mplab_ide/modules/../../bin/
 # Adding MPLAB X bin directory to path.
 PATH:=C:/Program Files (x86)/Microchip/MPLABX/v4.20/mplab_platform/platform/../mplab_ide/modules/../../bin/:$(PATH)
 # Path to java used to run MPLAB X when this makefile was created
 MP_JAVA_PATH="C:\Program Files (x86)\Microchip\MPLABX\v4.20\sys\java\jre1.8.0_144/bin/"
+=======
+PATH_TO_IDE_BIN=/Applications/microchip/mplabx/v4.20/mplab_platform/platform/../mplab_ide/modules/../../bin/
+# Adding MPLAB X bin directory to path.
+PATH:=/Applications/microchip/mplabx/v4.20/mplab_platform/platform/../mplab_ide/modules/../../bin/:$(PATH)
+# Path to java used to run MPLAB X when this makefile was created
+MP_JAVA_PATH="/Applications/microchip/mplabx/v4.20/sys/java/jre1.8.0_144.jre/Contents/Home/bin/"
+>>>>>>> 459773a76ed5ea1895aa3a21f36d42c2e7108700
 OS_CURRENT="$(shell uname -s)"
 MP_CC="C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe"
 # MP_CPPC is not defined
 # MP_BC is not defined
+<<<<<<< HEAD
 MP_AS="C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe"
 MP_LD="C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe"
 MP_AR="C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe"
@@ -34,4 +43,16 @@ MP_CC_DIR="C:\Program Files (x86)\Microchip\xc8\v1.45\bin"
 MP_AS_DIR="C:\Program Files (x86)\Microchip\xc8\v1.45\bin"
 MP_LD_DIR="C:\Program Files (x86)\Microchip\xc8\v1.45\bin"
 MP_AR_DIR="C:\Program Files (x86)\Microchip\xc8\v1.45\bin"
+=======
+MP_AS="/Applications/microchip/xc8/v1.45/bin/xc8"
+MP_LD="/Applications/microchip/xc8/v1.45/bin/xc8"
+MP_AR="/Applications/microchip/xc8/v1.45/bin/xc8"
+DEP_GEN=${MP_JAVA_PATH}java -jar "/Applications/microchip/mplabx/v4.20/mplab_platform/platform/../mplab_ide/modules/../../bin/extractobjectdependencies.jar"
+MP_CC_DIR="/Applications/microchip/xc8/v1.45/bin"
+# MP_CPPC_DIR is not defined
+# MP_BC_DIR is not defined
+MP_AS_DIR="/Applications/microchip/xc8/v1.45/bin"
+MP_LD_DIR="/Applications/microchip/xc8/v1.45/bin"
+MP_AR_DIR="/Applications/microchip/xc8/v1.45/bin"
+>>>>>>> 459773a76ed5ea1895aa3a21f36d42c2e7108700
 # MP_BC_DIR is not defined
