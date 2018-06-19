@@ -2,7 +2,7 @@
 #define ONEWIRE_H
 #include "mcc_generated_files/mcc.h"
 
-unsigned char ds18x20 [9];
+unsigned char SENSOR [9];
 
 
 unsigned char ow_master_reset (void)

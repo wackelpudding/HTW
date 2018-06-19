@@ -15,7 +15,7 @@ extern "C" {
 #endif
 
 /*** extern *******************************************************************/
-extern unsigned char ds18x20 [9];
+extern unsigned char SENSOR [9];
 /*** prototypes ***************************************************************/
 unsigned char ow_master_reset (void);
 unsigned char ow_read_bit (void);

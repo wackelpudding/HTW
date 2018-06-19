@@ -25,7 +25,8 @@ void send_string(const char *x);
 
 float getTemp(void);
 
-unsigned char SENSOR[9];
+extern unsigned char SENSOR[9];
+
 bool out0 = false;
 bool out1 = false;
 bool out2 = false;
