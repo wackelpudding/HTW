@@ -140,8 +140,11 @@ void TMR0_ISR(void)
 void TMR0_CallBack(void)
 {
     // Add your custom callback code here
-    
+    INTERRUPT_PeripheralInterruptDisable();
+    INTERRUPT_GlobalInterruptDisable();
     float temp = getTemp();
+    INTERRUPT_PeripheralInterruptEnable();
+    INTERRUPT_GlobalInterruptEnable();
     
     printf("Die aktuelle Temperatur ist %f.\r\n",temp);
 

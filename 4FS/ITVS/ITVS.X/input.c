@@ -5,7 +5,7 @@
 #include "mcc_generated_files/eusart.h"
 
 
-char data;
+extern unsigned char SENSOR[9];
     
 //Sendet einen String an EUSART
 void send_string(const char *x){
