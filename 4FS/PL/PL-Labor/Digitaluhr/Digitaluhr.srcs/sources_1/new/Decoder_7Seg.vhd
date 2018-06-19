@@ -91,38 +91,44 @@ frequency_divider: process (Clock,Reset)
     end if;
   end process;
   
-Bounter: process (Enable_1kHz, counter)
+Bounter: process (Enable_1kHz, clock, reset)
     begin
-    if (Enable_1kHz = '1') then
-        if (counter = "11") then
-            counter <= "00";
-        else
-            counter <= counter + 1;
-        end if;
+    if (reset='1') then
+        counter <= "00";
+    elsif (clock='1' and clock'event) then
+        if (Enable_1kHz = '1') then
+            if (counter = "11") then
+                counter <= "00";
+            else
+                counter <= counter + 1;
+            end if;
+     end if;
      end if;
 end process;
     
-multiplexer: process (counter)
-    begin
-    CASE counter IS
-        WHEN "00" => 
-            Dev_Select <= "1110";
-            BCD_int    <= BCD_0;
-            DP         <= Dec_Point(0);
-        WHEN "01" => 
-            Dev_Select <= "1101";
-            BCD_int    <= BCD_1;
-            DP         <= Dec_Point(1);
-        WHEN "10" => 
-            Dev_Select <= "1011";
-            BCD_int    <= BCD_2;
-            DP         <= Dec_Point(2);
-        WHEN "11" => 
-            Dev_Select <= "0111";
-            BCD_int    <= BCD_3;
-            DP         <= Dec_Point(3);
-        WHEN OTHERS => NULL;
-    END CASE;
+multiplexer: process (counter, clock, reset)
+begin
+    if (clock='1' and clock'event) then
+        CASE counter IS
+            WHEN "00" => 
+                Dev_Select <= "1110";
+                BCD_int    <= BCD_0;
+                DP         <= Dec_Point(0);
+            WHEN "01" => 
+                Dev_Select <= "1101";
+                BCD_int    <= BCD_1;
+                DP         <= Dec_Point(1);
+            WHEN "10" => 
+                Dev_Select <= "1011";
+                BCD_int    <= BCD_2;
+                DP         <= Dec_Point(2);
+            WHEN "11" => 
+                Dev_Select <= "0111";
+                BCD_int    <= BCD_3;
+                DP         <= Dec_Point(3);
+            WHEN OTHERS => NULL;
+        END CASE;
+    end if;
 end process;
 
 

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1529010847">
-  <File Type="OPT-DCP" Name="Digitaluhr_opt.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1529389731">
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="OPT-DCP" Name="Digitaluhr_opt.dcp"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
-  <File Type="PWROPT-DCP" Name="Digitaluhr_pwropt.dcp"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
   <File Type="ROUTE-DCP" Name="Digitaluhr_routed.dcp"/>
   <File Type="PA-TCL" Name="Digitaluhr.tcl"/>
-  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="PWROPT-DCP" Name="Digitaluhr_pwropt.dcp"/>
   <File Type="OPT-DRC" Name="Digitaluhr_drc_opted.rpt"/>
   <File Type="PWROPT-DRC" Name="Digitaluhr_drc_pwropted.rpt"/>
   <File Type="OPT-HWDEF" Name="Digitaluhr.hwdef"/>
@@ -20,8 +20,8 @@
   <File Type="PLACE-PRE-SIMILARITY" Name="Digitaluhr_incremental_reuse_pre_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="Digitaluhr_postplace_pwropt.dcp"/>
   <File Type="PHYSOPT-DCP" Name="Digitaluhr_physopt.dcp"/>
-  <File Type="RDI-RDI" Name="Digitaluhr.vdi"/>
   <File Type="PHYSOPT-DRC" Name="Digitaluhr_drc_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="Digitaluhr.vdi"/>
   <File Type="ROUTE-DRC" Name="Digitaluhr_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="Digitaluhr_drc_routed.pb"/>
   <File Type="ROUTE-PWR" Name="Digitaluhr_power_routed.rpt"/>

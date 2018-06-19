@@ -2,8 +2,8 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Thu Jun 14 23:12:38 2018
-# Process ID: 2824
+# Start of session at: Tue Jun 19 08:28:52 2018
+# Process ID: 2072
 # Log file: C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.runs/synth_1/Digitaluhr.vds
 # Journal file: C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -13,7 +13,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 261.648 ; gain = 85.867
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 262.102 ; gain = 86.172
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Digitaluhr' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:41]
 INFO: [Synth 8-3491] module 'Min1_Count' declared at 'C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Min1_Count.vhd:34' bound to instance 'Min1_Count_inst' of component 'Min1_Count' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:117]
@@ -33,19 +33,14 @@ INFO: [Synth 8-638] synthesizing module 'Sec_Count' [C:/Users/Ricardo/git/HTW/4F
 INFO: [Synth 8-256] done synthesizing module 'Sec_Count' (5#1) [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Sec_Count.vhd:42]
 INFO: [Synth 8-3491] module 'Decoder_7Seg' declared at 'C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:34' bound to instance 'Decoder_7Seg_inst' of component 'Decoder_7Seg' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:158]
 INFO: [Synth 8-638] synthesizing module 'Decoder_7Seg' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:48]
-INFO: [Synth 8-226] default block is never used [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:107]
-WARNING: [Synth 8-614] signal 'BCD_0' is read in the process but is not in the sensitivity list [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:105]
-WARNING: [Synth 8-614] signal 'Dec_Point' is read in the process but is not in the sensitivity list [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:105]
-WARNING: [Synth 8-614] signal 'BCD_1' is read in the process but is not in the sensitivity list [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:105]
-WARNING: [Synth 8-614] signal 'BCD_2' is read in the process but is not in the sensitivity list [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:105]
-WARNING: [Synth 8-614] signal 'BCD_3' is read in the process but is not in the sensitivity list [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:105]
+INFO: [Synth 8-226] default block is never used [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:112]
 INFO: [Synth 8-256] done synthesizing module 'Decoder_7Seg' (6#1) [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:48]
 INFO: [Synth 8-3491] module 'Freq_Divider' declared at 'C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Freq_Divider.vhd:34' bound to instance 'Freq_Divider_inst' of component 'Freq_Divider' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:173]
 INFO: [Synth 8-638] synthesizing module 'Freq_Divider' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Freq_Divider.vhd:40]
 INFO: [Synth 8-256] done synthesizing module 'Freq_Divider' (7#1) [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Freq_Divider.vhd:40]
 INFO: [Synth 8-256] done synthesizing module 'Digitaluhr' (8#1) [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Digitaluhr.vhd:41]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 296.902 ; gain = 121.121
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 296.391 ; gain = 120.461
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -55,7 +50,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 296.902 ; gain = 121.121
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 296.391 ; gain = 120.461
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -71,22 +66,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 619.043 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 618.500 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:42 . Memory (MB): peak = 619.043 ; gain = 443.262
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 618.500 ; gain = 442.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:42 . Memory (MB): peak = 619.043 ; gain = 443.262
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 618.500 ; gain = 442.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:43 . Memory (MB): peak = 619.043 ; gain = 443.262
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 618.500 ; gain = 442.570
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "Enable_Out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "Enable_Out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -96,9 +91,8 @@ INFO: [Synth 8-5545] ROM "freq_counter" won't be mapped to RAM because address s
 INFO: [Synth 8-5545] ROM "Enable_1kHz" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "freq_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Enable_Out" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
-WARNING: [Synth 8-327] inferring latch for variable 'counter_reg' [C:/Users/Ricardo/git/HTW/4FS/PL/PL-Labor/Digitaluhr/Digitaluhr.srcs/sources_1/new/Decoder_7Seg.vhd:97]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:44 . Memory (MB): peak = 619.043 ; gain = 443.262
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 618.500 ; gain = 442.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -118,8 +112,9 @@ Detailed RTL Component Info :
 +---Registers : 
 	               32 Bit    Registers := 2     
 	                6 Bit    Registers := 1     
-	                4 Bit    Registers := 4     
-	                1 Bit    Registers := 7     
+	                4 Bit    Registers := 6     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
 +---Muxes : 
 	   2 Input      4 Bit        Muxes := 4     
 	   4 Input      4 Bit        Muxes := 2     
@@ -188,7 +183,9 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
 	   4 Input      4 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 1     
@@ -212,7 +209,7 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:45 . Memory (MB): peak = 619.043 ; gain = 443.262
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 618.500 ; gain = 442.570
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -221,9 +218,9 @@ INFO: [Synth 8-5545] ROM "Enable_1kHz" won't be mapped to RAM because address si
 INFO: [Synth 8-5545] ROM "freq_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "Enable_Out" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:46 . Memory (MB): peak = 619.043 ; gain = 443.262
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 618.500 ; gain = 442.570
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:46 . Memory (MB): peak = 619.043 ; gain = 443.262
+Finished Parallel Reinference  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 618.500 ; gain = 442.570
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -237,16 +234,16 @@ Start Area Optimization
 WARNING: [Synth 8-3332] Sequential element (\Hour10_Count_inst/count_int_reg[3] ) is unused and will be removed from module Digitaluhr.
 WARNING: [Synth 8-3332] Sequential element (\Hour10_Count_inst/count_int_reg[2] ) is unused and will be removed from module Digitaluhr.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:48 . Memory (MB): peak = 619.043 ; gain = 443.262
+Finished Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 618.500 ; gain = 442.570
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:48 . Memory (MB): peak = 619.043 ; gain = 443.262
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 618.500 ; gain = 442.570
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:48 . Memory (MB): peak = 619.043 ; gain = 443.262
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 618.500 ; gain = 442.570
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -254,10 +251,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:01:10 . Memory (MB): peak = 619.043 ; gain = 443.262
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 618.500 ; gain = 442.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:10 . Memory (MB): peak = 619.043 ; gain = 443.262
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 618.500 ; gain = 442.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -269,7 +266,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:01:10 . Memory (MB): peak = 619.043 ; gain = 443.262
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 618.500 ; gain = 442.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -287,7 +284,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:01:11 . Memory (MB): peak = 619.043 ; gain = 443.262
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 618.500 ; gain = 442.570
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -300,7 +297,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:01:11 . Memory (MB): peak = 619.043 ; gain = 443.262
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 618.500 ; gain = 442.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -312,13 +309,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:01:11 . Memory (MB): peak = 619.043 ; gain = 443.262
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 618.500 ; gain = 442.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:01:11 . Memory (MB): peak = 619.043 ; gain = 443.262
+Start Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 618.500 ; gain = 442.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:01:11 . Memory (MB): peak = 619.043 ; gain = 443.262
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 618.500 ; gain = 442.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -336,51 +333,49 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |    16|
-|3     |LUT1   |    68|
-|4     |LUT2   |     8|
-|5     |LUT3   |     3|
-|6     |LUT4   |    51|
-|7     |LUT5   |    36|
-|8     |LUT6   |    21|
-|9     |FDCE   |    70|
-|10    |FDPE   |    14|
-|11    |FDRE   |     5|
-|12    |LD     |     2|
-|13    |IBUF   |     2|
-|14    |OBUF   |    12|
+|3     |LUT1   |    67|
+|4     |LUT2   |    12|
+|5     |LUT3   |    65|
+|6     |LUT4   |    16|
+|7     |LUT5   |     2|
+|8     |LUT6   |    22|
+|9     |FDCE   |    78|
+|10    |FDPE   |     8|
+|11    |FDRE   |    14|
+|12    |IBUF   |     2|
+|13    |OBUF   |    12|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+--------------------+-------------+------+
 |      |Instance            |Module       |Cells |
 +------+--------------------+-------------+------+
-|1     |top                 |             |   309|
-|2     |  Decoder_7Seg_inst |Decoder_7Seg |   133|
-|3     |  Freq_Divider_inst |Freq_Divider |   112|
+|1     |top                 |             |   315|
+|2     |  Decoder_7Seg_inst |Decoder_7Seg |   139|
+|3     |  Freq_Divider_inst |Freq_Divider |   111|
 |4     |  Hour10_Count_inst |Hour10_Count |     4|
 |5     |  Hour1_Count_inst  |Hour1_Count  |     8|
 |6     |  Min10_Count_inst  |Min10_Count  |    11|
 |7     |  Min1_Count_inst   |Min1_Count   |    11|
-|8     |  Sec_Count_inst    |Sec_Count    |    15|
+|8     |  Sec_Count_inst    |Sec_Count    |    16|
 +------+--------------------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:01:11 . Memory (MB): peak = 619.043 ; gain = 443.262
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 618.500 ; gain = 442.570
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:47 . Memory (MB): peak = 619.043 ; gain = 88.199
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:01:12 . Memory (MB): peak = 619.043 ; gain = 443.262
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 618.500 ; gain = 88.336
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 618.500 ; gain = 442.570
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  LD => LDCE: 2 instances
+No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-48 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+48 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:01:10 . Memory (MB): peak = 619.043 ; gain = 411.430
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.121 . Memory (MB): peak = 619.043 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Jun 14 23:13:56 2018...
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 618.500 ; gain = 410.555
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 618.500 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 19 08:29:26 2018...

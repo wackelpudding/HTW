@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Thu Jun 14 23:15:05 2018
+| Date         : Tue Jun 19 08:29:53 2018
 | Host         : DESKTOP-QL5G02M running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Digitaluhr_control_sets_placed.rpt
 | Design       : Digitaluhr
@@ -22,8 +22,8 @@ Table of Contents
 +-------------------------------------------------------------------+-------+
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
-| Number of unique control sets                                     |     7 |
-| Minimum Number of register sites lost to control set restrictions |    21 |
+| Number of unique control sets                                     |     6 |
+| Minimum Number of register sites lost to control set restrictions |    20 |
 +-------------------------------------------------------------------+-------+
 
 
@@ -33,11 +33,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               7 |            5 |
-| No           | No                    | Yes                    |              64 |           16 |
+| No           | No                    | No                     |              14 |            7 |
+| No           | No                    | Yes                    |              66 |           14 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              20 |            8 |
+| Yes          | No                    | Yes                    |              20 |            7 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -45,16 +45,15 @@ Table of Contents
 3. Detailed Control Set Information
 -----------------------------------
 
-+----------------------------------------+---------------------------------------+------------------+------------------+----------------+
-|              Clock Signal              |             Enable Signal             | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+----------------------------------------+---------------------------------------+------------------+------------------+----------------+
-|  Decoder_7Seg_inst/Enable_1kHz_reg_n_0 |                                       |                  |                1 |              2 |
-|  Clock_IBUF_BUFG                       | Sec_Count_inst/E[0]                   | Reset_IBUF       |                1 |              4 |
-|  Clock_IBUF_BUFG                       | Min10_Count_inst/E[0]                 | Reset_IBUF       |                2 |              4 |
-|  Clock_IBUF_BUFG                       |                                       |                  |                4 |              5 |
-|  Clock_IBUF_BUFG                       | Min1_Count_inst/count_int_reg[3]_0[0] | Reset_IBUF       |                3 |              6 |
-|  Clock_IBUF_BUFG                       | Freq_Divider_inst/E[0]                | Reset_IBUF       |                2 |              6 |
-|  Clock_IBUF_BUFG                       |                                       | Reset_IBUF       |               16 |             64 |
-+----------------------------------------+---------------------------------------+------------------+------------------+----------------+
++------------------+---------------------------------------+------------------+------------------+----------------+
+|   Clock Signal   |             Enable Signal             | Set/Reset Signal | Slice Load Count | Bel Load Count |
++------------------+---------------------------------------+------------------+------------------+----------------+
+|  Clock_IBUF_BUFG | Sec_Count_inst/E[0]                   | Reset_IBUF       |                1 |              4 |
+|  Clock_IBUF_BUFG | Min10_Count_inst/E[0]                 | Reset_IBUF       |                1 |              4 |
+|  Clock_IBUF_BUFG | Min1_Count_inst/count_int_reg[3]_0[0] | Reset_IBUF       |                2 |              6 |
+|  Clock_IBUF_BUFG | Freq_Divider_inst/E[0]                | Reset_IBUF       |                3 |              6 |
+|  Clock_IBUF_BUFG |                                       |                  |                7 |             14 |
+|  Clock_IBUF_BUFG |                                       | Reset_IBUF       |               14 |             66 |
++------------------+---------------------------------------+------------------+------------------+----------------+
 
 
