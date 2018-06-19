@@ -2,12 +2,12 @@
 #define ONEWIRE_H
 #include "mcc_generated_files/mcc.h"
 
-uint8_t ds18x20 [9];
+unsigned char ds18x20 [9];
 
 
-uint8_t ow_master_reset (void)
+unsigned char ow_master_reset (void)
 {
-    uint8_t rec;
+    unsigned char rec;
     TEMP_LAT = 0;             // set the (I)O to low level
     TEMP_TRIS = 0;            // config the DQ-IO as output (-> low)
     __delay_us(490);        // delay of >480 us
@@ -18,7 +18,7 @@ uint8_t ow_master_reset (void)
     return (rec);
 }
 
-void ow_write_bit (uint8_t val)
+void ow_write_bit (unsigned char val)
 {
 	TEMP_LAT = 0;						// set the (I)O to low level
     TEMP_TRIS = 0;                    // config the DQ-IO as output (-> low)
@@ -40,9 +40,9 @@ One_Wire_Write_Byte
 This function will write a complete byte on the bus.
 *******************************************************************************/
 
-void ow_write_byte (uint8_t val)
+void ow_write_byte (unsigned char val)
 {
-    uint8_t i, mask = 1;
+    unsigned char i, mask = 1;
 
 	// write the byte by sending eight bits (LSB first)
     for (i=0; i<8; i++)
@@ -52,9 +52,9 @@ void ow_write_byte (uint8_t val)
     }
 }
 
-uint8_t ow_read_bit (void)
+unsigned char ow_read_bit (void)
 {
-    uint8_t rec;
+    unsigned char rec;
 
 									// perform a very short low impuls
     TEMP_TRIS = 0;					// config the DQ-IO as output (-> low)
@@ -73,9 +73,9 @@ One_Wire_Read_Byte
 This function will read a complete byte from the bus.
 *******************************************************************************/
 
-uint8_t ow_read_byte (void)
+unsigned char ow_read_byte (void)
 {
-    uint8_t value = 0 , i;
+    unsigned char value = 0 , i;
 
     // read the byte by reading eight bits (LSB first)
     for(i=0; i<8; i++)

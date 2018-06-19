@@ -46,6 +46,7 @@
 /*
                          Main application
  */
+
 void main(void)
 {
     // initialize the device
@@ -68,7 +69,10 @@ void main(void)
     
     // defining some global variables
     
-
+    
+    send_string("Wilkommen zum I/O-Board Interface.\r\n\n");
+    
+    
     while (1)
     {
         // Add your application code

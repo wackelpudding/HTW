@@ -137,7 +137,7 @@ void TMR6_ISR(void)
 void TMR6_CallBack(void)
 {
     // Add your custom callback code here
-    out3 =  GetInput(3);
+    out3 =  GetInput(3, out0, out1, out2, out3);
     // this code executes every TMR6_INTERRUPT_TICKER_FACTOR periods of TMR6
     if(TMR6_InterruptHandler)
     {

@@ -177,7 +177,7 @@ void TMR1_CallBack(void)
 {
     // Add your custom callback code here
     
-    out0 =  GetInput(0);
+    out0 =  GetInput(0, out0, out1, out2, out3);
     if(TMR1_InterruptHandler)
     {
         TMR1_InterruptHandler();

@@ -16,9 +16,16 @@ extern "C" {
 #include <stdio.h>
 #include "mcc_generated_files/pin_manager.h"
 #include <xc.h>
+#include "onewire.h"
+#include "mcc_generated_files/mcc.h"
 
-bool GetInput(int in); 
+bool GetInput(int in, bool out0, bool out1, bool out2, bool out3); 
 
+void send_string(const char *x);
+
+float getTemp(void);
+
+unsigned char SENSOR[9];
 bool out0 = false;
 bool out1 = false;
 bool out2 = false;

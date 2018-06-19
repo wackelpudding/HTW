@@ -15,13 +15,13 @@ extern "C" {
 #endif
 
 /*** extern *******************************************************************/
-extern uint8_t ds18x20 [9];
+extern unsigned char ds18x20 [9];
 /*** prototypes ***************************************************************/
-uint8_t ow_master_reset (void);
-uint8_t ow_read_bit (void);
-uint8_t ow_read_byte (void);
-void ow_write_bit (uint8_t val);
-void ow_write_byte (uint8_t val);
+unsigned char ow_master_reset (void);
+unsigned char ow_read_bit (void);
+unsigned char ow_read_byte (void);
+void ow_write_bit (unsigned char val);
+void ow_write_byte (unsigned char val);
 void ow_skip_rom (void);
 
 

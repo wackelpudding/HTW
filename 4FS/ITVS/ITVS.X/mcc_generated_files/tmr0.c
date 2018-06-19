@@ -115,7 +115,7 @@ void TMR0_ISR(void)
 
     TMR0 = timer0ReloadVal;
 
-    // callback function - called every 2003th pass
+    // callback function - called every 200th pass
     if (++CountCallBack >= TMR0_INTERRUPT_TICKER_FACTOR)
     {
         // ticker function call
@@ -140,6 +140,10 @@ void TMR0_ISR(void)
 void TMR0_CallBack(void)
 {
     // Add your custom callback code here
+    
+    float temp = getTemp();
+    
+    printf("Die aktuelle Temperatur ist %f.\r\n",temp);
 
     if(TMR0_InterruptHandler)
     {
