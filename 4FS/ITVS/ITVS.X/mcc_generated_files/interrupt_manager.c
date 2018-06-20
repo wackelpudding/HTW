@@ -66,18 +66,6 @@ void interrupt INTERRUPT_InterruptManager (void)
         {
             TMR1_ISR();
         } 
-        else if(PIE1bits.TMR2IE == 1 && PIR1bits.TMR2IF == 1)
-        {
-            TMR2_ISR();
-        } 
-        else if(PIE3bits.TMR4IE == 1 && PIR3bits.TMR4IF == 1)
-        {
-            TMR4_ISR();
-        } 
-        else if(PIE3bits.TMR6IE == 1 && PIR3bits.TMR6IF == 1)
-        {
-            TMR6_ISR();
-        } 
         else
         {
             //Unhandled Interrupt

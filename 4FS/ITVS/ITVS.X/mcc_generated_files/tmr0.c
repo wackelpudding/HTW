@@ -85,26 +85,26 @@ void TMR0_Initialize(void)
     TMR0_SetInterruptHandler(TMR0_DefaultInterruptHandler);
 }
 
-uint8_t TMR0_ReadTimer(void)
+/*uint8_t TMR0_ReadTimer(void)
 {
     uint8_t readVal;
 
     readVal = TMR0;
 
     return readVal;
-}
+}*/
 
-void TMR0_WriteTimer(uint8_t timerVal)
+/*void TMR0_WriteTimer(uint8_t timerVal)
 {
     // Write to the Timer0 register
     TMR0 = timerVal;
-}
+}*/
 
-void TMR0_Reload(void)
+/*void TMR0_Reload(void)
 {
     // Write to the Timer0 register
     TMR0 = timer0ReloadVal;
-}
+}*/
 
 void TMR0_ISR(void)
 {
@@ -140,14 +140,16 @@ void TMR0_ISR(void)
 void TMR0_CallBack(void)
 {
     // Add your custom callback code here
-    INTERRUPT_PeripheralInterruptDisable();
-    INTERRUPT_GlobalInterruptDisable();
-    float temp = getTemp();
-    INTERRUPT_PeripheralInterruptEnable();
-    INTERRUPT_GlobalInterruptEnable();
+        
+    float temp = (float) getTemp()/10;
+    uint8_t i = 0; 
     
-    printf("Die aktuelle Temperatur ist %f.\r\n",temp);
+    printf("%c[2K", 27);
+    printf("Die aktuelle Temperatur ist %+.1f.\r",temp);
 
+    
+    
+    
     if(TMR0_InterruptHandler)
     {
         TMR0_InterruptHandler();

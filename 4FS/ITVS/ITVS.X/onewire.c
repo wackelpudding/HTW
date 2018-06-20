@@ -1,5 +1,5 @@
-#ifndef ONEWIRE_H
-#define ONEWIRE_H
+#ifndef ONEWIRE_C
+#define ONEWIRE_C
 #include "mcc_generated_files/mcc.h"
 
 unsigned char SENSOR [9];

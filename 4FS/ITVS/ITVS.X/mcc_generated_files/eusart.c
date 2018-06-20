@@ -75,7 +75,7 @@ void EUSART_Initialize(void)
 
 }
 
-bool EUSART_is_tx_ready(void)
+/*bool EUSART_is_tx_ready(void)
 {
     return (bool)(PIR1bits.TXIF && TXSTAbits.TXEN);
 }
@@ -88,7 +88,7 @@ bool EUSART_is_rx_ready(void)
 bool EUSART_is_tx_done(void)
 {
     return TXSTAbits.TRMT;
-}
+}*/
 
 uint8_t EUSART_Read(void)
 {

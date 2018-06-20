@@ -44,25 +44,23 @@
     SOFTWARE.
 */
 
+
 #ifndef MCC_H
 #define	MCC_H
 #include <xc.h>
 #include "pin_manager.h"
-#include <stdint.h>
-#include <stdbool.h>
+//#include <stdint.h>
+//#include <stdbool.h>
 #include "interrupt_manager.h"
-#include "tmr6.h"
-#include "tmr4.h"
 #include "tmr1.h"
-#include "tmr2.h"
 #include "tmr0.h"
 #include "eusart.h"
 #include "../onewire.h"
 #include "../input.h"
+//einbinden der stdio lib für die Verwendung von printf()
+#include <stdio.h>
 
 #define _XTAL_FREQ  4000000
-
-
 
 
 /**

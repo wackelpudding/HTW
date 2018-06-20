@@ -67,7 +67,7 @@
   Section: Macro Declarations
 */
 
-#define EUSART_DataReady  (EUSART_is_rx_ready())
+//#define EUSART_DataReady  (EUSART_is_rx_ready())
 
 
 /**
@@ -143,7 +143,7 @@ void EUSART_Initialize(void);
     }
     </code>
 */
-bool EUSART_is_tx_ready(void);
+//bool EUSART_is_tx_ready(void);
 
 /**
   @Summary
@@ -191,7 +191,7 @@ bool EUSART_is_tx_ready(void);
     }
     </code>
 */
-bool EUSART_is_rx_ready(void);
+//bool EUSART_is_rx_ready(void);
 
 /**
   @Summary
@@ -238,7 +238,7 @@ bool EUSART_is_rx_ready(void);
     }
     </code>
 */
-bool EUSART_is_tx_done(void);
+//bool EUSART_is_tx_done(void);
 
 /**
   @Summary

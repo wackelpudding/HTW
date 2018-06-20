@@ -128,7 +128,7 @@ void TMR1_Initialize(void);
     // Do something else...
     </code>
 */
-void TMR1_StartTimer(void);
+//void TMR1_StartTimer(void);
 
 /**
   @Summary
@@ -160,7 +160,7 @@ void TMR1_StartTimer(void);
     TMR1_StopTimer();
     </code>
 */
-void TMR1_StopTimer(void);
+//void TMR1_StopTimer(void);
 
 /**
   @Summary
@@ -195,7 +195,7 @@ void TMR1_StopTimer(void);
     }
     </code>
 */
-uint16_t TMR1_ReadTimer(void);
+//uint16_t TMR1_ReadTimer(void);
 
 /**
   @Summary
@@ -270,7 +270,7 @@ void TMR1_WriteTimer(uint16_t timerVal);
     }
     </code>
 */
-void TMR1_Reload(void);
+//void TMR1_Reload(void);
 
 /**
   @Summary
@@ -309,7 +309,7 @@ void TMR1_Reload(void);
     yVal = TMR1_ReadTimer();
     </code>
 */
-void TMR1_StartSinglePulseAcquisition(void);
+//void TMR1_StartSinglePulseAcquisition(void);
 
 /**
   @Summary
@@ -348,7 +348,7 @@ void TMR1_StartSinglePulseAcquisition(void);
     yVal = TMR1_ReadTimer();
     </code>
 */
-uint8_t TMR1_CheckGateValueStatus(void);
+//uint8_t TMR1_CheckGateValueStatus(void);
 
 /**
   @Summary

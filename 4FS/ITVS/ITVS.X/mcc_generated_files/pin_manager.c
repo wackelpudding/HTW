@@ -154,12 +154,14 @@ void IOCBF0_ISR(void) {
             LED1_SetHigh();
             __delay_ms(300);
             K1_SetHigh();
-            send_string("Relais K1 ist nun aktiv\r\n");
+            printf("%c[2K", 27);
+            send_string("Relais K1 ist nun aktiv\r");
         }   else {
             LED1_SetLow();
-            __delay_ms(300);        
+            __delay_ms(300); 
             K1_SetLow();
-            send_string("Relais K1 ist nun inaktiv\r\n");
+            printf("%c[2K", 27);
+            send_string("Relais K1 ist nun inaktiv\r");
         }
 
     // Call the interrupt handler for the callback registered at runtime
@@ -196,13 +198,15 @@ void IOCBF1_ISR(void) {
         LED2_SetHigh();
         __delay_ms(300); 
         K2_SetHigh();
-        send_string("Relais K2 ist nun aktiv\r\n");
+        printf("%c[2K", 27);
+        send_string("Relais K2 ist nun aktiv\r");
     }   else {
 
         LED2_SetLow();
         __delay_ms(300);
         K2_SetLow();
-        send_string("Relais K2 ist nun inaktiv\r\n");
+        printf("%c[2K", 27);
+        send_string("Relais K2 ist nun inaktiv\r");
     }
 
     // Call the interrupt handler for the callback registered at runtime

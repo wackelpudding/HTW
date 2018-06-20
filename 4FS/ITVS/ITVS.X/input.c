@@ -1,8 +1,6 @@
-#ifndef INPUT
-#define INPUT
+#ifndef INPUT_C
+#define INPUT_C
 #include "input.h"
-#include <stdbool.h>
-#include "mcc_generated_files/eusart.h"
 
 
 extern unsigned char SENSOR[9];
@@ -14,35 +12,35 @@ void send_string(const char *x){
     }
 }
 
-float getTemp(void){
-    float temp;
+int getTemp(void){
+    int temp;
     unsigned int sum;
     unsigned char i;
     
     ow_master_reset();
     ow_skip_rom();
-    ow_write_byte(0x44);
+    //sende "Convert T" an den DS18B20
+    ow_write_byte(0x44); 
     __delay_us(800);
     ow_master_reset();
     ow_skip_rom();
-    ow_write_byte(0xBE);
+    //sende befehl "READ SCRATCHPAD" an DS18B20
+    ow_write_byte(0xBE); 
     
     
     //Antwort einlesen
     for (i=0; i<9; i++){
         SENSOR[i] = ow_read_byte();
     }
-    
-    if (SENSOR[1] == 0){   //positive Temp
-        temp = SENSOR[0]/5.0;
-    } else { //negative Temp
-        temp = (~SENSOR[0])+1; // 2er-Komplement
-        temp = (temp*(-1))/5; 
+    SENSOR[0] >>= 1;
+    if (SENSOR[1] & 0xF8) {                                 // Negativer Temperaturwert
+        SENSOR[0] ^= 0xFF;                                     // Einer-Komplement
+        SENSOR[0]++;                                           // inkrementieren
+        SENSOR[1] ^= 0xFF;                                     // Einer-Komplement
+        temp = -(((int) SENSOR[1] << 8) | (int) SENSOR[0]) * 10 / 16;
+    } else {
+        temp = (((int) SENSOR[1] << 8) | (int) SENSOR[0]) * 10 / 16;
     }
-    
-    sum = 0; // Fehler-Summe löschen
-    for(i=0; i<9; i++) sum = sum + SENSOR[i];
-    if(sum == 2295) temp = 555; 
            
     return temp;
 }
@@ -56,9 +54,11 @@ bool GetInput(int in, bool out0, bool out1, bool out2, bool out3){
             
             if (out0 != oldout){
                 if (out0){
-                    send_string("Der Input 0 ist nun HIGH.\r\n");
+                    printf("%c[2K", 27);
+                    send_string("Der Input 0 ist nun HIGH.\r");
                 } else {
-                    send_string("Der Input 0 ist nun LOW.\r\n");
+                    printf("%c[2K", 27);
+                    send_string("Der Input 0 ist nun LOW.\r");
                 }
             }
             return out0;
@@ -67,9 +67,11 @@ bool GetInput(int in, bool out0, bool out1, bool out2, bool out3){
             out1 = IN1_GetValue();
             if (out1 != oldout){
                 if (out1){
-                    send_string("Der Input 1 ist nun HIGH.\r\n");
+                    printf("%c[2K", 27);
+                    send_string("Der Input 1 ist nun HIGH.\r");
                 } else {
-                    send_string("Der Input 1 ist nun LOW.\r\n");
+                    printf("%c[2K", 27);
+                    send_string("Der Input 1 ist nun LOW.\r");
                 }
                 
             };            
@@ -79,9 +81,11 @@ bool GetInput(int in, bool out0, bool out1, bool out2, bool out3){
             out2 = IN2_GetValue();
             if (out2 != oldout){
                 if (out2){
-                    send_string("Der Input 2 ist nun HIGH.\r\n");
+                    printf("%c[2K", 27);
+                    send_string("Der Input 2 ist nun HIGH.\r");
                 } else {
-                    send_string("Der Input 2 ist nun LOW.\r\n");
+                    printf("%c[2K", 27);
+                    send_string("Der Input 2 ist nun LOW.\r");
                 }
             };
             return out2;
@@ -90,9 +94,11 @@ bool GetInput(int in, bool out0, bool out1, bool out2, bool out3){
             out3 = IN3_GetValue();
             if (out3 != oldout){
                 if (out3){
-                    send_string("Der Input 3 ist nun HIGH.\r\n");
+                    printf("%c[2K", 27);
+                    send_string("Der Input 3 ist nun HIGH.\r");
                 } else {
-                    send_string("Der Input 3 ist nun LOW.\r\n");
+                    printf("%c[2K", 27);
+                    send_string("Der Input 3 ist nun LOW.\r");
                 }
             }
             return out3;

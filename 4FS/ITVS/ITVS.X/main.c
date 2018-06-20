@@ -68,8 +68,8 @@ void main(void)
     //INTERRUPT_PeripheralInterruptDisable();
     
     // defining some global variables
-    
-    
+    send_string("\033[H");
+    send_string("\033[2J");
     send_string("Wilkommen zum I/O-Board Interface.\r\n\n");
     
     

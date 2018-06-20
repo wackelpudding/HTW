@@ -51,6 +51,7 @@
 #include <xc.h>
 #include "tmr1.h"
 
+
 /**
   Section: Global Variables Definitions
 */
@@ -90,19 +91,19 @@ void TMR1_Initialize(void)
     T1CON = 0x31;
 }
 
-void TMR1_StartTimer(void)
+/*void TMR1_StartTimer(void)
 {
     // Start the Timer by writing to TMRxON bit
     T1CONbits.TMR1ON = 1;
-}
+}*/
 
-void TMR1_StopTimer(void)
+/*void TMR1_StopTimer(void)
 {
     // Stop the Timer by writing to TMRxON bit
     T1CONbits.TMR1ON = 0;
-}
+}*/
 
-uint16_t TMR1_ReadTimer(void)
+/*uint16_t TMR1_ReadTimer(void)
 {
     uint16_t readVal;
     uint8_t readValHigh;
@@ -115,7 +116,7 @@ uint16_t TMR1_ReadTimer(void)
     readVal = ((uint16_t)readValHigh << 8) | readValLow;
 
     return readVal;
-}
+}*/
 
 void TMR1_WriteTimer(uint16_t timerVal)
 {
@@ -139,20 +140,20 @@ void TMR1_WriteTimer(uint16_t timerVal)
     }
 }
 
-void TMR1_Reload(void)
+/*void TMR1_Reload(void)
 {
     TMR1_WriteTimer(timer1ReloadVal);
-}
+}*/
 
-void TMR1_StartSinglePulseAcquisition(void)
+/*void TMR1_StartSinglePulseAcquisition(void)
 {
     T1GCONbits.T1GGO = 1;
-}
+}*/
 
-uint8_t TMR1_CheckGateValueStatus(void)
+/*uint8_t TMR1_CheckGateValueStatus(void)
 {
     return (T1GCONbits.T1GVAL);
-}
+}*/
 
 void TMR1_ISR(void)
 {
@@ -176,8 +177,12 @@ void TMR1_ISR(void)
 void TMR1_CallBack(void)
 {
     // Add your custom callback code here
-    
+
     out0 =  GetInput(0, out0, out1, out2, out3);
+    out1 =  GetInput(1, out0, out1, out2, out3);
+    out2 =  GetInput(2, out0, out1, out2, out3);
+    out3 =  GetInput(3, out0, out1, out2, out3);
+    
     if(TMR1_InterruptHandler)
     {
         TMR1_InterruptHandler();
