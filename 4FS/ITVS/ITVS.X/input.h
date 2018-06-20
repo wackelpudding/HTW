@@ -17,7 +17,7 @@ extern "C" {
 
 /*** prototypes ***************************************************************/    
 //Fragt einen der 4 Inputs an und
-// liefert den aktuellen Zustand des Inputs zurrück
+// liefert den aktuellen Zustand des Inputs zurück
 bool GetInput(int in, bool out0, bool out1, bool out2, bool out3); 
 
 //sendet einen string via EUSART_Write

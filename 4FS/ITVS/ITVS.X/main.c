@@ -68,9 +68,10 @@ void main(void)
     //INTERRUPT_PeripheralInterruptDisable();
     
     // defining some global variables
+    //clear screen & cursor zum seitenanfang
     send_string("\033[H");
     send_string("\033[2J");
-    send_string("Wilkommen zum I/O-Board Interface.\r\n\n");
+    send_string("Willkommen zum I/O-Board Interface.\r\n\n");
     
     
     while (1)
