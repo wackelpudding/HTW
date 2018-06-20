@@ -17,11 +17,14 @@ int getTemp(void){
     unsigned int sum;
     unsigned char i;
     
+    //OW Bus INIT
     ow_master_reset();
     ow_skip_rom();
     //sende "Convert T" an den DS18B20
     ow_write_byte(0x44); 
+    //warte mindestens 790 us für verarbeitung der Daten
     __delay_us(800);
+    //OW Bus INIT
     ow_master_reset();
     ow_skip_rom();
     //sende befehl "READ SCRATCHPAD" an DS18B20
@@ -30,76 +33,78 @@ int getTemp(void){
     
     //Antwort einlesen
     for (i=0; i<9; i++){
+        //Lese alle 9 Bytes vom OW Bus ein und speicher Sie im Array SENSOR
         SENSOR[i] = ow_read_byte();
     }
-    SENSOR[0] >>= 1;
-    if (SENSOR[1] & 0xF8) {                                 // Negativer Temperaturwert
-        SENSOR[0] ^= 0xFF;                                     // Einer-Komplement
-        SENSOR[0]++;                                           // inkrementieren
-        SENSOR[1] ^= 0xFF;                                     // Einer-Komplement
-        temp = -(((int) SENSOR[1] << 8) | (int) SENSOR[0]) * 10 / 16;
+    
+    //SENSOR[0] >>= 1;
+    if (SENSOR[1] & 0xF8) {           // Negativer Temperaturwert
+        SENSOR[0] ^= 0xFF;            // Einer-Komplement
+        SENSOR[0]++;                  // inkrementieren
+        SENSOR[1] ^= 0xFF;            // Einer-Komplement
+        //berechnung der Temperatur
+        temp = -(((int) SENSOR[1] << 8) | (int) SENSOR[0]) * 10 / 16; 
     } else {
+        //berechnung der Temperatur
         temp = (((int) SENSOR[1] << 8) | (int) SENSOR[0]) * 10 / 16;
     }
            
     return temp;
 }
 
+
+
 bool GetInput(int in, bool out0, bool out1, bool out2, bool out3){
+    //temp var
     bool oldout;
+    //switch case für die inputabfrage
     switch (in) {
         case 0: 
+            //alter zustand zwischenspeichern
             oldout = out0; 
+            //Input abfragen
             out0 = IN0_GetValue();
             
             if (out0 != oldout){
-                if (out0){
-                    printf("%c[2K", 27);
-                    send_string("Der Input 0 ist nun HIGH.\r");
-                } else {
-                    printf("%c[2K", 27);
-                    send_string("Der Input 0 ist nun LOW.\r");
-                }
+                printf("%c[2K", 27);
+                printf("Der Input 1 ist nun %s.\r", out0 ? "HIGH" : "LOW" );
             }
             return out0;
         case 1: 
+            //alter zustand zwischenspeichern
             oldout = out1; 
+            //Input abfragen
             out1 = IN1_GetValue();
+            
+            //checken ob der Zustand des Inputs sich geändert hat
             if (out1 != oldout){
-                if (out1){
-                    printf("%c[2K", 27);
-                    send_string("Der Input 1 ist nun HIGH.\r");
-                } else {
-                    printf("%c[2K", 27);
-                    send_string("Der Input 1 ist nun LOW.\r");
-                }
-                
+                printf("%c[2K", 27);
+                printf("Der Input 1 ist nun %s.\r", out1 ? "HIGH" : "LOW" );   
             };            
             return out1;
         case 2:
+            //alter zustand zwischenspeichern
             oldout = out2;
+            //Input abfragen
             out2 = IN2_GetValue();
+            
+            //checken ob der Zustand des Inputs sich geändert hat
             if (out2 != oldout){
-                if (out2){
-                    printf("%c[2K", 27);
-                    send_string("Der Input 2 ist nun HIGH.\r");
-                } else {
-                    printf("%c[2K", 27);
-                    send_string("Der Input 2 ist nun LOW.\r");
-                }
+                printf("%c[2K", 27);
+                printf("Der Input 1 ist nun %s.\r", out2 ? "HIGH" : "LOW" );
             };
             return out2;
         case 3:
+            //alter zustand zwischenspeichern
             oldout = out3;
+            //Input abfragen
             out3 = IN3_GetValue();
+            
+            
+            //checken ob der Zustand des Inputs sich geändert hat
             if (out3 != oldout){
-                if (out3){
-                    printf("%c[2K", 27);
-                    send_string("Der Input 3 ist nun HIGH.\r");
-                } else {
-                    printf("%c[2K", 27);
-                    send_string("Der Input 3 ist nun LOW.\r");
-                }
+                printf("%c[2K", 27);
+                printf("Der Input 1 ist nun %s.\r", out3 ? "HIGH" : "LOW" );
             }
             return out3;
         default: break;

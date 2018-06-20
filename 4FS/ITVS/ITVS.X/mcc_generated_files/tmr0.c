@@ -140,11 +140,15 @@ void TMR0_ISR(void)
 void TMR0_CallBack(void)
 {
     // Add your custom callback code here
-        
-    float temp = (float) getTemp()/10;
-    uint8_t i = 0; 
     
+    //die aktuelle Temperatur abfragen und als float umcasten
+    //dadurch kann man die Nachkommastelle einfach rausrechnen.
+    float temp = (float) getTemp()/10;
+    
+    //sende "clear line"
     printf("%c[2K", 27);
+    
+    //gib die aktuelle Temperatur aus, 1 Nachkommastelle
     printf("Die aktuelle Temperatur ist %+.1f.\r",temp);
 
     

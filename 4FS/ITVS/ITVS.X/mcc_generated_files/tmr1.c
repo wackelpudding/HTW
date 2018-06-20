@@ -178,6 +178,9 @@ void TMR1_CallBack(void)
 {
     // Add your custom callback code here
 
+    
+    //Frage alle 4 Inputs ab, speichere den aktuellen Zustand 
+    // in der passenden Variable
     out0 =  GetInput(0, out0, out1, out2, out3);
     out1 =  GetInput(1, out0, out1, out2, out3);
     out2 =  GetInput(2, out0, out1, out2, out3);
