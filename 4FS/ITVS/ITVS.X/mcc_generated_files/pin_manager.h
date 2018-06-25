@@ -157,6 +157,8 @@
 #define IN3_SetDigitalInput()    do { TRISAbits.TRISA7 = 1; } while(0)
 #define IN3_SetDigitalOutput()   do { TRISAbits.TRISA7 = 0; } while(0)
 
+
+/*
 // get/set TASTER1 aliases
 #define TASTER1_TRIS                 TRISBbits.TRISB0
 #define TASTER1_LAT                  LATBbits.LATB0
@@ -190,7 +192,7 @@
 #define TASTER2_ResetPullup()        do { WPUBbits.WPUB1 = 0; } while(0)
 #define TASTER2_SetAnalogMode()      do { ANSELBbits.ANSB1 = 1; } while(0)
 #define TASTER2_SetDigitalMode()     do { ANSELBbits.ANSB1 = 0; } while(0)
-
+*/
 // get/set LED1 aliases
 #define LED1_TRIS                 TRISCbits.TRISC3
 #define LED1_LAT                  LATCbits.LATC3

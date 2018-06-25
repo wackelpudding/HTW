@@ -187,9 +187,6 @@ void TMR1_CallBack(void)
     out3 =  GetInput(3, out0, out1, out2, out3);
     
                 
-    if (in1){
-        K2_PORT = out1; 
-    }
     
     if(TMR1_InterruptHandler)
     {
