@@ -149,8 +149,8 @@ void PIN_MANAGER_IOC(void)
 void IOCBF0_ISR(void) {
 
     // Add custom IOCBF0 code
-    
-    if (!LED1_GetValue()){
+    /**
+    if (!K1_GetValue()){
             LED1_SetHigh();
             __delay_ms(300);
             K1_SetHigh();
@@ -162,7 +162,7 @@ void IOCBF0_ISR(void) {
             K1_SetLow();
             printf("%c[2K", 27);
             send_string("Relais K1 ist nun inaktiv\r");
-        }
+    }*/
 
     // Call the interrupt handler for the callback registered at runtime
     if(IOCBF0_InterruptHandler)
@@ -193,21 +193,7 @@ void IOCBF0_DefaultInterruptHandler(void){
 void IOCBF1_ISR(void) {
 
     // Add custom IOCBF1 code
-   
-    if (!LED2_GetValue()){
-        LED2_SetHigh();
-        __delay_ms(300); 
-        K2_SetHigh();
-        printf("%c[2K", 27);
-        send_string("Relais K2 ist nun aktiv\r");
-    }   else {
 
-        LED2_SetLow();
-        __delay_ms(300);
-        K2_SetLow();
-        printf("%c[2K", 27);
-        send_string("Relais K2 ist nun inaktiv\r");
-    }
 
     // Call the interrupt handler for the callback registered at runtime
     if(IOCBF1_InterruptHandler)

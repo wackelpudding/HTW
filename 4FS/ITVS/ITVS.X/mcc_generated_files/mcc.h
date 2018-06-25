@@ -62,6 +62,10 @@
 
 #define _XTAL_FREQ  4000000
 
+bool in0 = false;
+bool in1 = false;
+bool in2 = false;
+bool in3 = false;
 
 /**
  * @Param

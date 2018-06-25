@@ -186,6 +186,11 @@ void TMR1_CallBack(void)
     out2 =  GetInput(2, out0, out1, out2, out3);
     out3 =  GetInput(3, out0, out1, out2, out3);
     
+                
+    if (in1){
+        K2_PORT = out1; 
+    }
+    
     if(TMR1_InterruptHandler)
     {
         TMR1_InterruptHandler();

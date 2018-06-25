@@ -149,7 +149,7 @@ void TMR0_CallBack(void)
     printf("%c[2K", 27);
     
     //gib die aktuelle Temperatur aus, 1 Nachkommastelle
-    printf("Die aktuelle Temperatur ist %+.1f.\r",temp);
+    printf("Die aktuelle Temperatur ist %+.1f Grad Celsius.\n\r",temp);
 
     
     
