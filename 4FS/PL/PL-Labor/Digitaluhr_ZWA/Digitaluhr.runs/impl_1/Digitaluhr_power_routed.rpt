@@ -1,7 +1,11 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+<<<<<<< HEAD
 | Date             : Tue Jun 26 08:38:06 2018
+=======
+| Date             : Tue Jun 19 09:31:29 2018
+>>>>>>> e8da86e9cd176b9e2736abcff44beaa767b934a1
 | Host             : DSK-G433-P09W7 running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file Digitaluhr_power_routed.rpt -pb Digitaluhr_power_summary_routed.pb
 | Design           : Digitaluhr
@@ -49,6 +53,7 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
+<<<<<<< HEAD
 | Clocks         |    <0.001 |        3 |       --- |             --- |
 | Slice Logic    |     0.001 |      322 |       --- |             --- |
 |   LUT as Logic |     0.001 |      143 |     53200 |            0.27 |
@@ -57,6 +62,16 @@ Table of Contents
 |   Others       |     0.000 |       13 |       --- |             --- |
 | Signals        |     0.001 |      207 |       --- |             --- |
 | I/O            |     0.020 |       16 |       200 |            8.00 |
+=======
+| Clocks         |     0.001 |        3 |       --- |             --- |
+| Slice Logic    |     0.001 |      318 |       --- |             --- |
+|   LUT as Logic |     0.001 |      141 |     53200 |            0.27 |
+|   CARRY4       |    <0.001 |       16 |     13300 |            0.12 |
+|   Register     |    <0.001 |      101 |    106400 |            0.09 |
+|   Others       |     0.000 |       13 |       --- |             --- |
+| Signals        |     0.001 |      206 |       --- |             --- |
+| I/O            |     0.020 |       14 |       200 |            7.00 |
+>>>>>>> e8da86e9cd176b9e2736abcff44beaa767b934a1
 | Static Power   |     0.124 |          |           |                 |
 | Total          |     0.147 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+

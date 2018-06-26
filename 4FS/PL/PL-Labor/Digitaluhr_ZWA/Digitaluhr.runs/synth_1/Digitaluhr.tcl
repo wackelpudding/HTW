@@ -4,6 +4,10 @@
 
 set_param xicom.use_bs_reader 1
 debug::add_scope template.lib 1
+<<<<<<< HEAD
+=======
+set_msg_config -id {Common-41} -limit 4294967295
+>>>>>>> e8da86e9cd176b9e2736abcff44beaa767b934a1
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 create_project -in_memory -part xc7z020clg484-1

@@ -40,7 +40,11 @@ end Freq_Divider;
 architecture Behavioral of Freq_Divider is
 
 --constant Divider : integer := 10;
+<<<<<<< HEAD
 constant Divider : integer := 50000;
+=======
+constant Divider : integer := 100000;
+>>>>>>> e8da86e9cd176b9e2736abcff44beaa767b934a1
 signal freq_counter: integer:= 10;
 
 begin

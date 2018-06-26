@@ -42,7 +42,11 @@ entity Decoder_7Seg is
            Dec_Point : in STD_LOGIC_VECTOR (3 downto 0);
            --output
            Seg_Driver : out STD_LOGIC_VECTOR (7 downto 0);
+<<<<<<< HEAD
            Dev_Select : out STD_LOGIC_VECTOR (5 downto 0));
+=======
+           Dev_Select : out STD_LOGIC_VECTOR (3 downto 0));
+>>>>>>> e8da86e9cd176b9e2736abcff44beaa767b934a1
 end Decoder_7Seg;
 
 architecture Behavioral of Decoder_7Seg is
@@ -110,6 +114,7 @@ begin
     if (clock='1' and clock'event) then
         CASE counter IS
             WHEN "00" => 
+<<<<<<< HEAD
                 Dev_Select <= "111110";
                 BCD_int    <= BCD_0;
                 DP         <= Dec_Point(0);
@@ -123,6 +128,21 @@ begin
                 DP         <= Dec_Point(2);
             WHEN "11" => 
                 Dev_Select <= "110111";
+=======
+                Dev_Select <= "1110";
+                BCD_int    <= BCD_0;
+                DP         <= Dec_Point(0);
+            WHEN "01" => 
+                Dev_Select <= "1101";
+                BCD_int    <= BCD_1;
+                DP         <= Dec_Point(1);
+            WHEN "10" => 
+                Dev_Select <= "1011";
+                BCD_int    <= BCD_2;
+                DP         <= Dec_Point(2);
+            WHEN "11" => 
+                Dev_Select <= "0111";
+>>>>>>> e8da86e9cd176b9e2736abcff44beaa767b934a1
                 BCD_int    <= BCD_3;
                 DP         <= Dec_Point(3);
             WHEN OTHERS => NULL;

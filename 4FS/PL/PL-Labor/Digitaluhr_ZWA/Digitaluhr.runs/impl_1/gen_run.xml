@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1529994843">
+=======
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1529393261">
+>>>>>>> e8da86e9cd176b9e2736abcff44beaa767b934a1
   <File Type="OPT-DCP" Name="Digitaluhr_opt.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>

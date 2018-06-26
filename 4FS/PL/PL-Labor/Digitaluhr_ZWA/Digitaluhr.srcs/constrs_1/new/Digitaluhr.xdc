@@ -25,8 +25,13 @@ set_property PACKAGE_PIN W12 [get_ports Selector_7Seg[0]];  # JB1
 set_property PACKAGE_PIN W11 [get_ports Selector_7Seg[1]];  # JB2
 set_property PACKAGE_PIN V10 [get_ports Selector_7Seg[2]];  # JB3
 set_property PACKAGE_PIN W8  [get_ports Selector_7Seg[3]];  # JB4
+<<<<<<< HEAD
 set_property PACKAGE_PIN V12 [get_ports Selector_7Seg[4]];  # JB7
 set_property PACKAGE_PIN W10 [get_ports Selector_7Seg[5]];  # JB8
+=======
+#set_property PACKAGE_PIN V12 [get_ports Selector_7Seg[4]];  # JB7
+#set_property PACKAGE_PIN W10 [get_ports Selector_7Seg[5]];  # JB8
+>>>>>>> e8da86e9cd176b9e2736abcff44beaa767b934a1
 #set_property PACKAGE_PIN V9 [get_ports myJB9];  # JB9
 #set_property PACKAGE_PIN V8 [get_ports myJB10];  # JB10
 

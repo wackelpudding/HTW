@@ -35,7 +35,11 @@ entity Digitaluhr is
     Port ( Clock : in STD_LOGIC;
            Reset : in STD_LOGIC;
            Driver_7Seg : out STD_LOGIC_VECTOR (7 downto 0);
+<<<<<<< HEAD
            Selector_7Seg : out STD_LOGIC_VECTOR (5 downto 0));
+=======
+           Selector_7Seg : out STD_LOGIC_VECTOR (3 downto 0));
+>>>>>>> e8da86e9cd176b9e2736abcff44beaa767b934a1
 end Digitaluhr;
 
 architecture Behavioral of Digitaluhr is
@@ -83,7 +87,11 @@ Component Decoder_7Seg is
            BCD_3 : in STD_LOGIC_VECTOR (3 downto 0);
            Dec_Point : in STD_LOGIC_VECTOR (3 downto 0);
            Seg_Driver : out STD_LOGIC_VECTOR (7 downto 0);
+<<<<<<< HEAD
            Dev_Select : out STD_LOGIC_VECTOR (5 downto 0));
+=======
+           Dev_Select : out STD_LOGIC_VECTOR (3 downto 0));
+>>>>>>> e8da86e9cd176b9e2736abcff44beaa767b934a1
 end Component Decoder_7Seg;
 
 COMPONENT Sec_Count is
