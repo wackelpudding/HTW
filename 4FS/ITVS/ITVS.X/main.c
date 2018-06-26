@@ -51,16 +51,13 @@ void main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
-
     // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
     // Use the following macros to:
 
     // Enable the Global Interrupts
     INTERRUPT_GlobalInterruptEnable();
-
     // Enable the Peripheral Interrupts
     INTERRUPT_PeripheralInterruptEnable();
-
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
 
@@ -90,15 +87,18 @@ void main(void)
         //lese ein einzelnes zeichen vom serial port ein.
         char console = EUSART_Read();
         
+        //Fallüberprüfung, je nachdem was eingelesen wurde.
         switch(console){
             case '1':
+                //Zeichen '1' eingegeben und Inputsteuerung deaktiviert.
                 if (!in0){
-                    if (!K1_GetValue() && !in0){
+                    //Relais ist aus. LED und Relais aktivieren, ausgabe.
+                    if (!K1_GetValue()){
                         LED1_SetHigh();
                         K1_SetHigh();
                         send_string("\033[2K");
                         send_string("Relais K1 ist nun aktiv\r\n");
-                    }   else {
+                    }   else { //relais ist an.
                         LED1_SetLow(); 
                         K1_SetLow();
                         send_string("\033[2K");
@@ -107,7 +107,9 @@ void main(void)
                 }
                 break;
             case '2':
+                //Zeichen '2' eingegeben und Inputsteuerung deaktiviert.
                 if (!in1){
+                    //Relais ist aus. LED und Relais aktivieren, ausgabe.
                     if (!K2_GetValue()){
                         LED2_SetHigh(); 
                         K2_SetHigh();
@@ -122,8 +124,11 @@ void main(void)
                 }
                 break;   
             case 'q':
+                //Inputsteuerung für input0 ein/aus mit ausgabe
                 in0 = !in0;
                 send_string("K1 Inputsteuerung: ");
+                K1_PORT = out0;
+                LED1_PORT = out0;
                 if (in0){
                     send_string("AN!\r\n");
                 }   else {
@@ -131,8 +136,11 @@ void main(void)
                 }
                 break;
             case 'w':
+                //Inputsteuerung für input1 ein/aus mit ausgabe
                 in1 = !in1;
                 send_string("K2 Inputsteuerung: ");
+                K2_PORT = out1;
+                LED2_PORT = out1;
                 if (in1){
                     send_string("AN!\r\n");
                 }   else {

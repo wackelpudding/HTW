@@ -127,13 +127,7 @@ void TMR0_ISR(void)
 
     // add your TMR0 interrupt custom code
     
-    INTERRUPT_PeripheralInterruptDisable();
-    INTERRUPT_GlobalInterruptDisable();
-    
-    
-    
-    INTERRUPT_PeripheralInterruptEnable();
-    INTERRUPT_GlobalInterruptEnable();
+
     
 }
 
