@@ -86,7 +86,7 @@ bool GetInput(int in, bool out0, bool out1, bool out2, bool out3){
             //checken ob der Zustand des Inputs sich geändert hat
             if (out1 != oldout){
                 printf("%c[2K", 27);
-                printf("Der Input 1 ist nun %s.", out1 ? "HIGH" : "LOW" );
+                printf("Der Input 2 ist nun %s.", out1 ? "HIGH" : "LOW" );
                 if (in1){
                     K2_PORT = out1;
                     LED2_PORT = out1;
@@ -105,7 +105,7 @@ bool GetInput(int in, bool out0, bool out1, bool out2, bool out3){
             //checken ob der Zustand des Inputs sich geändert hat
             if (out2 != oldout){
                 printf("%c[2K", 27);
-                printf("Der Input 1 ist nun %s.\r\n", out2 ? "HIGH" : "LOW" );
+                printf("Der Input 2 ist nun %s.\r\n", out2 ? "HIGH" : "LOW" );
             };
             return out2;
         case 3:
