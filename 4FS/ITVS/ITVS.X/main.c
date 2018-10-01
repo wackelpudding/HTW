@@ -19,25 +19,25 @@
 */
 
 /*
-    (c) 2018 Microchip Technology Inc. and its subsidiaries. 
-    
-    Subject to your compliance with these terms, you may use Microchip software and any 
-    derivatives exclusively with Microchip products. It is your responsibility to comply with third party 
-    license terms applicable to your use of third party software (including open source software) that 
+    (c) 2018 Microchip Technology Inc. and its subsidiaries.
+
+    Subject to your compliance with these terms, you may use Microchip software and any
+    derivatives exclusively with Microchip products. It is your responsibility to comply with third party
+    license terms applicable to your use of third party software (including open source software) that
     may accompany Microchip software.
-    
-    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER 
-    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY 
-    IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS 
+
+    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
+    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY
+    IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS
     FOR A PARTICULAR PURPOSE.
-    
-    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
-    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND 
-    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP 
-    HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO 
-    THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL 
-    CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT 
-    OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
+
+    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
+    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
+    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP
+    HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO
+    THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL
+    CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT
+    OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS
     SOFTWARE.
 */
 
@@ -63,14 +63,14 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-    
+
     // defining some global variables
-    //clear screen & cursor zum seitenanfang + Funktionsmenü
+    //clear screen & cursor zum seitenanfang + Funktionsmenï¿½
     send_string("\033[H");
     send_string("\033[2J");
     send_string("Willkommen zum I/O-Board Interface.\r\n\n");
     send_string("Der angeschlossene Temperatursensor\n\rwird alle 6 Sekunden abgefragt und\r\ngibt das Messergebnis auf der Konsole bekannt.\r\n");
-    send_string("##################################################\r\n");        
+    send_string("##################################################\r\n");
     send_string("Sie gibt folgende Funktionen bedienen:\r\n");
     send_string("(Tippen Sie auf die entsprechende Taste auf Ihrer Tastatur.)\r\n");
     send_string("1) Relais K1 schalten.\r\n");
@@ -78,16 +78,16 @@ void main(void)
     send_string("q) K1 durch Input0 schaltbar machen ein/aus.\r\n");
     send_string("w) K2 durch Input1 schaltbar machen ein/aus.\r\n");
     send_string("##################################################\r\n");
-    
-    
+
+
     while (1)
     {
         // Add your application code
-        
+
         //lese ein einzelnes zeichen vom serial port ein.
         char console = EUSART_Read();
-        
-        //Fallüberprüfung, je nachdem was eingelesen wurde.
+
+        //Fallueberpruefung, je nachdem was eingelesen wurde.
         switch(console){
             case '1':
                 //Zeichen '1' eingegeben und Inputsteuerung deaktiviert.
@@ -99,7 +99,7 @@ void main(void)
                         send_string("\033[2K");
                         send_string("Relais K1 ist nun aktiv\r\n");
                     }   else { //relais ist an.
-                        LED1_SetLow(); 
+                        LED1_SetLow();
                         K1_SetLow();
                         send_string("\033[2K");
                         send_string("Relais K1 ist nun inaktiv\r\n");
@@ -111,7 +111,7 @@ void main(void)
                 if (!in1){
                     //Relais ist aus. LED und Relais aktivieren, ausgabe.
                     if (!K2_GetValue()){
-                        LED2_SetHigh(); 
+                        LED2_SetHigh();
                         K2_SetHigh();
                         send_string("\033[2K");
                         send_string("Relais K2 ist nun aktiv\r\n");
@@ -122,9 +122,9 @@ void main(void)
                         send_string("Relais K2 ist nun inaktiv\r\n");
                     }
                 }
-                break;   
+                break;
             case 'q':
-                //Inputsteuerung für input0 ein/aus mit ausgabe
+                //Inputsteuerung fuer input0 ein/aus mit ausgabe
                 in0 = !in0;
                 send_string("K1 Inputsteuerung: ");
                 K1_PORT = out0;
@@ -136,7 +136,7 @@ void main(void)
                 }
                 break;
             case 'w':
-                //Inputsteuerung für input1 ein/aus mit ausgabe
+                //Inputsteuerung fuer input1 ein/aus mit ausgabe
                 in1 = !in1;
                 send_string("K2 Inputsteuerung: ");
                 K2_PORT = out1;
