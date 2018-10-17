@@ -5,6 +5,8 @@
  * @author Ricardo Jimenez Tuero
  * @version 0.42
  */
+import java.util.Scanner;
+
 
 public class MathPowerArray {
   /**
