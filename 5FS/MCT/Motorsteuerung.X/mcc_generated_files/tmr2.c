@@ -1,26 +1,24 @@
 /**
-  Generated Pin Manager File
+  TMR2 Generated Driver File
 
-  Company:
+  @Company
     Microchip Technology Inc.
 
-  File Name:
-    pin_manager.c
+  @File Name
+    tmr2.c
 
-  Summary:
-    This is the Pin Manager file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+  @Summary
+    This is the generated driver implementation file for the TMR2 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
-  Description:
-    This header file provides implementations for pin APIs for all pins selected in the GUI.
+  @Description
+    This source file provides APIs for TMR2.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65.2
         Device            :  PIC16F1937
-        Driver Version    :  2.11
+        Driver Version    :  2.01
     The generated drivers are tested against the following:
         Compiler          :  XC8 1.45
-        MPLAB             :  MPLAB X 4.15
-
-    Copyright (c) 2013 - 2015 released Microchip Technology Inc.  All rights reserved.
+        MPLAB 	          :  MPLAB X 4.15
 */
 
 /*
@@ -46,67 +44,81 @@
     SOFTWARE.
 */
 
+/**
+  Section: Included Files
+*/
+
 #include <xc.h>
-#include "pin_manager.h"
-#include "stdbool.h"
-
-
-
-
-
-void PIN_MANAGER_Initialize(void)
-{
-    /**
-    LATx registers
-    */
-    LATE = 0x00;
-    LATD = 0x00;
-    LATA = 0x00;
-    LATB = 0x00;
-    LATC = 0x00;
-
-    /**
-    TRISx registers
-    */
-    TRISE = 0x0F;
-    TRISA = 0x00;
-    TRISB = 0xFF;
-    TRISC = 0xF8;
-    TRISD = 0xDF;
-
-    /**
-    ANSELx registers
-    */
-    ANSELD = 0xFF;
-    ANSELB = 0x3F;
-    ANSELE = 0x07;
-    ANSELA = 0x3F;
-
-    /**
-    WPUx registers
-    */
-    WPUE = 0x00;
-    WPUB = 0x00;
-    OPTION_REGbits.nWPUEN = 1;
-
-
-
-    /**
-    APFCONx registers
-    */
-    APFCON = 0x00;
-
-
-
-
-   
-    
-}
-  
-void PIN_MANAGER_IOC(void)
-{   
-}
+#include "tmr2.h"
 
 /**
- End of File
+  Section: Global Variables Definitions
+*/
+
+/**
+  Section: TMR2 APIs
+*/
+
+void TMR2_Initialize(void)
+{
+    // Set TMR2 to the options selected in the User Interface
+
+    // PR2 255; 
+    PR2 = 0xFF;
+
+    // TMR2 0; 
+    TMR2 = 0x00;
+
+    // Clearing IF flag.
+    PIR1bits.TMR2IF = 0;
+
+    // T2CKPS 1:4; T2OUTPS 1:1; TMR2ON off; 
+    T2CON = 0x01;
+}
+
+void TMR2_StartTimer(void)
+{
+    // Start the Timer by writing to TMRxON bit
+    T2CONbits.TMR2ON = 1;
+}
+
+void TMR2_StopTimer(void)
+{
+    // Stop the Timer by writing to TMRxON bit
+    T2CONbits.TMR2ON = 0;
+}
+
+uint8_t TMR2_ReadTimer(void)
+{
+    uint8_t readVal;
+
+    readVal = TMR2;
+
+    return readVal;
+}
+
+void TMR2_WriteTimer(uint8_t timerVal)
+{
+    // Write to the Timer2 register
+    TMR2 = timerVal;
+}
+
+void TMR2_LoadPeriodRegister(uint8_t periodVal)
+{
+   PR2 = periodVal;
+}
+
+bool TMR2_HasOverflowOccured(void)
+{
+    // check if  overflow has occurred by checking the TMRIF bit
+    bool status = PIR1bits.TMR2IF;
+    if(status)
+    {
+        // Clearing IF flag.
+        PIR1bits.TMR2IF = 0;
+    }
+    return status;
+}
+/**
+  End of File
 */
