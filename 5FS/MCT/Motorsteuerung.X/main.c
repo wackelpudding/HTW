@@ -43,10 +43,14 @@
 
 #include "mcc_generated_files/mcc.h"
 
+
 /*
                          Main application
  */
 uint16_t convertedValue = 0;
+uint8_t percent =0;
+char Buffer[] = {"InitalizeValue"};
+char sint[3];
 
 void main(void)
 {
@@ -64,26 +68,34 @@ void main(void)
 
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
-
-    // Disable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptDisable();
-    EPWM1_LoadDutyValue(300); // Start at 50% speed
-    //Turn motor clockwise
+    
+    
     IN1_SetHigh();
     IN2_SetLow();
+
+    Lcd_Init(); //Initialisierung des LCD
+    //RW_SetLow(); // Read-Modus
+
+    Lcd_Clear(); // Bildschirm clearen
+    Lcd_Set_Cursor(1,1); //Cursor nach oben Links (1,1) setzen
+    Lcd_Write_String("Welfrieden:"); // Text in der oberen Zeile
+    Lcd_Set_Cursor(2,1);
+    Lcd_Write_String("Done:");
+    send_string("\033[H\033[J");
+    send_string("Weltfrieden\r\nDone:");
+        
     while (1)
     {
-        // Add your application code
-        
-        convertedValue = 0;
-           
-        ADC_StartConversion();
-        while( !ADC_IsConversionDone() ){};
-        convertedValue = ADC_GetConversionResult();  
-      
-       
-     
-     __delay_ms(10)   ; // create a short delay
+        convertedValue = ADC_GetConversion(POT); //Konvertierte Wert in Variablen "convertedValue" speichern
+        percent = (uint8_t)( (float)convertedValue /1023*100); //Umrechnen in den Spannungswert
+        Lcd_Set_Cursor(2,6);
+        //Lcd_Write_String(sint);
+        send_string("\033[2;6H");
+        send_string("...");
+        conv_int_to_string(percent);
+        send_string("%");
+        EPWM1_LoadDutyValue(convertedValue);
+        //__delay_ms(5);
      }
 }
 /**

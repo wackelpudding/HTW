@@ -1,24 +1,24 @@
 /**
-  @Generated PIC10 / PIC12 / PIC16 / PIC18 MCUs Header File
+  EUSART Generated Driver File
 
-  @Company:
+  @Company
     Microchip Technology Inc.
 
-  @File Name:
-    mcc.h
+  @File Name
+    eusart.c
 
-  @Summary:
-    This is the mcc.h file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+  @Summary
+    This is the generated driver implementation file for the EUSART driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
-  @Description:
-    This header file provides implementations for driver APIs for all modules selected in the GUI.
+  @Description
+    This source file provides APIs for EUSART.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65.2
         Device            :  PIC16F1937
-        Driver Version    :  2.00
+        Driver Version    :  2.01
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.45 or later
-        MPLAB             :  MPLAB X 4.15
+        Compiler          :  XC8 1.45
+        MPLAB 	          :  MPLAB X 4.15
 */
 
 /*
@@ -44,62 +44,53 @@
     SOFTWARE.
 */
 
-#ifndef MCC_H
-#define	MCC_H
-#include <xc.h>
-#include "device_config.h"
-#include "pin_manager.h"
-#include <stdint.h>
-#include <stdbool.h>
-#include <stdio.h>
-#include "epwm1.h"
-#include "tmr2.h"
-#include "adc.h"
-#include "../motor.h"
-#include "../lcd.h"
-#include <string.h>
+/**
+  Section: Included Files
+*/
+#include "eusart.h"
+
+
+/**
+  Section: EUSART APIs
+*/
+
+
+/*bool EUSART_is_tx_ready(void)
+{
+    return (bool)(PIR1bits.TXIF && TXSTAbits.TXEN);
+}*/
+
+/*bool EUSART_is_rx_ready(void)
+{
+    return PIR1bits.RCIF;
+}*/
+
+/*bool EUSART_is_tx_done(void)
+{
+    return TXSTAbits.TRMT;
+}*/
+
+/*uint8_t EUSART_Read(void)
+{
+    while(!PIR1bits.RCIF)
+    {
+    }
+
+    
+    if(1 == RCSTAbits.OERR)
+    {
+        // EUSART error - restart
+
+        RCSTAbits.CREN = 0; 
+        RCSTAbits.CREN = 1; 
+    }
+
+    return RCREG;
+}*/
+
 
 
 
 /**
- * @Param
-    none
- * @Returns
-    none
- * @Description
-    Initializes the device to the default states configured in the
- *                  MCC GUI
- * @Example
-    SYSTEM_Initialize(void);
- */
-void SYSTEM_Initialize(void);
-
-/**
- * @Param
-    none
- * @Returns
-    none
- * @Description
-    Initializes the oscillator to the default states configured in the
- *                  MCC GUI
- * @Example
-    OSCILLATOR_Initialize(void);
- */
-void OSCILLATOR_Initialize(void);
-/**
- * @Param
-    none
- * @Returns
-    none
- * @Description
-    Initializes the WDT module to the default states configured in the
- *                  MCC GUI
- * @Example
-    WDT_Initialize(void);
- */
-void WDT_Initialize(void);
-
-#endif	/* MCC_H */
-/**
- End of File
+  End of File
 */
