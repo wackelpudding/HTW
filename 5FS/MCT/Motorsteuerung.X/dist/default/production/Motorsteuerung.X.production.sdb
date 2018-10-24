@@ -3,92 +3,32 @@
 [d edition pro ]
 [d chip 16F1937 ]
 [d frameptr 6 ]
-"83 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\mcc_generated_files/adc.c
+"110 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\mcc_generated_files/adc.c
 [e E2940 . `uc
 POT 5
 channel_Temp 29
 channel_DAC 30
 channel_FVR 31
 ]
-"87 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\main.c
+"89 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\main.c
 [e E3272 . `uc
 POT 5
 channel_Temp 29
 channel_DAC 30
 channel_FVR 31
 ]
-"51 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X/lcd.h
-[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
-"70
-[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
-"79
-[v _Lcd_Clear Lcd_Clear `(i  1 e 2 0 ]
-"85
-[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
-"106
-[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
-"125
-[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
-"141
-[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\__fpclassifyf.c
-[v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\atoi.c
-[v _atoi atoi `(i  1 e 2 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
-"72 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\doprnt.c
-[v _pad pad `(i  1 s 2 pad ]
-"319
-[v _efgtoa efgtoa `(i  1 s 2 efgtoa ]
-"670
-[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
-"1368
-[v _vfprintf vfprintf `(i  1 e 2 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\fleq.c
-[v ___fleq __fleq `(b  1 e 0 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\flge.c
-[v ___flge __flge `(b  1 e 0 0 ]
-"15 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\flneg.c
-[v ___flneg __flneg `(d  1 e 4 0 ]
-"3 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\floorf.c
-[v _floorf floorf `(f  1 e 4 0 ]
 "43 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\isdigit.c
-[v _isdigit isdigit `(i  1 e 2 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\isspace.c
-[v _isspace isspace `(i  1 e 2 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\isupper.c
-[v _isupper isupper `(i  1 e 2 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\nf_fputc.c
-[v _fputc fputc `(i  1 e 2 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\nf_fputs.c
-[v _fputs fputs `(i  1 e 2 0 ]
-"9 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\nf_sprintf.c
-[v _sprintf sprintf `(i  1 e 2 0 ]
-"7 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\putch.c
-[v _putch putch `(v  1 e 1 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"242
-[v ___flsub __flsub `(d  1 e 4 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
-"7 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\strcpy.c
-[v _strcpy strcpy `(*.5uc  1 e 1 0 ]
-"12 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
-"3 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\strncmp.c
-[v _strncmp strncmp `(i  1 e 2 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\tolower.c
-[v _tolower tolower `(i  1 e 2 0 ]
-"15 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\xxtofl.c
@@ -97,7 +37,21 @@ channel_FVR 31
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"52 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\main.c
+"6 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\lcd.c
+[v _Lcd_Clear Lcd_Clear `(v  1 e 1 0 ]
+"12
+[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
+"32
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+"41
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+"62
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+"80
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+"96
+[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+"55 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "65 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
@@ -109,15 +63,23 @@ channel_FVR 31
 [v _EPWM1_LoadDutyValue EPWM1_LoadDutyValue `(v  1 e 1 0 ]
 "50 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"61
+"62
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"71
+"72
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 "57 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 "62 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
-[s S186 . 1 `uc 1 TMR1IF 1 0 :1:0 
+"9 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\motor.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+"51
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+"70
+[v _send_string send_string `(v  1 e 1 0 ]
+"76
+[v _conv_int_to_string conv_int_to_string `(v  1 e 1 0 ]
+[s S183 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -127,29 +89,14 @@ channel_FVR 31
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
 "732 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f1937.h
-[u S195 . 1 `S186 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES195  1 e 1 @17 ]
+[u S192 . 1 `S183 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES192  1 e 1 @17 ]
 "1096
 [v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
 "1116
 [v _PR2 PR2 `VEuc  1 e 1 @27 ]
 "1136
 [v _T2CON T2CON `VEuc  1 e 1 @28 ]
-[s S208 . 1 `uc 1 T2CKPS0 1 0 :1:0 
-`uc 1 T2CKPS1 1 0 :1:1 
-`uc 1 TMR2ON 1 0 :1:2 
-`uc 1 T2OUTPS0 1 0 :1:3 
-`uc 1 T2OUTPS1 1 0 :1:4 
-`uc 1 T2OUTPS2 1 0 :1:5 
-`uc 1 T2OUTPS3 1 0 :1:6 
-]
-"1157
-[s S216 . 1 `uc 1 T2CKPS 1 0 :2:0 
-`uc 1 . 1 0 :1:2 
-`uc 1 T2OUTPS 1 0 :4:3 
-]
-[u S220 . 1 `S208 1 . 1 0 `S216 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES220  1 e 1 @28 ]
 "1307
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1369
@@ -189,7 +136,7 @@ channel_FVR 31
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
 "2190
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
-[s S90 . 1 `uc 1 ADON 1 0 :1:0 
+[s S89 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -198,23 +145,23 @@ channel_FVR 31
 `uc 1 CHS4 1 0 :1:6 
 ]
 "2219
-[s S98 . 1 `uc 1 . 1 0 :1:0 
+[s S97 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
 ]
-[s S102 . 1 `uc 1 . 1 0 :1:0 
+[s S101 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[s S105 . 1 `uc 1 . 1 0 :1:0 
+[s S104 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[u S108 . 1 `S90 1 . 1 0 `S98 1 . 1 0 `S102 1 . 1 0 `S105 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES108  1 e 1 @157 ]
+[u S107 . 1 `S89 1 . 1 0 `S97 1 . 1 0 `S101 1 . 1 0 `S104 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES107  1 e 1 @157 ]
 "2279
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
 "2351
 [v _LATA LATA `VEuc  1 e 1 @268 ]
-[s S307 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S349 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -224,13 +171,13 @@ channel_FVR 31
 `uc 1 LATA7 1 0 :1:7 
 ]
 "2368
-[u S316 . 1 `S307 1 . 1 0 ]
-[v _LATAbits LATAbits `VES316  1 e 1 @268 ]
+[u S358 . 1 `S349 1 . 1 0 ]
+[v _LATAbits LATAbits `VES358  1 e 1 @268 ]
 "2413
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2475
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S331 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S260 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -240,8 +187,8 @@ channel_FVR 31
 `uc 1 LATC7 1 0 :1:7 
 ]
 "2492
-[u S340 . 1 `S331 1 . 1 0 ]
-[v _LATCbits LATCbits `VES340  1 e 1 @270 ]
+[u S269 . 1 `S260 1 . 1 0 ]
+[v _LATCbits LATCbits `VES269  1 e 1 @270 ]
 "2537
 [v _LATD LATD `VEuc  1 e 1 @271 ]
 "2607
@@ -258,6 +205,18 @@ channel_FVR 31
 [v _ANSELD ANSELD `VEuc  1 e 1 @399 ]
 "3508
 [v _ANSELE ANSELE `VEuc  1 e 1 @400 ]
+"3762
+[v _TXREG TXREG `VEuc  1 e 1 @410 ]
+"3798
+[v _SPBRGL SPBRGL `VEuc  1 e 1 @411 ]
+"3848
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
+"3881
+[v _RCSTA RCSTA `VEuc  1 e 1 @413 ]
+"3943
+[v _TXSTA TXSTA `VEuc  1 e 1 @414 ]
+"4005
+[v _BAUDCON BAUDCON `VEuc  1 e 1 @415 ]
 "4057
 [v _WPUB WPUB `VEuc  1 e 1 @525 ]
 "4127
@@ -274,7 +233,7 @@ channel_FVR 31
 [v _ECCP1AS ECCP1AS `VEuc  1 e 1 @661 ]
 "4829
 [v _PSTR1CON PSTR1CON `VEuc  1 e 1 @662 ]
-[s S268 . 1 `uc 1 C1TSEL0 1 0 :1:0 
+[s S220 . 1 `uc 1 C1TSEL0 1 0 :1:0 
 `uc 1 C1TSEL1 1 0 :1:1 
 `uc 1 C2TSEL0 1 0 :1:2 
 `uc 1 C2TSEL1 1 0 :1:3 
@@ -284,363 +243,45 @@ channel_FVR 31
 `uc 1 C4TSEL1 1 0 :1:7 
 ]
 "5253
-[s S277 . 1 `uc 1 C1TSEL 1 0 :2:0 
+[s S229 . 1 `uc 1 C1TSEL 1 0 :2:0 
 `uc 1 C2TSEL 1 0 :2:2 
 `uc 1 C3TSEL 1 0 :2:4 
 `uc 1 C4TSEL 1 0 :2:6 
 ]
-[u S282 . 1 `S268 1 . 1 0 `S277 1 . 1 0 ]
-[v _CCPTMRS0bits CCPTMRS0bits `VES282  1 e 1 @670 ]
-"55 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\doprnt.c
-[v _flags flags `i  1 s 2 flags ]
-[v _prec prec `i  1 s 2 prec ]
-[v _width width `i  1 s 2 width ]
-"66
-[v _dbuf dbuf `[80]uc  1 s 80 dbuf ]
-"69
-[v _nout nout `i  1 s 2 nout ]
-"52 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\main.c
+[u S234 . 1 `S220 1 . 1 0 `S229 1 . 1 0 ]
+[v _CCPTMRS0bits CCPTMRS0bits `VES234  1 e 1 @670 ]
+"50 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\main.c
+[v _convertedValue convertedValue `us  1 e 2 0 ]
+"51
+[v _percent percent `uc  1 e 1 0 ]
+"55
 [v _main main `(v  1 e 1 0 ]
 {
+"100
+} 0
+"70 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\motor.c
+[v _send_string send_string `(v  1 e 1 0 ]
+{
+[v send_string@x x `*.25DCuc  1 p 2 1 ]
+"74
+} 0
 "76
-[v main@Buffer Buffer `[15]uc  1 a 15 22 ]
-"75
-[v main@percent percent `f  1 a 4 37 ]
-"74
-[v main@convertedValue convertedValue `us  1 a 2 41 ]
-"75
-[v main@F3314 F3314 `[15]uc  1 s 15 F3314 ]
-"95
-} 0
-"9 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\nf_sprintf.c
-[v _sprintf sprintf `(i  1 e 2 0 ]
+[v _conv_int_to_string conv_int_to_string `(v  1 e 1 0 ]
 {
-[v sprintf@s s `*.5uc  1 a 1 wreg ]
-[s S1056 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-"13
-[v sprintf@f f `S1056  1 a 5 16 ]
-"11
-[v sprintf@ret ret `i  1 a 2 12 ]
-"12
-[v sprintf@ap ap `[1]*.5v  1 a 1 15 ]
-"9
-[v sprintf@s s `*.5uc  1 a 1 wreg ]
-[v sprintf@fmt fmt `*.25DCuc  1 p 2 6 ]
-"15
-[v sprintf@s s `*.5uc  1 a 1 14 ]
-"23
-} 0
-"1368 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\doprnt.c
-[v _vfprintf vfprintf `(i  1 e 2 0 ]
-{
-[s S578 _IO_FILE 0 ]
-[v vfprintf@fp fp `*.5S578  1 a 1 wreg ]
-"1371
-[v vfprintf@cfmt cfmt `*.25uc  1 a 2 4 ]
-"1368
-[v vfprintf@fp fp `*.5S578  1 a 1 wreg ]
-[v vfprintf@fmt fmt `*.25DCuc  1 p 2 0 ]
-[v vfprintf@ap ap `*.5*.5v  1 p 1 2 ]
-"1373
-"1368
-[v vfprintf@fp fp `*.5S578  1 a 1 3 ]
-"1382
-} 0
-"670
-[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
-{
-[s S578 _IO_FILE 0 ]
-[v vfpfcnvrt@fp fp `*.5S578  1 a 1 wreg ]
-"676
-[v vfpfcnvrt@f f `d  1 a 4 69 ]
-"672
-[v vfpfcnvrt@ct ct `[3]uc  1 a 3 73 ]
-[v vfpfcnvrt@c c `uc  1 a 1 76 ]
-"670
-[v vfpfcnvrt@fp fp `*.5S578  1 a 1 wreg ]
-[v vfpfcnvrt@fmt fmt `*.5*.25uc  1 p 1 77 ]
-[v vfpfcnvrt@ap ap `*.5*.5v  1 p 1 78 ]
-"680
-"670
-[v vfpfcnvrt@fp fp `*.5S578  1 a 1 77 ]
-"1365
-} 0
-"3 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\strncmp.c
-[v _strncmp strncmp `(i  1 e 2 0 ]
-{
-[v strncmp@_l _l `*.4DCuc  1 a 1 wreg ]
-"5
-[v strncmp@r r `*.25DCuc  1 a 2 7 ]
-[v strncmp@l l `*.4DCuc  1 a 1 9 ]
-"3
-[v strncmp@_l _l `*.4DCuc  1 a 1 wreg ]
-[v strncmp@_r _r `*.25DCuc  1 p 2 0 ]
-[v strncmp@n n `ui  1 p 2 2 ]
-"5
-[v strncmp@_l _l `*.4DCuc  1 a 1 6 ]
-"9
-} 0
-"319 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\doprnt.c
-[v _efgtoa efgtoa `(i  1 s 2 efgtoa ]
-{
-[s S578 _IO_FILE 0 ]
-[v efgtoa@fp fp `*.5S578  1 a 1 wreg ]
-"323
-[v efgtoa@u u `d  1 a 4 53 ]
-[v efgtoa@g g `d  1 a 4 45 ]
-[v efgtoa@l l `d  1 a 4 39 ]
-[v efgtoa@h h `d  1 a 4 35 ]
-[v efgtoa@ou ou `d  1 a 4 0 ]
-"322
-[v efgtoa@n n `i  1 a 2 51 ]
-[v efgtoa@e e `i  1 a 2 49 ]
-[v efgtoa@i i `i  1 a 2 43 ]
-[v efgtoa@w w `i  1 a 2 32 ]
-[v efgtoa@p p `i  1 a 2 29 ]
-[v efgtoa@sign sign `i  1 a 2 26 ]
-[v efgtoa@d d `i  1 a 2 24 ]
-[v efgtoa@ne ne `i  1 a 2 22 ]
-[v efgtoa@m m `i  1 a 2 20 ]
-[v efgtoa@pp pp `i  1 a 2 18 ]
-[v efgtoa@t t `i  1 a 2 16 ]
-"321
-[v efgtoa@mode mode `uc  1 a 1 34 ]
-[v efgtoa@nmode nmode `uc  1 a 1 31 ]
-"319
-[v efgtoa@fp fp `*.5S578  1 a 1 wreg ]
-[v efgtoa@f f `d  1 p 4 68 ]
-[v efgtoa@c c `uc  1 p 1 72 ]
-"326
-"319
-[v efgtoa@fp fp `*.5S578  1 a 1 28 ]
-"503
-} 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\tolower.c
-[v _tolower tolower `(i  1 e 2 0 ]
-{
-[v tolower@c c `i  1 p 2 6 ]
-"8
-} 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\isupper.c
-[v _isupper isupper `(i  1 e 2 0 ]
-{
-[v isupper@c c `i  1 p 2 0 ]
-"8
-} 0
-"7 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\strcpy.c
-[v _strcpy strcpy `(*.5uc  1 e 1 0 ]
-{
-[v strcpy@dest dest `*.5uc  1 a 1 wreg ]
-"13
-[v strcpy@s s `*.26DCuc  1 a 2 4 ]
-"14
-[v strcpy@d d `*.5uc  1 a 1 6 ]
-"7
-[v strcpy@dest dest `*.5uc  1 a 1 wreg ]
-[v strcpy@src src `*.26DCuc  1 p 2 0 ]
-"13
-[v strcpy@dest dest `*.5uc  1 a 1 7 ]
-"18
-} 0
-"72 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\doprnt.c
-[v _pad pad `(i  1 s 2 pad ]
-{
-[s S578 _IO_FILE 0 ]
-[v pad@fp fp `*.5S578  1 a 1 wreg ]
-"74
-[v pad@w w `i  1 a 2 9 ]
-[v pad@i i `i  1 a 2 7 ]
-"72
-[v pad@fp fp `*.5S578  1 a 1 wreg ]
-[v pad@buf buf `*.5uc  1 p 1 4 ]
-[v pad@p p `i  1 p 2 5 ]
+[v conv_int_to_string@integer integer `uc  1 a 1 wreg ]
+"90
+[v conv_int_to_string@i_431 i `uc  1 a 1 6 ]
+"79
+[v conv_int_to_string@i i `uc  1 a 1 5 ]
 "77
-"72
-[v pad@fp fp `*.5S578  1 a 1 11 ]
+[v conv_int_to_string@result result `[3]uc  1 a 3 1 ]
+"78
+[v conv_int_to_string@rest rest `uc  1 a 1 0 ]
+"76
+[v conv_int_to_string@integer integer `uc  1 a 1 wreg ]
+[v conv_int_to_string@F2953 F2953 `[3]uc  1 s 3 F2953 ]
+[v conv_int_to_string@integer integer `uc  1 a 1 4 ]
 "95
-} 0
-"12 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
-{
-[v strlen@s s `*.5DCuc  1 a 1 wreg ]
-"14
-[v strlen@a a `*.5DCuc  1 a 1 6 ]
-"12
-[v strlen@s s `*.5DCuc  1 a 1 wreg ]
-"14
-[v strlen@s s `*.5DCuc  1 a 1 7 ]
-"26
-} 0
-"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\nf_fputs.c
-[v _fputs fputs `(i  1 e 2 0 ]
-{
-[v fputs@s s `*.5DCuc  1 a 1 wreg ]
-"11
-[v fputs@i i `i  1 a 2 1 ]
-"10
-[v fputs@c c `uc  1 a 1 0 ]
-"8
-[v fputs@s s `*.5DCuc  1 a 1 wreg ]
-[s S1056 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputs@fp fp `*.5S1056  1 p 1 8 ]
-"13
-[v fputs@s s `*.5DCuc  1 a 1 3 ]
-"19
-} 0
-"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\nf_fputc.c
-[v _fputc fputc `(i  1 e 2 0 ]
-{
-[v fputc@c c `i  1 p 2 0 ]
-[s S1056 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputc@fp fp `*.5S1056  1 p 1 2 ]
-"21
-} 0
-"7 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\putch.c
-[v _putch putch `(v  1 e 1 0 ]
-{
-"9
-} 0
-"3 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\floorf.c
-[v _floorf floorf `(f  1 e 4 0 ]
-{
-[u S990 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
-"5
-[v floorf@u u `S990  1 a 4 42 ]
-"7
-[v floorf@m m `ul  1 a 4 36 ]
-"6
-[v floorf@e e `i  1 a 2 40 ]
-"3
-[v floorf@x x `f  1 p 4 26 ]
-"4
-[v floorf@F514 F514 `S990  1 s 4 F514 ]
-"27
-} 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\__fpclassifyf.c
-[v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
-{
-[u S990 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
-"6
-[v ___fpclassifyf@u u `S990  1 a 4 2 ]
-"7
-[v ___fpclassifyf@e e `i  1 a 2 0 ]
-"4
-[v ___fpclassifyf@x x `f  1 p 4 0 ]
-"5
-[v ___fpclassifyf@F453 F453 `S990  1 s 4 F453 ]
-"11
-} 0
-"43 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\fltol.c
-[v ___fltol __fltol `(l  1 e 4 0 ]
-{
-"45
-[v ___fltol@exp1 exp1 `uc  1 a 1 10 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 9 ]
-"43
-[v ___fltol@f1 f1 `d  1 p 4 0 ]
-"70
-} 0
-"242 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcadd.c
-[v ___flsub __flsub `(d  1 e 4 0 ]
-{
-[v ___flsub@a a `d  1 p 4 52 ]
-[v ___flsub@b b `d  1 p 4 56 ]
-"250
-} 0
-"10
-[v ___fladd __fladd `(d  1 e 4 0 ]
-{
-"17
-[v ___fladd@grs grs `uc  1 a 1 11 ]
-"15
-[v ___fladd@bexp bexp `uc  1 a 1 10 ]
-"16
-[v ___fladd@aexp aexp `uc  1 a 1 9 ]
-"13
-[v ___fladd@signs signs `uc  1 a 1 8 ]
-"10
-[v ___fladd@b b `d  1 p 4 0 ]
-[v ___fladd@a a `d  1 p 4 4 ]
-"237
-} 0
-"15 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\flneg.c
-[v ___flneg __flneg `(d  1 e 4 0 ]
-{
-[v ___flneg@f1 f1 `d  1 p 4 0 ]
-"20
-} 0
-"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcmul.c
-[v ___flmul __flmul `(d  1 e 4 0 ]
-{
-[s S853 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
-"13
-[s S858 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S861 . 4 `l 1 i 4 0 `d 1 f 4 0 `S853 1 fAsBytes 4 0 `S858 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S861  1 a 4 46 ]
-"12
-[v ___flmul@grs grs `ul  1 a 4 40 ]
-[s S930 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
-"14
-[u S933 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S930 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S933  1 a 2 50 ]
-"10
-[v ___flmul@bexp bexp `uc  1 a 1 45 ]
-"11
-[v ___flmul@aexp aexp `uc  1 a 1 44 ]
-"9
-[v ___flmul@sign sign `uc  1 a 1 39 ]
-"8
-[v ___flmul@b b `d  1 p 4 26 ]
-[v ___flmul@a a `d  1 p 4 30 ]
-"205
-} 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul8_16.c
-[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-{
-[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
-"6
-[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 6 ]
-"5
-[v __Umul8_16@product product `ui  1 a 2 4 ]
-"4
-[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
-[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
-[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
-"60
-} 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\flge.c
-[v ___flge __flge `(b  1 e 0 0 ]
-{
-[v ___flge@ff1 ff1 `d  1 p 4 52 ]
-[v ___flge@ff2 ff2 `d  1 p 4 56 ]
-"19
-} 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\fleq.c
-[v ___fleq __fleq `(b  1 e 0 0 ]
-{
-[v ___fleq@ff1 ff1 `d  1 p 4 0 ]
-[v ___fleq@ff2 ff2 `d  1 p 4 4 ]
-"12
-} 0
-"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcdiv.c
-[v ___fldiv __fldiv `(d  1 e 4 0 ]
-{
-"21
-[v ___fldiv@grs grs `ul  1 a 4 20 ]
-"22
-[v ___fldiv@rem rem `ul  1 a 4 13 ]
-"20
-[v ___fldiv@new_exp new_exp `i  1 a 2 18 ]
-"19
-[v ___fldiv@aexp aexp `uc  1 a 1 25 ]
-"18
-[v ___fldiv@bexp bexp `uc  1 a 1 24 ]
-"16
-[v ___fldiv@sign sign `uc  1 a 1 17 ]
-"8
-[v ___fldiv@a a `d  1 p 4 0 ]
-[v ___fldiv@b b `d  1 p 4 4 ]
-"185
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
@@ -666,37 +307,13 @@ channel_FVR 31
 [v ___awdiv@dividend dividend `i  1 p 2 2 ]
 "41
 } 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\atoi.c
-[v _atoi atoi `(i  1 e 2 0 ]
+"51 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\motor.c
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
 {
-"6
-[v atoi@n n `i  1 a 2 7 ]
-[v atoi@neg neg `i  1 a 2 0 ]
-"4
-[v atoi@s s `*.25DCuc  1 p 2 6 ]
-"16
-} 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\isspace.c
-[v _isspace isspace `(i  1 e 2 0 ]
-{
-[v isspace@c c `i  1 p 2 0 ]
-"8
-} 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\isdigit.c
-[v _isdigit isdigit `(i  1 e 2 0 ]
-{
-[v isdigit@c c `i  1 p 2 0 ]
-"8
-} 0
-"15 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
-{
-"17
-[v ___wmul@product product `ui  1 a 2 4 ]
-"15
-[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
-"53
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 0 ]
+"58
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -713,15 +330,84 @@ channel_FVR 31
 [v ___xxtofl@sign sign `uc  1 a 1 8 ]
 "44
 } 0
+"43 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 62 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 61 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 52 ]
+"70
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S719 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S724 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S727 . 4 `l 1 i 4 0 `d 1 f 4 0 `S719 1 fAsBytes 4 0 `S724 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S727  1 a 4 46 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 40 ]
+[s S796 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S799 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S796 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S799  1 a 2 50 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 45 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 44 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 39 ]
+"8
+[v ___flmul@b b `d  1 p 4 26 ]
+[v ___flmul@a a `d  1 p 4 30 ]
+"205
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+{
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 6 ]
+"5
+[v __Umul8_16@product product `ui  1 a 2 4 ]
+"4
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
+"60
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 20 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 13 ]
+"20
+[v ___fldiv@new_exp new_exp `i  1 a 2 18 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 25 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 24 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 17 ]
+"8
+[v ___fldiv@a a `d  1 p 4 0 ]
+[v ___fldiv@b b `d  1 p 4 4 ]
+"185
+} 0
 "50 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"59
+"60
 } 0
-"71
+"72
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 {
-"75
+"76
 } 0
 "62 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
@@ -733,10 +419,15 @@ channel_FVR 31
 {
 "104
 } 0
-"61 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\mcc_generated_files/mcc.c
+"62 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"69
+"70
+} 0
+"9 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\motor.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+{
+"29
 } 0
 "64 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\mcc_generated_files/epwm1.c
 [v _EPWM1_Initialize EPWM1_Initialize `(v  1 e 1 0 ]
@@ -748,70 +439,70 @@ channel_FVR 31
 {
 "81
 } 0
-"141 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X/lcd.h
+"96 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\lcd.c
 [v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
 {
-"143
+"98
 [v Lcd_Write_String@i i `i  1 a 2 8 ]
-"141
-[v Lcd_Write_String@a a `*.26uc  1 p 2 5 ]
-"146
+"96
+[v Lcd_Write_String@a a `*.25uc  1 p 2 5 ]
+"101
 } 0
-"125
+"80
 [v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
 {
 [v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
-"127
+"82
 [v Lcd_Write_Char@y y `uc  1 a 1 3 ]
 [v Lcd_Write_Char@temp temp `uc  1 a 1 2 ]
-"125
+"80
 [v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
-"128
+"83
 [v Lcd_Write_Char@a a `uc  1 a 1 4 ]
-"139
+"94
 } 0
-"85
+"41
 [v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
 {
 [v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
-"87
+"43
 [v Lcd_Set_Cursor@temp temp `uc  1 a 1 9 ]
 [v Lcd_Set_Cursor@y y `uc  1 a 1 8 ]
 [v Lcd_Set_Cursor@z z `uc  1 a 1 7 ]
-"85
+"41
 [v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
 [v Lcd_Set_Cursor@b b `uc  1 p 1 3 ]
-"88
+"44
 [v Lcd_Set_Cursor@a a `uc  1 a 1 6 ]
-"104
+"60
 } 0
-"106
+"62
 [v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
 {
-"123
+"78
 } 0
-"79
-[v _Lcd_Clear Lcd_Clear `(i  1 e 2 0 ]
+"6
+[v _Lcd_Clear Lcd_Clear `(v  1 e 1 0 ]
 {
-"83
+"10
 } 0
-"70
+"32
 [v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
 {
 [v Lcd_Cmd@a a `uc  1 a 1 wreg ]
 [v Lcd_Cmd@a a `uc  1 a 1 wreg ]
-"72
+"34
 [v Lcd_Cmd@a a `uc  1 a 1 2 ]
-"77
+"39
 } 0
-"51
+"12
 [v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
 {
 [v Lcd_Port@a a `uc  1 a 1 wreg ]
 [v Lcd_Port@a a `uc  1 a 1 wreg ]
-"53
+"14
 [v Lcd_Port@a a `uc  1 a 1 0 ]
-"69
+"30
 } 0
 "90 C:\Users\Ricardo\git\HTW\5FS\MCT\Motorsteuerung.X\mcc_generated_files/epwm1.c
 [v _EPWM1_LoadDutyValue EPWM1_LoadDutyValue `(v  1 e 1 0 ]

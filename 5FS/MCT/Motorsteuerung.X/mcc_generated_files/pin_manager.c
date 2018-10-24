@@ -71,7 +71,7 @@ void PIN_MANAGER_Initialize(void)
     TRISE = 0x0F;
     TRISA = 0x00;
     TRISB = 0xFF;
-    TRISC = 0xF8;
+    TRISC = 0xB8;
     TRISD = 0xDF;
 
     /**
@@ -103,9 +103,9 @@ void PIN_MANAGER_Initialize(void)
     
 }
   
-void PIN_MANAGER_IOC(void)
+/*void PIN_MANAGER_IOC(void)
 {   
-}
+}*/
 
 /**
  End of File

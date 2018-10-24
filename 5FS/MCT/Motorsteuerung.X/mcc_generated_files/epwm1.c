@@ -55,7 +55,7 @@
   Section: Macro Declarations
 */
 
-#define PWM1_INITIALIZE_DUTY_VALUE    1023
+#define PWM1_INITIALIZE_DUTY_VALUE    511
 
 /**
   Section: EPWM Module APIs
@@ -80,8 +80,8 @@ void EPWM1_Initialize(void)
 	// CCPR1H 0; 
 	CCPR1H = 0x00;    
 	
-	// CCPR1L 255; 
-	CCPR1L = 0xFF;    
+	// CCPR1L 127; 
+	CCPR1L = 0x7F;    
 
 	// Selecting CCPTMRS0
 	CCPTMRS0bits.C1TSEL = 0x0;

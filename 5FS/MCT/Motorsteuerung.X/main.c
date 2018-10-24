@@ -42,12 +42,15 @@
 */
 
 #include "mcc_generated_files/mcc.h"
-#include "lcd.h"
+
 
 /*
                          Main application
  */
 uint16_t convertedValue = 0;
+uint8_t percent =0;
+char Buffer[] = {"InitalizeValue"};
+char sint[3];
 
 void main(void)
 {
@@ -69,26 +72,28 @@ void main(void)
     
     IN1_SetHigh();
     IN2_SetLow();
-    
+
     Lcd_Init(); //Initialisierung des LCD
-        uint16_t convertedValue= 0; //benutze Variablen werden deklariert und initalisiert
-        float percent =0;
-        char Buffer[] = {"InitalizeValue"}; 
-        //RW_SetLow(); // Read-Modus
+    //RW_SetLow(); // Read-Modus
+
+    Lcd_Clear(); // Bildschirm clearen
+    Lcd_Set_Cursor(1,1); //Cursor nach oben Links (1,1) setzen
+    Lcd_Write_String("Welfrieden:"); // Text in der oberen Zeile
+    Lcd_Set_Cursor(2,1);
+    Lcd_Write_String("Done:");
+    send_string("\033[H\033[J");
+    send_string("Weltfrieden\r\nDone:");
         
-        Lcd_Clear(); // Bildschirm clearen
-        Lcd_Set_Cursor(1,1); //Cursor nach oben Links (1,1) setzen
-        Lcd_Write_String("Welfrieden:"); // Text in der oberen Zeile
-        Lcd_Set_Cursor(2,1);
-        Lcd_Write_String("Done:");
     while (1)
     {
-        
         convertedValue = ADC_GetConversion(POT); //Konvertierte Wert in Variablen "convertedValue" speichern
-        percent = ((float) convertedValue/1023)*100; //Umrechnen in den Spannungswert
+        percent = (uint8_t)( (float)convertedValue /1023*100); //Umrechnen in den Spannungswert
         Lcd_Set_Cursor(2,6);
-        sprintf(Buffer,"...%2.0f%% ", percent); //Umwandel des Wertes des floats "percent" in die Zeichenkette "Buffer"
-        Lcd_Write_String(Buffer);
+        //Lcd_Write_String(sint);
+        send_string("\033[2;6H");
+        send_string("...");
+        conv_int_to_string(percent);
+        send_string("%");
         EPWM1_LoadDutyValue(convertedValue);
         //__delay_ms(5);
      }
