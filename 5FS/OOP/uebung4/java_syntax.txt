@@ -1,0 +1,25 @@
+public fehlt,
+{ fehlt
+korrekt
+typendeklaration fehlt (zb. int)
+; fehlt
+byte ist kein zulässiger variablenname, da reserviert
+isOK will ein boolean werden, kein boolean
+korrekt
+korrekt
+x will ein int werden
+korrekt
+korrekt
+korrekt
+korrekt
+passt so
+new float [32] .. also muss nen wert rein
+, -> ;
+float to string? array[i].toString()
+korrekt
+() bei array.length ist zu viel
+korrekt
+passst
+bool? wohl eher nen int!
+jo
+; zuviel
