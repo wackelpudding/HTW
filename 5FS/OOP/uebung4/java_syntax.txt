@@ -4,9 +4,9 @@ korrekt
 typendeklaration fehlt (zb. int)
 ; fehlt
 byte ist kein zulässiger variablenname, da reserviert
-isOK will ein boolean werden, kein boolean
+isOK will ein boolean werden, kein bool
 korrekt
-korrekt
+public static void main
 x will ein int werden
 korrekt
 korrekt

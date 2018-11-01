@@ -7,7 +7,7 @@ public class Radio {
 	private double frequenz;
 
 	public Radio() {
-		this(false,0,85.0);
+		this(false, 0, 85.0);
 	}
 
 	public Radio(boolean istAn, int lautstaerke, double frequenz) {
@@ -23,14 +23,16 @@ public class Radio {
 			this.setFrequenz(85.0);
 		}
 	}
-	
+
 	public double getFrequenz() {
 		return frequenz;
 	}
 
 	public void setFrequenz(double frequenz) {
 		System.out.println("Aufruf von setFrequenz()");
-		if (frequenz <= 110.0 && frequenz >= 85.0) this.frequenz = frequenz; System.out.println(this.toString());
+		if (frequenz <= 110.0 && frequenz >= 85.0)
+			this.frequenz = frequenz;
+		System.out.println(this.toString());
 	}
 
 	public int getLautstaerke() {
@@ -39,7 +41,9 @@ public class Radio {
 
 	public void setLautstaerke(int lautstaerke) {
 		System.out.println("Aufruf von setLaufstaerke()");
-		if (lautstaerke <= 10 && lautstaerke >= 0) this.lautstaerke = lautstaerke; System.out.println(this.toString());
+		if (lautstaerke <= 10 && lautstaerke >= 0)
+			this.lautstaerke = lautstaerke;
+		System.out.println(this.toString());
 	}
 
 	public boolean isIstAn() {
@@ -48,26 +52,31 @@ public class Radio {
 
 	public void lauter() {
 		System.out.println("Aufruf von lauter()");
-		if(this.isIstAn()) this.setLautstaerke(this.lautstaerke + 1);
+		if (this.isIstAn())
+			this.setLautstaerke(this.lautstaerke + 1);
 		System.out.println(this.toString());
 
 	}
 
 	public void leiser() {
 		System.out.println("Aufruf von leiser()");
-		if(this.isIstAn()) this.setLautstaerke(this.lautstaerke - 1);
+		if (this.isIstAn())
+			this.setLautstaerke(this.lautstaerke - 1);
 		System.out.println(this.toString());
 	}
 
-
 	public void aus() {
 		System.out.println("Aufruf von aus()");
-		if (this.isIstAn())this.istAn = false; System.out.println(this.toString());
+		if (this.isIstAn())
+			this.istAn = false;
+		System.out.println(this.toString());
 	}
 
 	public void an() {
 		System.out.println("Aufruf von an()");
-		if (!this.isIstAn())this.istAn = true; System.out.println(this.toString());
+		if (!this.isIstAn())
+			this.istAn = true;
+		System.out.println(this.toString());
 	}
 
 	public String toString() {
@@ -79,6 +88,5 @@ public class Radio {
 		}
 		return s1;
 	}
-
 
 }
