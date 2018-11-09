@@ -46,6 +46,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>Motor.mc3</itemPath>
     </logicalFolder>
+    <itemPath>Motor.mc3</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem></Elem>
