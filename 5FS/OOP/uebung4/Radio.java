@@ -40,7 +40,7 @@ public class Radio {
 	}
 
 	public void setLautstaerke(int lautstaerke) {
-		System.out.println("Aufruf von setLaufstaerke()");
+		System.out.println("Aufruf von setLautstaerke()");
 		if (lautstaerke <= 10 && lautstaerke >= 0)
 			this.lautstaerke = lautstaerke;
 		System.out.println(this.toString());
