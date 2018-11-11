@@ -67,7 +67,7 @@ void TMR0_Initialize(void)
     // Set TMR0 to the options selected in the User Interface
 	
     // PSA assigned; PS 1:256; TMRSE Increment_hi_lo; mask the nWPUEN and INTEDG bits
-    OPTION_REG = (uint8_t)((OPTION_REG & 0xC0) | 0xD7 & 0x3F); 
+    OPTION_REG = (uint8_t)((OPTION_REG & 0xC0) | (0xD7 & 0x3F)); 
 	
     // TMR0 139; 
     TMR0 = 0x8B;
@@ -133,8 +133,6 @@ void TMR0_ISR(void)
 
 void TMR0_CallBack(void)
 {
-    // Add your custom callback code here
-    
     //die aktuelle Temperatur abfragen und als float umcasten
     //dadurch kann man die Nachkommastelle einfach rausrechnen.
     float temp = (float) getTemp()/10;
@@ -143,7 +141,7 @@ void TMR0_CallBack(void)
     printf("%c[2K", 27);
     
     //gib die aktuelle Temperatur aus, 1 Nachkommastelle
-    printf("Die aktuelle Temperatur ist %+.1f Grad Celsius.\n\r",temp);
+    printf("Die aktuelle Temperatur ist %+.1f Grad Celsius.\n\r",0);
 
     
     
