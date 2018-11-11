@@ -22,7 +22,7 @@ int getTemp(void){
     ow_skip_rom();
     //sende "Convert T" an den DS18B20
     ow_write_byte(0x44);
-    //warte mindestens 790 us fï¿½r verarbeitung der Daten
+    //warte mindestens 790 us für verarbeitung der Daten
     __delay_us(800);
     //OW Bus INIT
     ow_master_reset();
