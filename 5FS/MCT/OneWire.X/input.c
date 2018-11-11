@@ -48,7 +48,6 @@ int getTemp(void){
         //berechnung der Temperatur
         temp = (((int) SENSOR[1] << 8) | (int) SENSOR[0]) * 10 / 16;
     }
-
     return temp;
 }
 

@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Ricardo\AppData\Local\Temp\s7n4.o
+$C:\Users\Ricardo\AppData\Local\Temp\s1q0.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 0 8007 8007 2 2
@@ -35,18 +35,17 @@ stringtext1 STRCODE 0 800 800 7A 2
 stringtext2 STRCODE 0 87A 87A 35 2
 stringtext3 STRCODE 0 8AF 8AF 32 2
 stringtext4 STRCODE 0 8E1 8E1 23 2
-stringtext5 STRCODE 0 904 904 6 2
-stringtext6 STRCODE 0 90A 90A 5 2
-stringtext7 STRCODE 0 90F 90F 4 2
-stringtext8 STRCODE 0 913 913 4 2
-stringtext9 STRCODE 0 917 917 4 2
+stringtext5 STRCODE 0 904 904 5 2
+stringtext6 STRCODE 0 909 909 4 2
+stringtext7 STRCODE 0 90D 90D 4 2
+stringtext8 STRCODE 0 911 911 4 2
+stringtext9 STRCODE 0 915 915 4 2
 bssBANK0 BANK0 1 20 20 11 1
 bssBANK1 BANK1 1 A0 A0 50 1
 clrtext CODE 0 720 720 6 2
 bssCOMMON COMMON 1 70 70 A 1
-stringtext10 STRCODE 0 91B 91B 4 2
-stringtext11 STRCODE 0 91F 91F 4 2
-stringtext12 STRCODE 0 923 923 3 2
+stringtext10 STRCODE 0 919 919 4 2
+stringtext11 STRCODE 0 91D 91D 3 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -66,9 +65,9 @@ BANK4 220-26F 1
 BANK5 2A0-2EF 1
 BANK6 320-32F 1
 CONST 4-709 2
-CONST 926-1FFF 2
+CONST 920-1FFF 2
 ENTRY 4-709 2
-ENTRY 926-1FFF 2
+ENTRY 920-1FFF 2
 IDLOC 8000-8003 2
 SFR10 500-56F 1
 SFR11 580-5EF 1
@@ -94,7 +93,7 @@ SFR30 F00-F6F 1
 SFR31 F80-FEF 1
 STACK 20A0-21EF 1
 CODE 4-709 2
-CODE 926-1FFF 2
+CODE 920-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -108,9 +107,9 @@ SFR9 480-4EF 1
 BIGRAM 2000-21EF 1
 EEDATA F000-F0FF 2
 STRCODE 4-709 2
-STRCODE 926-1FFF 2
+STRCODE 920-1FFF 2
 STRING 4-709 2
-STRING 926-1FFF 2
+STRING 920-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -125,29 +124,29 @@ STRING 926-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\OneWire.X.production.o
-7E5 cinit CODE >3775:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7E5 cinit CODE >3778:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7E5 cinit CODE >3832:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7E6 cinit CODE >3833:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7E7 cinit CODE >3834:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7E8 cinit CODE >3835:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7E9 cinit CODE >3836:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7EA cinit CODE >3837:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7ED cinit CODE >3841:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7EE cinit CODE >3842:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7EF cinit CODE >3843:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7F0 cinit CODE >3844:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7F1 cinit CODE >3845:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7F2 cinit CODE >3846:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7F5 cinit CODE >3850:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7F6 cinit CODE >3851:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7F7 cinit CODE >3852:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7F8 cinit CODE >3853:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7F9 cinit CODE >3854:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7FA cinit CODE >3855:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7FD cinit CODE >3861:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7FD cinit CODE >3863:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-7FE cinit CODE >3864:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
+7E5 cinit CODE >3764:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7E5 cinit CODE >3767:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7E5 cinit CODE >3821:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7E6 cinit CODE >3822:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7E7 cinit CODE >3823:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7E8 cinit CODE >3824:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7E9 cinit CODE >3825:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7EA cinit CODE >3826:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7ED cinit CODE >3830:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7EE cinit CODE >3831:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7EF cinit CODE >3832:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7F0 cinit CODE >3833:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7F1 cinit CODE >3834:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7F2 cinit CODE >3835:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7F5 cinit CODE >3839:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7F6 cinit CODE >3840:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7F7 cinit CODE >3841:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7F8 cinit CODE >3842:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7F9 cinit CODE >3843:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7FA cinit CODE >3844:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7FD cinit CODE >3850:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7FD cinit CODE >3852:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+7FE cinit CODE >3853:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
 72D text11 CODE >56:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\mcc_generated_files/eusart.c
 72D text11 CODE >61:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\mcc_generated_files/eusart.c
 730 text11 CODE >64:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\mcc_generated_files/eusart.c
@@ -195,9 +194,9 @@ $dist/default/production\OneWire.X.production.o
 7DC text7 CODE >125:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\mcc_generated_files/pin_manager.c
 7E3 text7 CODE >128:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\mcc_generated_files/pin_manager.c
 7E4 text7 CODE >130:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\mcc_generated_files/pin_manager.c
-71A text6 CODE >157:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\mcc_generated_files/tmr0.c
-71A text6 CODE >158:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\mcc_generated_files/tmr0.c
-71F text6 CODE >159:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\mcc_generated_files/tmr0.c
+71A text6 CODE >155:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\mcc_generated_files/tmr0.c
+71A text6 CODE >156:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\mcc_generated_files/tmr0.c
+71F text6 CODE >157:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\mcc_generated_files/tmr0.c
 754 text5 CODE >65:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\mcc_generated_files/tmr0.c
 754 text5 CODE >70:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\mcc_generated_files/tmr0.c
 759 text5 CODE >73:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\mcc_generated_files/tmr0.c
@@ -240,14 +239,14 @@ $dist/default/production\OneWire.X.production.o
 7AB maintext CODE >77:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\main.c
 7AB maintext CODE >79:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\main.c
 7AC maintext CODE >80:C:\Users\Ricardo\git\HTW\5FS\MCT\OneWire.X\main.c
-720 clrtext CODE >3821:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-720 clrtext CODE >3822:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-721 clrtext CODE >3823:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-721 clrtext CODE >3824:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-722 clrtext CODE >3825:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-723 clrtext CODE >3826:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-724 clrtext CODE >3827:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-725 clrtext CODE >3828:C:\Users\Ricardo\AppData\Local\Temp\s7n4.
+720 clrtext CODE >3810:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+720 clrtext CODE >3811:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+721 clrtext CODE >3812:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+721 clrtext CODE >3813:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+722 clrtext CODE >3814:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+723 clrtext CODE >3815:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+724 clrtext CODE >3816:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+725 clrtext CODE >3817:C:\Users\Ricardo\AppData\Local\Temp\s1q0.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -279,21 +278,20 @@ _TMR0 15 0 ABS 0 - dist/default/production\OneWire.X.production.o
 _WPUB 20D 0 ABS 0 - dist/default/production\OneWire.X.production.o
 _WPUE 210 0 ABS 0 - dist/default/production\OneWire.X.production.o
 __end_of_IOCBF0_SetInterruptHandler E28 0 CODE 0 text9 dist/default/production\OneWire.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Ricardo\AppData\Local\Temp\s7n4.o
+___sp 0 0 STACK 2 stack C:\Users\Ricardo\AppData\Local\Temp\s1q0.o
 _dbuf A0 0 BANK1 1 bssBANK1 dist/default/production\OneWire.X.production.o
 _main F06 0 CODE 0 maintext dist/default/production\OneWire.X.production.o
 _nout 70 0 COMMON 1 bssCOMMON dist/default/production\OneWire.X.production.o
 _prec 74 0 COMMON 1 bssCOMMON dist/default/production\OneWire.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\OneWire.X.production.o
 _IOCBF0_DefaultInterruptHandler 0 0 ABS 0 - dist/default/production\OneWire.X.production.o
-start 4 0 CODE 0 init C:\Users\Ricardo\AppData\Local\Temp\s7n4.o
+start 4 0 CODE 0 init C:\Users\Ricardo\AppData\Local\Temp\s1q0.o
 _EUSART_Write E70 0 CODE 0 text2 dist/default/production\OneWire.X.production.o
 _TMR0_InterruptHandler 31 0 BANK0 1 nvBANK0 dist/default/production\OneWire.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\OneWire.X.production.o
 __Hstringtext10 0 0 ABS 0 stringtext10 -
 __Hstringtext11 0 0 ABS 0 stringtext11 -
 __Hstringtext12 0 0 ABS 0 stringtext12 -
-__Hstringtext13 0 0 ABS 0 stringtext13 -
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __end_of_TMR0_SetInterruptHandler E40 0 CODE 0 text6 dist/default/production\OneWire.X.production.o
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production\OneWire.X.production.o
@@ -301,12 +299,12 @@ __end_of_EUSART_Initialize E70 0 CODE 0 text11 dist/default/production\OneWire.X
 __Hpowerup 0 0 CODE 0 powerup -
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\OneWire.X.production.o
 TMR0_SetInterruptHandler@InterruptHandler 7A 0 COMMON 1 cstackCOMMON dist/default/production\OneWire.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Ricardo\AppData\Local\Temp\s7n4.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Ricardo\AppData\Local\Temp\s7n4.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Ricardo\AppData\Local\Temp\s7n4.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Ricardo\AppData\Local\Temp\s7n4.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Ricardo\AppData\Local\Temp\s7n4.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Ricardo\AppData\Local\Temp\s7n4.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Ricardo\AppData\Local\Temp\s1q0.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Ricardo\AppData\Local\Temp\s1q0.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Ricardo\AppData\Local\Temp\s1q0.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Ricardo\AppData\Local\Temp\s1q0.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Ricardo\AppData\Local\Temp\s1q0.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Ricardo\AppData\Local\Temp\s1q0.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\OneWire.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -330,7 +328,6 @@ _PIN_MANAGER_Initialize F5C 0 CODE 0 text7 dist/default/production\OneWire.X.pro
 __Lstringtext10 0 0 ABS 0 stringtext10 -
 __Lstringtext11 0 0 ABS 0 stringtext11 -
 __Lstringtext12 0 0 ABS 0 stringtext12 -
-__Lstringtext13 0 0 ABS 0 stringtext13 -
 start_initialization FCA 0 CODE 0 cinit dist/default/production\OneWire.X.production.o
 _OSCCON 99 0 ABS 0 - dist/default/production\OneWire.X.production.o
 IOCBF0_SetInterruptHandler@InterruptHandler 7A 0 COMMON 1 cstackCOMMON dist/default/production\OneWire.X.production.o
@@ -344,7 +341,7 @@ _SPBRGL 19B 0 ABS 0 - dist/default/production\OneWire.X.production.o
 __end_of_IOCBF1_SetInterruptHandler E34 0 CODE 0 text8 dist/default/production\OneWire.X.production.o
 _IOCBF0_InterruptHandler 35 0 BANK0 1 nvBANK0 dist/default/production\OneWire.X.production.o
 _WDTCON 97 0 ABS 0 - dist/default/production\OneWire.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Ricardo\AppData\Local\Temp\s7n4.o
+___int_sp 0 0 STACK 2 stack C:\Users\Ricardo\AppData\Local\Temp\s1q0.o
 __end_of_send_string F06 0 CODE 0 text1 dist/default/production\OneWire.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -480,15 +477,14 @@ __pstringtext2 10F4 0 STRCODE 0 stringtext2 dist/default/production\OneWire.X.pr
 __pstringtext3 115E 0 STRCODE 0 stringtext3 dist/default/production\OneWire.X.production.o
 __pstringtext4 11C2 0 STRCODE 0 stringtext4 dist/default/production\OneWire.X.production.o
 __pstringtext5 1208 0 STRCODE 0 stringtext5 dist/default/production\OneWire.X.production.o
-__pstringtext6 1214 0 STRCODE 0 stringtext6 dist/default/production\OneWire.X.production.o
-__pstringtext7 121E 0 STRCODE 0 stringtext7 dist/default/production\OneWire.X.production.o
-__pstringtext8 1226 0 STRCODE 0 stringtext8 dist/default/production\OneWire.X.production.o
-__pstringtext9 122E 0 STRCODE 0 stringtext9 dist/default/production\OneWire.X.production.o
+__pstringtext6 1212 0 STRCODE 0 stringtext6 dist/default/production\OneWire.X.production.o
+__pstringtext7 121A 0 STRCODE 0 stringtext7 dist/default/production\OneWire.X.production.o
+__pstringtext8 1222 0 STRCODE 0 stringtext8 dist/default/production\OneWire.X.production.o
+__pstringtext9 122A 0 STRCODE 0 stringtext9 dist/default/production\OneWire.X.production.o
 __pnvBANK0 31 0 BANK0 1 nvBANK0 dist/default/production\OneWire.X.production.o
-__pstringtext10 1236 0 STRCODE 0 stringtext10 dist/default/production\OneWire.X.production.o
-__pstringtext11 123E 0 STRCODE 0 stringtext11 dist/default/production\OneWire.X.production.o
-__pstringtext12 1246 0 STRCODE 0 stringtext12 dist/default/production\OneWire.X.production.o
-__pstringtext13 0 0 STRCODE 0 stringtext13 dist/default/production\OneWire.X.production.o
+__pstringtext10 1232 0 STRCODE 0 stringtext10 dist/default/production\OneWire.X.production.o
+__pstringtext11 123A 0 STRCODE 0 stringtext11 dist/default/production\OneWire.X.production.o
+__pstringtext12 0 0 STRCODE 0 stringtext12 dist/default/production\OneWire.X.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __size_of_WDT_Initialize 0 0 ABS 0 - dist/default/production\OneWire.X.production.o
 __S0 8009 0 ABS 0 - -
@@ -499,7 +495,7 @@ _SYSTEM_Initialize E88 0 CODE 0 text3 dist/default/production\OneWire.X.producti
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\OneWire.X.production.o
 __HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Ricardo\AppData\Local\Temp\s7n4.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Ricardo\AppData\Local\Temp\s1q0.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
 send_string@x 7B 0 COMMON 1 cstackCOMMON dist/default/production\OneWire.X.production.o
@@ -557,8 +553,8 @@ TMR0_ISR@CountCallBack 78 0 COMMON 1 bssCOMMON dist/default/production\OneWire.X
 _TMR0_SetInterruptHandler E34 0 CODE 0 text6 dist/default/production\OneWire.X.production.o
 __size_of_send_string 0 0 ABS 0 - dist/default/production\OneWire.X.production.o
 __CFG_VCAPEN$OFF 0 0 ABS 0 - dist/default/production\OneWire.X.production.o
-stackhi 21EF 0 ABS 0 - C:\Users\Ricardo\AppData\Local\Temp\s7n4.o
-stacklo 20A0 0 ABS 0 - C:\Users\Ricardo\AppData\Local\Temp\s7n4.o
+stackhi 21EF 0 ABS 0 - C:\Users\Ricardo\AppData\Local\Temp\s1q0.o
+stacklo 20A0 0 ABS 0 - C:\Users\Ricardo\AppData\Local\Temp\s1q0.o
 _OSCTUNE 98 0 ABS 0 - dist/default/production\OneWire.X.production.o
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\OneWire.X.production.o
 __Lspace_0 0 0 ABS 0 - -
@@ -677,7 +673,7 @@ text9 0 70E E1C 6 2
 text10 0 726 E4C 7 2
 text11 0 72D E5A B 2
 maintext 0 783 F06 2B 2
-stringtext1 0 800 1000 126 2
+stringtext1 0 800 1000 120 2
 reset_vec 0 0 0 4 2
 bssBANK0 1 20 20 18 1
 bssBANK1 1 A0 A0 50 1

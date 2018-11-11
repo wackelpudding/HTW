@@ -919,19 +919,6 @@ static int pad(FILE *fp, char *buf, int p)
 
     return strlen(buf) + w;
 }
-# 259 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\sources\\c99\\common\\doprnt.c"
-static int ctoa(FILE *fp, char c)
-{
-    int l, w;
-
-
-    w = width ? width - 1 : width;
-
-
-    dbuf[0] = c;
-    dbuf[1] = '\0';
-    return pad(fp, &dbuf[0], w);
-}
 # 319 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\sources\\c99\\common\\doprnt.c"
 static int efgtoa(FILE *fp, long double f, char c)
 {
@@ -1192,12 +1179,6 @@ static int vfpfcnvrt(FILE *fp, char *fmt[], va_list ap)
             if (ct[1]) {
                 ct[2] = tolower((int)(*fmt)[2]);
             }
-        }
-# 792 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\sources\\c99\\common\\doprnt.c"
-        if (*fmt[0] == 'c') {
-            ++*fmt;
-            c = (unsigned char)(*(int *)__va_arg(*(int **)ap, (int)0));
-            return ctoa(fp, c);
         }
 # 920 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\sources\\c99\\common\\doprnt.c"
         if (ct[0] == 'f') {

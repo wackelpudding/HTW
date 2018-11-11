@@ -53,7 +53,7 @@ _flags 76 0 COMMON 1
 __CFG_STVREN$ON 0 0 ABS 0
 __Hstringtext7 0 0 ABS 0
 __Lstringtext7 0 0 ABS 0
-__pstringtext7 90F 0 STRCODE 0
+__pstringtext7 90D 0 STRCODE 0
 __Hfunctab 0 0 ENTRY 0
 __Lfunctab 0 0 ENTRY 0
 __end_of_WDT_Initialize 70E 0 CODE 0
@@ -119,10 +119,10 @@ __Ltext 0 0 ABS 0
 end_of_initialization 7FD 0 CODE 0
 __Hstringtext12 0 0 ABS 0
 __Lstringtext12 0 0 ABS 0
-__pstringtext12 923 0 STRCODE 0
+__pstringtext12 0 0 STRCODE 0
 __Hstringtext8 0 0 ABS 0
 __Lstringtext8 0 0 ABS 0
-__pstringtext8 913 0 STRCODE 0
+__pstringtext8 911 0 STRCODE 0
 __HnvBANK0 0 0 ABS 0
 __LnvBANK0 0 0 ABS 0
 __pnvBANK0 31 0 BANK0 1
@@ -231,7 +231,7 @@ __size_of_IOCBF0_SetInterruptHandler 0 0 ABS 0
 __Hstringtext9 0 0 ABS 0
 __end_of__initialization 7FD 0 CODE 0
 __Lstringtext9 0 0 ABS 0
-__pstringtext9 917 0 STRCODE 0
+__pstringtext9 915 0 STRCODE 0
 __end_of_send_string 783 0 CODE 0
 _TMR0_Initialize 754 0 CODE 0
 __Hidloc 0 0 IDLOC 0
@@ -259,18 +259,15 @@ __size_of_TMR0_Initialize 0 0 ABS 0
 _PIN_MANAGER_Initialize 7AE 0 CODE 0
 __Hstringtext10 0 0 ABS 0
 __Lstringtext10 0 0 ABS 0
-__pstringtext10 91B 0 STRCODE 0
+__pstringtext10 919 0 STRCODE 0
 __Hstringtext4 0 0 ABS 0
 __Lstringtext4 0 0 ABS 0
 send_string@x 7B 0 COMMON 1
 __pstringtext4 8E1 0 STRCODE 0
 clear_ram0 720 0 CODE 0
 __size_of_SYSTEM_Initialize 0 0 ABS 0
-__Hstringtext13 0 0 ABS 0
-__Lstringtext13 0 0 ABS 0
 __HbssBANK0 0 0 ABS 0
 __LbssBANK0 0 0 ABS 0
-__pstringtext13 0 0 STRCODE 0
 __Hbank10 0 0 BANK10 1
 __pbssBANK0 20 0 BANK0 1
 __Lbank10 0 0 BANK10 1
@@ -371,11 +368,11 @@ __initialization 7E5 0 CODE 0
 __CFG_CP$OFF 0 0 ABS 0
 __Hstringtext11 0 0 ABS 0
 __Lstringtext11 0 0 ABS 0
-__pstringtext11 91F 0 STRCODE 0
+__pstringtext11 91D 0 STRCODE 0
 __Hstringtext6 0 0 ABS 0
 __Lstringtext6 0 0 ABS 0
 __end_of_TMR0_Initialize 76A 0 CODE 0
-__pstringtext6 90A 0 STRCODE 0
+__pstringtext6 909 0 STRCODE 0
 __CFG_LVP$OFF 0 0 ABS 0
 %segments
 reset_vec 0 7 CODE 0 0
@@ -384,7 +381,7 @@ config 1000E 10011 CONFIG 1000E 0
 bssCOMMON 70 7D COMMON 70 1
 bssBANK1 A0 EF BANK1 A0 1
 bssBANK0 20 37 BANK0 20 1
-stringtext1 1000 124B STRCODE 1000 0
+stringtext1 1000 123F STRCODE 1000 0
 text7 F5C FC9 CODE F5C 0
 maintext F06 F5B CODE F06 0
 text1 ED4 F05 CODE ED4 0
@@ -400,38 +397,38 @@ text9 E1C E27 CODE E1C 0
 text4 E14 E1B CODE E14 0
 %locals
 dist/default/production\OneWire.X.production.o
-C:\Users\Ricardo\AppData\Local\Temp\s7n4.
-3775 7E5 0 CODE 0
-3778 7E5 0 CODE 0
-3832 7E5 0 CODE 0
-3833 7E6 0 CODE 0
-3834 7E7 0 CODE 0
-3835 7E8 0 CODE 0
-3836 7E9 0 CODE 0
-3837 7EA 0 CODE 0
-3841 7ED 0 CODE 0
-3842 7EE 0 CODE 0
-3843 7EF 0 CODE 0
-3844 7F0 0 CODE 0
-3845 7F1 0 CODE 0
-3846 7F2 0 CODE 0
-3850 7F5 0 CODE 0
-3851 7F6 0 CODE 0
-3852 7F7 0 CODE 0
-3853 7F8 0 CODE 0
-3854 7F9 0 CODE 0
-3855 7FA 0 CODE 0
-3861 7FD 0 CODE 0
-3863 7FD 0 CODE 0
-3864 7FE 0 CODE 0
-3821 720 0 CODE 0
-3822 720 0 CODE 0
-3823 721 0 CODE 0
-3824 721 0 CODE 0
-3825 722 0 CODE 0
-3826 723 0 CODE 0
-3827 724 0 CODE 0
-3828 725 0 CODE 0
+C:\Users\Ricardo\AppData\Local\Temp\s1q0.
+3764 7E5 0 CODE 0
+3767 7E5 0 CODE 0
+3821 7E5 0 CODE 0
+3822 7E6 0 CODE 0
+3823 7E7 0 CODE 0
+3824 7E8 0 CODE 0
+3825 7E9 0 CODE 0
+3826 7EA 0 CODE 0
+3830 7ED 0 CODE 0
+3831 7EE 0 CODE 0
+3832 7EF 0 CODE 0
+3833 7F0 0 CODE 0
+3834 7F1 0 CODE 0
+3835 7F2 0 CODE 0
+3839 7F5 0 CODE 0
+3840 7F6 0 CODE 0
+3841 7F7 0 CODE 0
+3842 7F8 0 CODE 0
+3843 7F9 0 CODE 0
+3844 7FA 0 CODE 0
+3850 7FD 0 CODE 0
+3852 7FD 0 CODE 0
+3853 7FE 0 CODE 0
+3810 720 0 CODE 0
+3811 720 0 CODE 0
+3812 721 0 CODE 0
+3813 721 0 CODE 0
+3814 722 0 CODE 0
+3815 723 0 CODE 0
+3816 724 0 CODE 0
+3817 725 0 CODE 0
 main.c
 50 783 0 CODE 0
 53 783 0 CODE 0
@@ -479,9 +476,9 @@ mcc_generated_files/tmr0.c
 82 761 0 CODE 0
 85 762 0 CODE 0
 86 769 0 CODE 0
-157 71A 0 CODE 0
-158 71A 0 CODE 0
-159 71F 0 CODE 0
+155 71A 0 CODE 0
+156 71A 0 CODE 0
+157 71F 0 CODE 0
 mcc_generated_files/pin_manager.c
 61 7AE 0 CODE 0
 66 7AE 0 CODE 0

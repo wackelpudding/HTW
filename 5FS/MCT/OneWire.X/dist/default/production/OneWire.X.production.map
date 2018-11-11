@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.00\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\OneWire.X.production.sym \
   --cmf=dist/default/production\OneWire.X.production.cmf -z -Q16F1937 \
-  -oC:\Users\Ricardo\AppData\Local\Temp\s7n4.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\Ricardo\AppData\Local\Temp\s1q0.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/OneWire.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=020A0h-021efh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -30,7 +30,7 @@ Linker command line:
   -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\Ricardo\AppData\Local\Temp\s7n4.o \
+  C:\Users\Ricardo\AppData\Local\Temp\s1q0.o \
   dist/default/production\OneWire.X.production.o 
 
 Object code version is 3.11
@@ -40,7 +40,7 @@ Machine type is 16F1937
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Ricardo\AppData\Local\Temp\s7n4.o
+C:\Users\Ricardo\AppData\Local\Temp\s1q0.o
                 end_init                              2        2        2        0       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2    1000E       0
@@ -63,14 +63,13 @@ dist/default/production\OneWire.X.production.o
                 bssBANK1                             A0       A0       50       A0       1
                 bssBANK0                             20       20       11       20       1
                 bssCOMMON                            70       70        A       70       1
-                stringtext12                        923      923        3     1000       0
-                stringtext11                        91F      91F        4     1000       0
-                stringtext10                        91B      91B        4     1000       0
-                stringtext9                         917      917        4     1000       0
-                stringtext8                         913      913        4     1000       0
-                stringtext7                         90F      90F        4     1000       0
-                stringtext6                         90A      90A        5     1000       0
-                stringtext5                         904      904        6     1000       0
+                stringtext11                        91D      91D        3     1000       0
+                stringtext10                        919      919        4     1000       0
+                stringtext9                         915      915        4     1000       0
+                stringtext8                         911      911        4     1000       0
+                stringtext7                         90D      90D        4     1000       0
+                stringtext6                         909      909        4     1000       0
+                stringtext5                         904      904        5     1000       0
                 stringtext4                         8E1      8E1       23     1000       0
                 stringtext3                         8AF      8AF       32     1000       0
                 stringtext2                         87A      87A       35     1000       0
@@ -99,14 +98,13 @@ TOTAL           Name                               Link     Load   Length     Sp
                 clrtext                             720      720        6         0
 
         CLASS   STRCODE        
-                stringtext12                        923      923        3         0
-                stringtext11                        91F      91F        4         0
-                stringtext10                        91B      91B        4         0
-                stringtext9                         917      917        4         0
-                stringtext8                         913      913        4         0
-                stringtext7                         90F      90F        4         0
-                stringtext6                         90A      90A        5         0
-                stringtext5                         904      904        6         0
+                stringtext11                        91D      91D        3         0
+                stringtext10                        919      919        4         0
+                stringtext9                         915      915        4         0
+                stringtext8                         911      911        4         0
+                stringtext7                         90D      90D        4         0
+                stringtext6                         909      909        4         0
+                stringtext5                         904      904        5         0
                 stringtext4                         8E1      8E1       23         0
                 stringtext3                         8AF      8AF       32         0
                 stringtext2                         87A      87A       35         0
@@ -289,7 +287,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 maintext                       000783  00002B  0007AE       F06       0  CODE        2
                 text7                          0007AE  000037  0007E5       F5C       0  CODE        2
                 cinit                          0007E5  00001B  000800       FCA       0  CODE        2
-                stringtext1                    000800  000126  000926      1000       0  STRCODE     2
+                stringtext1                    000800  000120  000920      1000       0  STRCODE     2
                 config                         008007  000002  008009     1000E       0  CONFIG      2
 
 
@@ -304,12 +302,12 @@ UNUSED ADDRESS RANGES
         BANK6            00320-0032F              10           1
         BIGRAM           02000-021EF             1F0           1
         CODE             00004-00709             706           2
-                         00926-01FFF             800
+                         00920-01FFF             800
         CONST            00004-00709             100           2
-                         00926-01FFF             100
+                         00920-01FFF             100
         EEDATA           0F000-0F0FF             100           2
         ENTRY            00004-00709             100           2
-                         00926-01FFF             100
+                         00920-01FFF             100
         IDLOC            08000-08003               4           2
         RAM              00038-0006F              38           1
                          00120-0016F              50
@@ -351,9 +349,9 @@ UNUSED ADDRESS RANGES
         SFR9             00480-004EF              70           1
         STACK            020A0-021EF             150           1
         STRCODE          00004-00709             706           2
-                         00926-01FFF            16DA
+                         00920-01FFF            16E0
         STRING           00004-00709             100           2
-                         00926-01FFF             100
+                         00920-01FFF             100
 
                                   Symbol Table
 
@@ -531,7 +529,6 @@ __Hstringtext1                              stringtext1  00000
 __Hstringtext10                             stringtext10 00000
 __Hstringtext11                             stringtext11 00000
 __Hstringtext12                             stringtext12 00000
-__Hstringtext13                             stringtext13 00000
 __Hstringtext2                              stringtext2  00000
 __Hstringtext3                              stringtext3  00000
 __Hstringtext4                              stringtext4  00000
@@ -637,7 +634,6 @@ __Lstringtext1                              stringtext1  00000
 __Lstringtext10                             stringtext10 00000
 __Lstringtext11                             stringtext11 00000
 __Lstringtext12                             stringtext12 00000
-__Lstringtext13                             stringtext13 00000
 __Lstringtext2                              stringtext2  00000
 __Lstringtext3                              stringtext3  00000
 __Lstringtext4                              stringtext4  00000
@@ -676,18 +672,17 @@ __pcstackCOMMON                             cstackCOMMON 0007A
 __pmaintext                                 maintext     00783
 __pnvBANK0                                  nvBANK0      00031
 __pstringtext1                              stringtext1  00800
-__pstringtext10                             stringtext10 0091B
-__pstringtext11                             stringtext11 0091F
-__pstringtext12                             stringtext12 00923
-__pstringtext13                             stringtext13 00000
+__pstringtext10                             stringtext10 00919
+__pstringtext11                             stringtext11 0091D
+__pstringtext12                             stringtext12 00000
 __pstringtext2                              stringtext2  0087A
 __pstringtext3                              stringtext3  008AF
 __pstringtext4                              stringtext4  008E1
 __pstringtext5                              stringtext5  00904
-__pstringtext6                              stringtext6  0090A
-__pstringtext7                              stringtext7  0090F
-__pstringtext8                              stringtext8  00913
-__pstringtext9                              stringtext9  00917
+__pstringtext6                              stringtext6  00909
+__pstringtext7                              stringtext7  0090D
+__pstringtext8                              stringtext8  00911
+__pstringtext9                              stringtext9  00915
 __ptext1                                    text1        0076A
 __ptext10                                   text10       00726
 __ptext11                                   text11       0072D
@@ -775,8 +770,8 @@ Total ram usage:        0 bytes
 		line 9 in file "input.c"
  Parameters:    Size  Location     Type
   x               2    1[COMMON] PTR const unsigned char 
-		 -> STR_7(53), STR_6(122), STR_5(35), STR_4(5), 
-		 -> STR_3(4), 
+		 -> STR_5(53), STR_4(122), STR_3(35), STR_2(5), 
+		 -> STR_1(4), 
  Auto vars:     Size  Location     Type
 		None
  Return value:  Size  Location     Type
@@ -927,7 +922,7 @@ Total ram usage:        1 bytes
 
  *************** function _TMR0_SetInterruptHandler *****************
  Defined at:
-		line 157 in file "mcc_generated_files/tmr0.c"
+		line 155 in file "mcc_generated_files/tmr0.c"
  Parameters:    Size  Location     Type
   InterruptHan    2    0[COMMON] PTR FTN()void 
 		 -> TMR0_DefaultInterruptHandler(1), 
