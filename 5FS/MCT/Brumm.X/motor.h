@@ -128,5 +128,15 @@ void send_string(const char *x);
 void conv_int_to_string(uint8_t integer);
 
 
+void rechtslauf();
+
+void linkslauf();
+
+void stop();
+
+void motorsteuerung(int);
+
+
+
 #endif	/* MOTOR_H */
 

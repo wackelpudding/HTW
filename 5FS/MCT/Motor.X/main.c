@@ -44,6 +44,7 @@
 #include "mcc_generated_files/mcc.h"
 
 
+
 /*
                          Main application
  */
@@ -69,9 +70,8 @@ void main(void)
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
     
-    EPWM1_LoadDutyValue(1023);
-    IN1_SetHigh();
-    IN2_SetLow();
+    EPWM1_LoadDutyValue(511);
+    rechtslauf();
 
     Lcd_Init(); //Initialisierung des LCD
     //RW_SetLow(); // Read-Modus

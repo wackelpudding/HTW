@@ -48,7 +48,7 @@
   Section: Included Files
 */
 #include "eusart.h"
-
+#include "../motor.h"
 
 /**
   Section: EUSART APIs

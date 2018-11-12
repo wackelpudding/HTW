@@ -45,6 +45,7 @@
 */
 
 #include "mcc.h"
+#include "../motor.h"
 
 
 void SYSTEM_Initialize(void)

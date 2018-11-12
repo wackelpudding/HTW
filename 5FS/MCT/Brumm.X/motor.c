@@ -6,6 +6,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "lcd.h"
+#include "mcc_generated_files/epwm1.h"
 
 void EUSART_Initialize(void)
 {
@@ -94,4 +95,37 @@ void conv_int_to_string(uint8_t integer){
     }
     
     //return result;
+}
+
+void rechtslauf(){
+    IN1_SetLow();
+    IN2_SetHigh();
+}
+
+void linkslauf(){
+    IN1_SetHigh();
+    IN2_SetLow();
+}
+
+void stop(){
+    IN1_SetLow();
+    IN2_SetLow();
+}
+
+void motorsteuerung(int poti){
+    int temp = 0;
+    if (poti <= 500){
+        linkslauf();
+        temp = (float) -(poti - 500) / 500 * 1023;
+        EPWM1_LoadDutyValue(temp);
+    } else if (poti > 500 && poti <= 522) {
+            stop();
+            EPWM1_LoadDutyValue(0);
+            __delay_ms(350);
+    } else {
+        rechtslauf();
+        temp = (float) (poti - 523) / 500 * 1023;
+        EPWM1_LoadDutyValue(temp);
+    }
+    
 }

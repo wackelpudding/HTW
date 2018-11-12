@@ -55,6 +55,8 @@
 #include "tmr2.h"
 #include "adc.h"
 #include "eusart.h"
+#include "../motor.h"
+#include "../lcd.h"
 
 
 

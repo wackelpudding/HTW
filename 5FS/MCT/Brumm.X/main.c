@@ -76,9 +76,8 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
     
-    EPWM1_LoadDutyValue(1023);
-    IN1_SetHigh();
-    IN2_SetLow();
+    EPWM1_LoadDutyValue(511);
+    rechtslauf();
 
     Lcd_Init(); //Initialisierung des LCD
     //RW_SetLow(); // Read-Modus
@@ -96,7 +95,7 @@ void main(void)
         // Add your application code
         
         convertedValue = ADC_GetConversion(POT); //Konvertierte Wert in Variablen "convertedValue" speichern
-        EPWM1_LoadDutyValue(convertedValue);
+        motorsteuerung(convertedValue);
         percent = (uint8_t)( (float)convertedValue /1023*100); //Umrechnen in den Spannungswert
         Lcd_Set_Cursor(2,6);
         send_string("\033[2;6H");
