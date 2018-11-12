@@ -6,42 +6,47 @@ public class Flugzeug {
 	float leerGewicht;
 	float maxTankInhalt;
 	float tankInhalt;
-	
+
 	public Flugzeug() {
-		this("Test",1,0,0,0);
+		this("Bitte Werte ändern!", 1, 0, 0, 0);
 	}
-	
-	public Flugzeug(String kennzeichen, float mGewicht, float lGewicht, float mTankI, float tankI) {
-		this.kennzeichen = kennzeichen;
+
+	public Flugzeug(String kennzeichen, float mGewicht, float lGewicht, 
+			float mTankI, float tankI) {
+
 		if (lGewicht + mTankI >= mGewicht) {
-			this.maximalesGewicht = lGewicht + mTankI + 1;
+			System.out.println("Unzulässiges Maximalgewicht, bitte "
+					+ "geben Sie ein gültiges Maximalgewicht an!");
 		} else {
 			this.maximalesGewicht = mGewicht;
+			this.kennzeichen = kennzeichen;
+			this.leerGewicht = lGewicht;
+			this.maxTankInhalt = mTankI;
+			this.tankInhalt = tankI;
 		}
-		this.leerGewicht = lGewicht;
-		this.maxTankInhalt = mTankI;
-		this.tankInhalt = tankI;
+
 	}
-	
+
 	public float gewicht() {
 		return this.leerGewicht + this.tankInhalt;
 	}
-	
+
 	public void tanken(float treibstoff) {
 		float temp;
-		if (this.tankInhalt + treibstoff > this.maxTankInhalt){
-			temp =  Math.abs(this.maxTankInhalt - (this.tankInhalt + treibstoff));
-			this.tankInhalt += temp;
+		temp = this.gewicht() + treibstoff;
+		if (temp > this.maximalesGewicht || treibstoff < 0 || 
+				this.tankInhalt + treibstoff > this.maxTankInhalt) {
+			System.out.println(treibstoff + "kg können Sie nicht tanken.");
 		} else {
-			temp = treibstoff;	
-			this.tankInhalt += temp;
+			this.tankInhalt += treibstoff;
 		}
-		if (this.gewicht() > this.maximalesGewicht) {
-			temp = Math.abs(this.maximalesGewicht - this.gewicht());
-			this.tankInhalt -= temp;
-		}
-		
+
 	}
 	
-	
+	public String toString() {
+		String daten = this.kennzeichen + ": " + this.gewicht() + "kg von " 
+				+ this.maximalesGewicht + "kg Gewicht.";
+		return daten;
+	}
+
 }

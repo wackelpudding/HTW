@@ -2,33 +2,41 @@ package oop.uebung5;
 
 public class Frachtflugzeug extends Flugzeug {
 	float ladung;
-	
+
 	public Frachtflugzeug() {
-		super(null,1,0,0,0);
+		super("Bitte Werte ändern!", 1, 0, 0, 0);
 		this.ladung = 0;
 	}
-	
-	public Frachtflugzeug(String kennzeichen, float mGewicht, float lGewicht, float mTankI, float tankI,float ladung) {
+
+	public Frachtflugzeug(String kennzeichen, float mGewicht, float lGewicht, float mTankI, float tankI, float ladung) {
 		super(kennzeichen, mGewicht, lGewicht, mTankI, tankI);
-		this.ladung = ladung;
-	}
-	
-	public float beladen(float ladung) {
-		float temp = 0;
-		float actLoad = super.gewicht();
-		if(actLoad + ladung > this.maximalesGewicht) {
-			temp = Math.abs(this.maximalesGewicht - (actLoad + ladung));
-			ladung -= temp;
+		if (super.gewicht() + ladung > mGewicht) {
+			System.out.println("Unzulässige Ladung!");
+		} else {
+			this.ladung = ladung;
 		}
-		return actLoad + ladung;
 	}
-	
+
+	public void beladen(float zuLaden) {
+		if (this.gewicht() + zuLaden > this.maximalesGewicht) {
+			System.out.println(zuLaden + "kg kann nicht geladen werden.");
+		} else {
+			this.ladung += zuLaden;
+		}
+	}
+
 	public void entladen() {
 		this.ladung = 0;
+		System.out.println("Flugzeug entladen!");
 	}
-	
+
 	public float gewicht() {
 		return this.leerGewicht + this.tankInhalt + this.ladung;
 	}
+	
+	public String toString() {
+		String daten = this.kennzeichen + ": " + this.gewicht() + "kg von " 
+				+ this.maximalesGewicht + "kg Gewicht und " + this.ladung + "kg Ladung.";
+		return daten;
+	}
 }
-
