@@ -1,7 +1,9 @@
 #ifndef INPUT_C
 #define INPUT_C
 #include "input.h"
+#include "mcc_generated_files/mcc.h"
 #include "onewire.h"
+#include <xc.h>
 
 
 extern unsigned char SENSOR[9];
@@ -18,6 +20,19 @@ int getTemp(void){
     unsigned int sum;
     unsigned char i;
 
+    //Adressenabfrage
+    ow_master_reset();
+    ow_write_byte(0x33);
+    printf("%c[7;1H",27);
+    printf("Teilnehmer: ");
+    for (i=0; i<8; i++){
+        //Lese alle 9 Bytes vom OW Bus ein und speicher Sie im Array SENSOR
+        SENSOR[i] = ow_read_byte();
+        printf("%x",SENSOR[i] & 0xff);
+    }
+    printf("\n\r");
+    
+    //Temperaturabfrage
     //OW Bus INIT
     ow_master_reset();
     ow_skip_rom();
@@ -33,10 +48,13 @@ int getTemp(void){
 
 
     //Antwort einlesen
+    printf("Antwort: ");
     for (i=0; i<9; i++){
         //Lese alle 9 Bytes vom OW Bus ein und speicher Sie im Array SENSOR
         SENSOR[i] = ow_read_byte();
+        printf("%x",SENSOR[i] & 0xff);
     }
+    printf("\n\r");
 
     //SENSOR[0] >>= 1;
     if (SENSOR[1] & 0xF8) {           // Negativer Temperaturwert
@@ -53,8 +71,29 @@ int getTemp(void){
     return temp;
 }
 
+void conv_int_to_string(uint8_t integer){
+    char result[3] = "";
+    uint8_t rest;
+    for (uint8_t i = 0; i < 3; i++) {
+        rest = integer % 10;
+        integer = integer / 10;
+        result[2-i] = rest + 48;
+    }
+    if (result[0] == 48){
+        result[0] = 32;
+        if (result[1] == 48){
+           result[1] = 32; 
+        }
+    }
+    for (uint8_t i = 0; i < 3; i++) {
+        EUSART_Write(result[i]);
+    }
+    
+    //return result;
+}
 
 
+/*
 bool GetInput(int in, bool out0, bool out1, bool out2, bool out3){
     //temp var
     bool oldout;
@@ -126,7 +165,7 @@ bool GetInput(int in, bool out0, bool out1, bool out2, bool out3){
     }
     return NULL;
 }
-
+*/
 
 
 #endif

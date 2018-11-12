@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>OneWire</name>
-            <creation-uuid>9421bd9d-3ada-44c4-a000-a11cf3d4a416</creation-uuid>
+            <name>Brumm</name>
+            <creation-uuid>63fe235d-2ffb-4451-a548-d69a1fa68438</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>

@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=OneWire.X
+PROJECTNAME=Brumm.X
 
 # Active Configuration
 DEFAULTCONF=default
