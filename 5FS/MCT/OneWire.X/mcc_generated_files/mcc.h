@@ -44,15 +44,13 @@
     SOFTWARE.
 */
 
-
 #ifndef MCC_H
 #define	MCC_H
 #include <xc.h>
 #include "pin_manager.h"
-//#include <stdint.h>
-//#include <stdbool.h>
+#include <stdint.h>
+#include <stdbool.h>
 #include "interrupt_manager.h"
-#include "tmr1.h"
 #include "tmr0.h"
 #include "eusart.h"
 #include "../onewire.h"
@@ -62,10 +60,6 @@
 
 #define _XTAL_FREQ  4000000
 
-bool in0 = false;
-bool in1 = false;
-bool in2 = false;
-bool in3 = false;
 
 /**
  * @Param

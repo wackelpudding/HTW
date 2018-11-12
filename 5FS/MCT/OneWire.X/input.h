@@ -16,9 +16,7 @@ extern "C" {
 
 
 /*** prototypes ***************************************************************/    
-//Fragt einen der 4 Inputs an und
-// liefert den aktuellen Zustand des Inputs zurück
-bool GetInput(int in, bool out0, bool out1, bool out2, bool out3); 
+
 
 //sendet einen string via EUSART_Write
 void send_string(const char *x);
@@ -30,11 +28,6 @@ int getTemp(void);
 
 extern unsigned char SENSOR[9];
 
-//deklaration der Input Variablen
-bool out0 = false;
-bool out1 = false;
-bool out2 = false;
-bool out3 = false;
 
 
 

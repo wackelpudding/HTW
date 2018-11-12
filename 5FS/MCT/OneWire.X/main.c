@@ -68,87 +68,14 @@ void main(void)
     //clear screen & cursor zum seitenanfang + Funktionsmen�
     send_string("\033[H");
     send_string("\033[2J");
-    send_string("Willkommen zum I/O-Board Interface.\r\n\n");
+    send_string("Willkommen zum Board Interface.\r\n\n");
     send_string("Der angeschlossene Temperatursensor\n\rwird alle 6 Sekunden abgefragt und\r\ngibt das Messergebnis auf der Konsole bekannt.\r\n");
     send_string("##################################################\r\n");
-    send_string("Sie gibt folgende Funktionen bedienen:\r\n");
-    send_string("(Tippen Sie auf die entsprechende Taste auf Ihrer Tastatur.)\r\n");
-    send_string("1) Relais K1 schalten.\r\n");
-    send_string("2) Relais K2 schalten.\r\n");
-    send_string("q) K1 durch Input0 schaltbar machen ein/aus.\r\n");
-    send_string("w) K2 durch Input1 schaltbar machen ein/aus.\r\n");
-    send_string("##################################################\r\n");
+
 
 
     while (1)
     {
-        // Add your application code
-
-        //lese ein einzelnes zeichen vom serial port ein.
-        char console = EUSART_Read();
-
-        //Fallueberpruefung, je nachdem was eingelesen wurde.
-        switch(console){
-            case '1':
-                //Zeichen '1' eingegeben und Inputsteuerung deaktiviert.
-                if (!in0){
-                    //Relais ist aus. LED und Relais aktivieren, ausgabe.
-                    if (!K1_GetValue()){
-                        LED1_SetHigh();
-                        K1_SetHigh();
-                        send_string("\033[2K");
-                        send_string("Relais K1 ist nun aktiv\r\n");
-                    }   else { //relais ist an.
-                        LED1_SetLow();
-                        K1_SetLow();
-                        send_string("\033[2K");
-                        send_string("Relais K1 ist nun inaktiv\r\n");
-                    }
-                }
-                break;
-            case '2':
-                //Zeichen '2' eingegeben und Inputsteuerung deaktiviert.
-                if (!in1){
-                    //Relais ist aus. LED und Relais aktivieren, ausgabe.
-                    if (!K2_GetValue()){
-                        LED2_SetHigh();
-                        K2_SetHigh();
-                        send_string("\033[2K");
-                        send_string("Relais K2 ist nun aktiv\r\n");
-                    }   else {
-                        LED2_SetLow();
-                        K2_SetLow();
-                        send_string("\033[2K");
-                        send_string("Relais K2 ist nun inaktiv\r\n");
-                    }
-                }
-                break;
-            case 'q':
-                //Inputsteuerung fuer input0 ein/aus mit ausgabe
-                in0 = !in0;
-                send_string("K1 Inputsteuerung: ");
-                K1_PORT = out0;
-                LED1_PORT = out0;
-                if (in0){
-                    send_string("AN!\r\n");
-                }   else {
-                    send_string("AUS!\r\n");
-                }
-                break;
-            case 'w':
-                //Inputsteuerung fuer input1 ein/aus mit ausgabe
-                in1 = !in1;
-                send_string("K2 Inputsteuerung: ");
-                K2_PORT = out1;
-                LED2_PORT = out1;
-                if (in1){
-                    send_string("AN!\r\n");
-                }   else {
-                    send_string("AUS!\r\n");
-                }
-                break;
-            default: break;
-        }
     }
 }
 /**
