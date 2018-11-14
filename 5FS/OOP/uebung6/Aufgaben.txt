@@ -1,0 +1,31 @@
+- Welche Rolle spielt die Klasse Object in Java?
+
+  -> Object ist die Wurzel der Java-Klassenhierarchie
+  -> Jede Klasse in Java ist vom Obertyp java.lang.Object
+  -> Wenn keine Oberklasse durch Vererbung angegeben wird, ist Object, die direkte Oberklasse (implizite Vererbung)
+
+- Was sind die Eigenschaften von abstrakten Klassen?
+
+  -> ine Klasse, die mindestens eine abstrakte Methode enthält, muss als abstrakte Klasse deklariert werden
+  -> Abstrakte Klassen werden mit dem Schlüsselwort abstract markiert
+  -> Eine abstrakte Klasse wird in einer Unterklasse konkretisiert, wenn dort alle ihre abstrakten Methoden implementiert sind
+  -> Abstrakte Klassen sind künstliche Oberklassen, die geschaffen werden, um Gemeinsamkeiten mehrerer Klassen zusammenzufassen
+  -> Abstrakte Klassen dienen nur zur besseren Strukturierung der Software
+  -> Es können keine Objekte einer abstrakten Klasse erzeugt werden
+  -> Die fehlende Implementierung wird in den Unterklassen „nachgeliefert“, sonst sind diese auch abstrakt
+
+- Wozu benutzt man Interfaces beim Programmieren?
+
+  -> Legen eine minimale Funktionalität (Methoden) fest, die in einer implementierten Klasse vorhanden sein soll
+  ->  gehen weiter als abstrakte Klassen
+  -> Alle Methoden sind abstrakt dadurch ist das Schlüsselwort abstract überflüssig
+  -> Werden ähnlich wie Klassen definiert mit dem Schlüsselwort interface
+
+- Was sind die Unterschiede zwischen Interfaces und abstrakten Klassen?
+
+  ->  Alle Methoden müssen public sein -> Muss nicht angegeben werden, wird implizit gesetzt
+  -> Es sind nur Methoden-Köpfe erlaubt
+  -> Es sind nur Instanzmethoden erlaubt
+  -> Es sind keine Instanzvariablen erlaubt
+  -> Es sind nur static final Klassenattribute erlaubt -> final muss nicht angegeben werden, wird implizit gesetzt
+  -> Interfaces können nicht instanziiert werden, deshalb sind auch keine Konstruktoren erlaubt
