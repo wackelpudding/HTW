@@ -34,6 +34,6 @@ public class TestTime {
 		
 		System.out.print("Stelle " + time1 + " um 3h, 4min, 27s vor: ");
 		time1.turnForward(3, 4, 27);
-		System.out.print(time2 + "\n");
+		System.out.print(time1 + "\n");
 	}
 }
