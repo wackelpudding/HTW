@@ -25,8 +25,8 @@
     derivatives exclusively with Microchip products. It is your responsibility to comply with third party 
     license terms applicable to your use of third party software (including open source software) that 
     may accompany Microchip software.
-    
-    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER 
+     
+   THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER 
     EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY 
     IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS 
     FOR A PARTICULAR PURPOSE.
@@ -84,11 +84,11 @@ void main(void)
 
     Lcd_Clear(); // Bildschirm clearen
     Lcd_Set_Cursor(1,1); //Cursor nach oben Links (1,1) setzen
-    Lcd_Write_String("Welfrieden:"); // Text in der oberen Zeile
+    Lcd_Write_String("Motorsteuerung"); // Text in der oberen Zeile
     Lcd_Set_Cursor(2,1);
     Lcd_Write_String("Done:");
     send_string("\033[H\033[J");
-    send_string("Weltfrieden\r\nDone:");
+    send_string("Motorsteuerung: \r\nLeistung: "); //für Modus: (1,17), für Leistung: (2,11)
 
     while (1)
     {
@@ -98,10 +98,9 @@ void main(void)
         motorsteuerung(convertedValue);
         percent = (uint8_t)( (float)convertedValue /1023*100); //Umrechnen in den Spannungswert
         Lcd_Set_Cursor(2,6);
-        send_string("\033[2;6H");
-        send_string("...");
-        conv_int_to_string(percent);
-        send_string("%");
+        //send_string("\033[2;6H");
+        //conv_int_to_string(percent);
+        //send_string("%");
         Lcd_Write_String("%");
     }
 }

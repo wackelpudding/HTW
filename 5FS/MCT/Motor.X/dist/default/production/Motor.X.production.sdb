@@ -3,41 +3,41 @@
 [d edition pro ]
 [d chip 16F1937 ]
 [d frameptr 6 ]
-"89 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\main.c
-[e E2954 . `uc
-POT 5
-channel_Temp 29
-channel_DAC 30
-channel_FVR 31
-]
-"110 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\mcc_generated_files/adc.c
+"110 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/mcc_generated_files/adc.c
 [e E2940 . `uc
 POT 5
 channel_Temp 29
 channel_DAC 30
 channel_FVR 31
 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+"90 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/main.c
+[e E2954 . `uc
+POT 5
+channel_Temp 29
+channel_DAC 30
+channel_FVR 31
+]
+"5 /Applications/microchip/xc8/v2.00/pic/sources/c99/common/awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awmod.c
+"5 /Applications/microchip/xc8/v2.00/pic/sources/c99/common/awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
-"43 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\fltol.c
+"43 /Applications/microchip/xc8/v2.00/pic/sources/c99/common/fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcadd.c
+"10 /Applications/microchip/xc8/v2.00/pic/sources/c99/common/sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcdiv.c
+"8 /Applications/microchip/xc8/v2.00/pic/sources/c99/common/sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcmul.c
+"8 /Applications/microchip/xc8/v2.00/pic/sources/c99/common/sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul8_16.c
+"4 /Applications/microchip/xc8/v2.00/pic/sources/c99/common/Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\xxtofl.c
+"10 /Applications/microchip/xc8/v2.00/pic/sources/c99/common/xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"6 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\pic\__eeprom.c
+"6 /Applications/microchip/xc8/v2.00/pic/sources/c99/pic/__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"6 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\lcd.c
+"6 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/lcd.c
 [v _Lcd_Clear Lcd_Clear `(v  1 e 1 0 ]
 "12
 [v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
@@ -51,27 +51,27 @@ channel_FVR 31
 [v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
 "96
 [v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
-"55 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\main.c
+"57 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/main.c
 [v _main main `(v  1 e 1 0 ]
-"65 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\mcc_generated_files/adc.c
+"65 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 "110
 [v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
-"64 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\mcc_generated_files/epwm1.c
+"64 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/mcc_generated_files/epwm1.c
 [v _EPWM1_Initialize EPWM1_Initialize `(v  1 e 1 0 ]
 "90
 [v _EPWM1_LoadDutyValue EPWM1_LoadDutyValue `(v  1 e 1 0 ]
-"50 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\mcc_generated_files/mcc.c
+"50 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "62
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "72
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
-"57 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\mcc_generated_files/pin_manager.c
+"57 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"62 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\mcc_generated_files/tmr2.c
+"62 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
-"10 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\motor.c
+"10 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/motor.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 "52
 [v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
@@ -79,7 +79,7 @@ channel_FVR 31
 [v _send_string send_string `(v  1 e 1 0 ]
 "77
 [v _conv_int_to_string conv_int_to_string `(v  1 e 1 0 ]
-[s S88 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S186 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -88,16 +88,16 @@ channel_FVR 31
 `uc 1 ADIF 1 0 :1:6 
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
-"732 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f1937.h
-[u S97 . 1 `S88 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES97  1 e 1 @17 ]
+"732 /Applications/microchip/xc8/v2.00/pic/include/pic16f1937.h
+[u S195 . 1 `S186 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES195  1 e 1 @17 ]
 "1096
 [v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
 "1116
 [v _PR2 PR2 `VEuc  1 e 1 @27 ]
 "1136
 [v _T2CON T2CON `VEuc  1 e 1 @28 ]
-[s S380 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+[s S208 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -106,12 +106,12 @@ channel_FVR 31
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
 "1157
-[s S388 . 1 `uc 1 T2CKPS 1 0 :2:0 
+[s S216 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS 1 0 :4:3 
 ]
-[u S392 . 1 `S380 1 . 1 0 `S388 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES392  1 e 1 @28 ]
+[u S220 . 1 `S208 1 . 1 0 `S216 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES220  1 e 1 @28 ]
 "1307
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1369
@@ -122,7 +122,7 @@ channel_FVR 31
 [v _TRISD TRISD `VEuc  1 e 1 @143 ]
 "1555
 [v _TRISE TRISE `VEuc  1 e 1 @144 ]
-[s S322 . 1 `uc 1 PS0 1 0 :1:0 
+[s S141 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 PSA 1 0 :1:3 
@@ -132,13 +132,13 @@ channel_FVR 31
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "1781
-[s S331 . 1 `uc 1 PS 1 0 :3:0 
+[s S150 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S336 . 1 `S322 1 . 1 0 `S331 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES336  1 e 1 @149 ]
+[u S155 . 1 `S141 1 . 1 0 `S150 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES155  1 e 1 @149 ]
 "1892
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "1951
@@ -151,7 +151,7 @@ channel_FVR 31
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
 "2190
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
-[s S218 . 1 `uc 1 ADON 1 0 :1:0 
+[s S31 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -160,23 +160,23 @@ channel_FVR 31
 `uc 1 CHS4 1 0 :1:6 
 ]
 "2219
-[s S226 . 1 `uc 1 . 1 0 :1:0 
+[s S39 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
 ]
-[s S230 . 1 `uc 1 . 1 0 :1:0 
+[s S43 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[s S233 . 1 `uc 1 . 1 0 :1:0 
+[s S46 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[u S236 . 1 `S218 1 . 1 0 `S226 1 . 1 0 `S230 1 . 1 0 `S233 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES236  1 e 1 @157 ]
+[u S49 . 1 `S31 1 . 1 0 `S39 1 . 1 0 `S43 1 . 1 0 `S46 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES49  1 e 1 @157 ]
 "2279
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
 "2351
 [v _LATA LATA `VEuc  1 e 1 @268 ]
-[s S27 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S312 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -186,24 +186,12 @@ channel_FVR 31
 `uc 1 LATA7 1 0 :1:7 
 ]
 "2368
-[u S36 . 1 `S27 1 . 1 0 ]
-[v _LATAbits LATAbits `VES36  1 e 1 @268 ]
+[u S321 . 1 `S312 1 . 1 0 ]
+[v _LATAbits LATAbits `VES321  1 e 1 @268 ]
 "2413
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2475
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S141 . 1 `uc 1 LATC0 1 0 :1:0 
-`uc 1 LATC1 1 0 :1:1 
-`uc 1 LATC2 1 0 :1:2 
-`uc 1 LATC3 1 0 :1:3 
-`uc 1 LATC4 1 0 :1:4 
-`uc 1 LATC5 1 0 :1:5 
-`uc 1 LATC6 1 0 :1:6 
-`uc 1 LATC7 1 0 :1:7 
-]
-"2492
-[u S150 . 1 `S141 1 . 1 0 ]
-[v _LATCbits LATCbits `VES150  1 e 1 @270 ]
 "2537
 [v _LATD LATD `VEuc  1 e 1 @271 ]
 "2607
@@ -248,7 +236,7 @@ channel_FVR 31
 [v _ECCP1AS ECCP1AS `VEuc  1 e 1 @661 ]
 "4829
 [v _PSTR1CON PSTR1CON `VEuc  1 e 1 @662 ]
-[s S432 . 1 `uc 1 C1TSEL0 1 0 :1:0 
+[s S268 . 1 `uc 1 C1TSEL0 1 0 :1:0 
 `uc 1 C1TSEL1 1 0 :1:1 
 `uc 1 C2TSEL0 1 0 :1:2 
 `uc 1 C2TSEL1 1 0 :1:3 
@@ -258,23 +246,23 @@ channel_FVR 31
 `uc 1 C4TSEL1 1 0 :1:7 
 ]
 "5253
-[s S441 . 1 `uc 1 C1TSEL 1 0 :2:0 
+[s S277 . 1 `uc 1 C1TSEL 1 0 :2:0 
 `uc 1 C2TSEL 1 0 :2:2 
 `uc 1 C3TSEL 1 0 :2:4 
 `uc 1 C4TSEL 1 0 :2:6 
 ]
-[u S446 . 1 `S432 1 . 1 0 `S441 1 . 1 0 ]
-[v _CCPTMRS0bits CCPTMRS0bits `VES446  1 e 1 @670 ]
-"50 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\main.c
+[u S282 . 1 `S268 1 . 1 0 `S277 1 . 1 0 ]
+[v _CCPTMRS0bits CCPTMRS0bits `VES282  1 e 1 @670 ]
+"52 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/main.c
 [v _convertedValue convertedValue `us  1 e 2 0 ]
-"51
+"53
 [v _percent percent `uc  1 e 1 0 ]
-"55
+"57
 [v _main main `(v  1 e 1 0 ]
 {
-"99
+"100
 } 0
-"71 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\motor.c
+"71 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/motor.c
 [v _send_string send_string `(v  1 e 1 0 ]
 {
 [v send_string@x x `*.25DCuc  1 p 2 1 ]
@@ -285,7 +273,7 @@ channel_FVR 31
 {
 [v conv_int_to_string@integer integer `uc  1 a 1 wreg ]
 "91
-[v conv_int_to_string@i_131 i `uc  1 a 1 6 ]
+[v conv_int_to_string@i_395 i `uc  1 a 1 6 ]
 "80
 [v conv_int_to_string@i i `uc  1 a 1 5 ]
 "78
@@ -298,7 +286,7 @@ channel_FVR 31
 [v conv_int_to_string@integer integer `uc  1 a 1 1 ]
 "97
 } 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awmod.c
+"5 /Applications/microchip/xc8/v2.00/pic/sources/c99/common/awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
@@ -309,7 +297,7 @@ channel_FVR 31
 [v ___awmod@dividend dividend `i  1 p 2 2 ]
 "34
 } 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\awdiv.c
+"5 /Applications/microchip/xc8/v2.00/pic/sources/c99/common/awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 {
 "10
@@ -322,7 +310,7 @@ channel_FVR 31
 [v ___awdiv@dividend dividend `i  1 p 2 2 ]
 "41
 } 0
-"52 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\motor.c
+"52 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/motor.c
 [v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
 {
 [v EUSART_Write@txData txData `uc  1 a 1 wreg ]
@@ -330,7 +318,7 @@ channel_FVR 31
 [v EUSART_Write@txData txData `uc  1 a 1 0 ]
 "59
 } 0
-"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\xxtofl.c
+"10 /Applications/microchip/xc8/v2.00/pic/sources/c99/common/xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 {
 [v ___xxtofl@sign sign `uc  1 a 1 wreg ]
@@ -345,7 +333,7 @@ channel_FVR 31
 [v ___xxtofl@sign sign `uc  1 a 1 8 ]
 "44
 } 0
-"43 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\fltol.c
+"43 /Applications/microchip/xc8/v2.00/pic/sources/c99/common/fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
 {
 "45
@@ -355,20 +343,20 @@ channel_FVR 31
 [v ___fltol@f1 f1 `d  1 p 4 52 ]
 "70
 } 0
-"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcmul.c
+"8 /Applications/microchip/xc8/v2.00/pic/sources/c99/common/sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S758 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S727 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S763 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S766 . 4 `l 1 i 4 0 `d 1 f 4 0 `S758 1 fAsBytes 4 0 `S763 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S766  1 a 4 46 ]
+[s S732 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S735 . 4 `l 1 i 4 0 `d 1 f 4 0 `S727 1 fAsBytes 4 0 `S732 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S735  1 a 4 46 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 40 ]
-[s S835 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S804 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S838 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S835 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S838  1 a 2 50 ]
+[u S807 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S804 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S807  1 a 2 50 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 45 ]
 "11
@@ -380,7 +368,7 @@ channel_FVR 31
 [v ___flmul@a a `d  1 p 4 30 ]
 "205
 } 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul8_16.c
+"4 /Applications/microchip/xc8/v2.00/pic/sources/c99/common/Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 {
 [v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
@@ -394,7 +382,7 @@ channel_FVR 31
 [v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
 "60
 } 0
-"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcdiv.c
+"8 /Applications/microchip/xc8/v2.00/pic/sources/c99/common/sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 {
 "21
@@ -414,7 +402,7 @@ channel_FVR 31
 [v ___fldiv@b b `d  1 p 4 4 ]
 "185
 } 0
-"50 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\mcc_generated_files/mcc.c
+"50 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "60
@@ -424,37 +412,37 @@ channel_FVR 31
 {
 "76
 } 0
-"62 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\mcc_generated_files/tmr2.c
+"62 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 {
 "77
 } 0
-"57 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\mcc_generated_files/pin_manager.c
+"57 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "104
 } 0
-"62 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\mcc_generated_files/mcc.c
+"62 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "70
 } 0
-"10 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\motor.c
+"10 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/motor.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 {
 "30
 } 0
-"64 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\mcc_generated_files/epwm1.c
+"64 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/mcc_generated_files/epwm1.c
 [v _EPWM1_Initialize EPWM1_Initialize `(v  1 e 1 0 ]
 {
 "88
 } 0
-"65 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\mcc_generated_files/adc.c
+"65 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 {
 "81
 } 0
-"96 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\lcd.c
+"96 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/lcd.c
 [v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
 {
 "98
@@ -519,13 +507,13 @@ channel_FVR 31
 [v Lcd_Port@a a `uc  1 a 1 0 ]
 "30
 } 0
-"90 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\mcc_generated_files/epwm1.c
+"90 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/mcc_generated_files/epwm1.c
 [v _EPWM1_LoadDutyValue EPWM1_LoadDutyValue `(v  1 e 1 0 ]
 {
 [v EPWM1_LoadDutyValue@dutyValue dutyValue `us  1 p 2 0 ]
 "97
 } 0
-"110 C:\Users\Ricardo\git\HTW\5FS\MCT\Motor.X\mcc_generated_files/adc.c
+"110 /Users/jimeneztuero/git/HTW/5FS/MCT/Motor.X/mcc_generated_files/adc.c
 [v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
 {
 [v ADC_GetConversion@channel channel `E2940  1 a 1 wreg ]

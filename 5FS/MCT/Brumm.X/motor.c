@@ -114,18 +114,35 @@ void stop(){
 
 void motorsteuerung(int poti){
     int temp = 0;
+    uint8_t percent = 0;
     if (poti <= 500){
         linkslauf();
-        temp = (float) -(poti - 500) / 500 * 1023;
+        send_string("\033[1;17H");
+        send_string("links ");
+        temp = (float) -(poti - 500) / 500 * 543 + 480 ;
         EPWM1_LoadDutyValue(temp);
+        percent = (uint8_t)( (float)temp /1023*100);
+        send_string("\033[2;11H");
+        conv_int_to_string(percent);
+        send_string("%");
     } else if (poti > 500 && poti <= 522) {
             stop();
+            send_string("\033[1;17H");
+            send_string("STOP  ");
+            send_string("\033[2;11H");
+            send_string("  0%");
             EPWM1_LoadDutyValue(0);
             __delay_ms(350);
     } else {
         rechtslauf();
-        temp = (float) (poti - 523) / 500 * 1023;
+        send_string("\033[1;17H");
+        send_string("rechts");
+        temp = (float) (poti - 523) / 500 * 543 + 480;
+        percent = (uint8_t)( (float)temp /1023*100);
         EPWM1_LoadDutyValue(temp);
+        send_string("\033[2;11H");
+        conv_int_to_string(percent);
+        send_string("%");
     }
     
 }
