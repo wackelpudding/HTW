@@ -1,21 +1,24 @@
 /**
-  Generated Main Source File
+  @Generated PIC10 / PIC12 / PIC16 / PIC18 MCUs Header File
 
-  Company:
+  @Company:
     Microchip Technology Inc.
 
-  File Name:
-    main.c
+  @File Name:
+    mcc.c
 
-  Summary:
-    This is the main file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+  @Summary:
+    This is the device_config.h file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
-  Description:
+  @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65.2
         Device            :  PIC16F1937
         Driver Version    :  2.00
+    The generated drivers are tested against the following:
+        Compiler          :  XC8 1.45 or later
+        MPLAB             :  MPLAB X 4.15
 */
 
 /*
@@ -25,8 +28,8 @@
     derivatives exclusively with Microchip products. It is your responsibility to comply with third party 
     license terms applicable to your use of third party software (including open source software) that 
     may accompany Microchip software.
-     
-   THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER 
+    
+    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER 
     EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY 
     IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS 
     FOR A PARTICULAR PURPOSE.
@@ -41,52 +44,12 @@
     SOFTWARE.
 */
 
-#include "mcc_generated_files/mcc.h"
-#include "lcd.h"
-#include "motor.h"
+#ifndef DEVICE_CONFIG_H
+#define	DEVICE_CONFIG_H
 
-/*
-                         Main application
- */
+#define _XTAL_FREQ 8000000
 
-uint16_t convertedValue = 0;
-uint8_t percent =0;
-char Buffer[] = {"InitalizeValue"};
-char sint[3];
-
-
-
-void main(void)
-{
-    // initialize the device
-    SYSTEM_Initialize();
-
-    // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
-    // Use the following macros to:
-
-    // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
-
-    // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
-
-    // Disable the Global Interrupts
-    //INTERRUPT_GlobalInterruptDisable();
-
-    // Disable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptDisable();
-    
-    EPWM1_LoadDutyValue(511);
-    rechtslauf();
-    send_string("\033[H\033[J");
-    send_string("Motorsteuerung: \r\nLeistung: "); //für Modus: (1,17), für Leistung: (2,11)
-
-    while (1)
-    {
-        convertedValue = ADC_GetConversion(POT); //Konvertierte Wert in Variablen "convertedValue" speichern
-        motorsteuerung(convertedValue);
-    }
-}
+#endif	/* DEVICE_CONFIG_H */
 /**
  End of File
 */

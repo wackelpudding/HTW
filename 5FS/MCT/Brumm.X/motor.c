@@ -74,7 +74,7 @@ void send_string(const char *x){
         EUSART_Write(*x++);
     }
 }
-
+//actually converts and prints to output 3digit int to 3 char string.
 void conv_int_to_string(uint8_t integer){
     char result[3] = "";
     uint8_t rest;
@@ -91,7 +91,6 @@ void conv_int_to_string(uint8_t integer){
     }
     for (uint8_t i = 0; i < 3; i++) {
         EUSART_Write(result[i]);
-        Lcd_Write_Char(result[i]);
     }
     
     //return result;
