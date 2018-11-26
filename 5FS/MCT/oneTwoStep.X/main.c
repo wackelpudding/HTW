@@ -42,11 +42,13 @@
 */
 
 #include "mcc_generated_files/mcc.h"
+#include "step.h"
 
 
-int curStep = 1; //schritte gelaufen (0-4))
-int toStep = 0;  //schritte zu laufen
+int curStep = 1; //schritte gelaufen (1-4)
+int8_t toStep = 0;
 uint16_t convertedValue = 0;
+uint8_t temp = 0;
 
 /*
                          Main application
@@ -70,14 +72,42 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
+    
+    
+    //initialisierung
+    for (int i = 4; i > 0 ; i --){
+        curStep = step(curStep, i);
+        __delay_ms(250);
+    }
+    __delay_ms(2000);
+    
+    //1 Schritt
+    curStep = stepping(curStep, 1);
+    __delay_ms(2000);
+    
+    //90 Grad
+    curStep = stepping(curStep,5);
+    
+    __delay_ms(2000);
+    //180 Grad, andere Richtung
+    
+    curStep = stepping(curStep,-10);
+    __delay_ms(2000);
+    
+    
 
     while (1)
     {
-        // Add your application code
+        // Add your application code  
+        convertedValue = ADC_GetConversion(POT); //Konvertierte Wert in Variablen "convertedValue" speichern 0-1023
+        toStep = (float) convertedValue / 1023 * 19 + 1 ;
+        temp = toStep - curStep;
         
-        convertedValue = ADC_GetConversion(POT); //Konvertierte Wert in Variablen "convertedValue" speichern
+        curStep = stepping (curStep, temp);
         
-        curStep = step();
+        
+        
+        
     }
 }
 /**

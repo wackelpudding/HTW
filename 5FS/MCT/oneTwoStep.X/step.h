@@ -12,7 +12,9 @@
 extern "C" {
 #endif
 
-    int step();
+    int step(int, int);
+    int stepping(int, int);
+    void schrittmotor(int, int);
     
 
 
