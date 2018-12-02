@@ -32,6 +32,6 @@ public class Wuerfel {
 	}
 	
 	public int wuerfeln() {
-		return ThreadLocalRandom.current().nextInt(this.getMinAugenZahl(), this.getMaxAugenZahl());
+		return ThreadLocalRandom.current().nextInt(this.getMinAugenZahl(), this.getMaxAugenZahl()+1);
 	}
 }
