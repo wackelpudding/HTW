@@ -3,6 +3,10 @@ package oop.uebung7;
 import java.util.concurrent.TimeUnit;
 import java.util.Scanner;
 
+<<<<<<< HEAD
+=======
+import javax.swing.plaf.synth.SynthSpinnerUI;
+>>>>>>> c63afcca523ad4465a7522f40fd9244e1568f4fb
 
 public class WuerfelSpiel {
 
