@@ -9,10 +9,10 @@ int step(int curStep, int setStep){
     if (((curStep + setStep) % 4) == 1 || ((curStep + setStep) % 4) == 3){
         switch(setStep){
             case 1:
-                IN1_SetLow();
+                IN1_SetHigh();
                 IN2_SetHigh();
                 IN3_SetLow();
-                IN4_SetHigh();
+                IN4_SetLow();
                 break;
             case 2:
                 IN1_SetLow();
@@ -21,10 +21,10 @@ int step(int curStep, int setStep){
                 IN4_SetLow();
                 break;
             case 3:
-                IN1_SetHigh();
+                IN1_SetLow();
                 IN2_SetLow();
                 IN3_SetHigh();
-                IN4_SetLow();
+                IN4_SetHigh();
                 break;
             case 4:
                 IN1_SetHigh();
@@ -53,7 +53,7 @@ int stepping(int curStep, int toStep){
                 temp = 4;
             }
             step(temp + 1, temp);
-            __delay_ms(150);
+            __delay_ms(10);
         }
     } else {
         for (int i = 1; i <= toStep; i++){
@@ -62,10 +62,10 @@ int stepping(int curStep, int toStep){
                 temp = 1;
             }
             step(temp - 1,temp);
-            __delay_ms(150);
+            __delay_ms(10);
         }
     }
-    return (curStep + toStep % 20) + 1;
+    return (curStep + toStep % 4) + 1;
 }
 
 

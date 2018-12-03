@@ -45,10 +45,13 @@
 #include "step.h"
 
 
-int curStep = 1; //schritte gelaufen (1-4)
-int8_t toStep = 0;
+#define STEPSIZE 4096/2
+
+int16_t curStep = 1; //schritte gelaufen (1-4)
+int16_t toStep = 0;
 uint16_t convertedValue = 0;
 uint8_t temp = 0;
+
 
 /*
                          Main application
@@ -77,36 +80,36 @@ void main(void)
     //initialisierung
     for (int i = 4; i > 0 ; i --){
         curStep = step(curStep, i);
-        __delay_ms(250);
+        __delay_ms(10);
     }
-    __delay_ms(2000);
     
     //1 Schritt
     curStep = stepping(curStep, 1);
-    __delay_ms(2000);
+    __delay_ms(100);
     
     //90 Grad
-    curStep = stepping(curStep,5);
+    curStep = stepping(curStep,STEPSIZE / 4 );
     
-    __delay_ms(2000);
+    __delay_ms(100);
     //180 Grad, andere Richtung
     
-    curStep = stepping(curStep,-10);
-    __delay_ms(2000);
+    curStep = stepping(curStep, -1 * STEPSIZE / 2 );
+    
     
     
 
     while (1)
     {
         // Add your application code  
+        /*
         convertedValue = ADC_GetConversion(POT); //Konvertierte Wert in Variablen "convertedValue" speichern 0-1023
-        toStep = (float) convertedValue / 1023 * 19 + 1 ;
+        toStep = (float) convertedValue / 1023 * 63 + 1 ;
         temp = toStep - curStep;
         
         curStep = stepping (curStep, temp);
         
         
-        
+        */
         
     }
 }
