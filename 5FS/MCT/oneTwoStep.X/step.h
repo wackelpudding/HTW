@@ -16,7 +16,7 @@ extern "C" {
     // Deklaration
     int step(int, int);
     int stepping(int, int);
-    void clock(int);
+    int clock(int);
     
 
 
