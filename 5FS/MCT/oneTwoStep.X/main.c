@@ -16,7 +16,7 @@
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65.2
         Device            :  PIC16F1937
         Driver Version    :  2.00
-*/
+ */
 
 /*
     (c) 2018 Microchip Technology Inc. and its subsidiaries. 
@@ -39,7 +39,7 @@
     CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT 
     OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
     SOFTWARE.
-*/
+ */
 
 #include "mcc_generated_files/mcc.h"
 #include "step.h"
@@ -52,12 +52,15 @@ int16_t toStep = 0;
 uint16_t convertedValue = 0;
 uint8_t temp = 0;
 
-
-/*
-                         Main application
+/**
+ * Main Application
+ *  Initialisiert den Schrittmotor
+ *  Macht einen Schritt
+ *  90° Drehung gegen der Uhrzeigersinn
+ *  180° Drehung im Uhrzeigersinn.
+ *  360° Drehung im Uhrzeigersinn innerhalb ovn 60 Sekunden.
  */
-void main(void)
-{
+void main(void) {
     // initialize the device
     SYSTEM_Initialize();
 
@@ -75,44 +78,41 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-    
-    
+
+
     //initialisierung
-    for (int i = 4; i > 0 ; i --){
+
+
+
+    for (int i = 4; i > 0; i--) {
         curStep = step(curStep, i);
         __delay_ms(10);
     }
-    
+
+    __delay_ms(1500);
+
     //1 Schritt
     curStep = stepping(curStep, 1);
-    __delay_ms(100);
-    
-    //90 Grad
-    curStep = stepping(curStep,STEPSIZE / 4 );
-    
-    __delay_ms(100);
-    //180 Grad, andere Richtung
-    
-    curStep = stepping(curStep, -1 * STEPSIZE / 2 );
-    
-    
-    
+    __delay_ms(1500);
 
-    while (1)
-    {
-        // Add your application code  
-        /*
-        convertedValue = ADC_GetConversion(POT); //Konvertierte Wert in Variablen "convertedValue" speichern 0-1023
-        toStep = (float) convertedValue / 1023 * 63 + 1 ;
-        temp = toStep - curStep;
-        
-        curStep = stepping (curStep, temp);
-        
-        
-        */
-        
+    //90 Grad
+    curStep = stepping(curStep, STEPSIZE / 4);
+
+    __delay_ms(1500);
+    //180 Grad, andere Richtung
+
+    curStep = stepping(curStep, -1 * STEPSIZE / 2);
+
+
+
+
+    while (1) {
+        // Clockmodus -> 360° in ~60 Sekunden
+        curStep = clock(curStep);
+
+
     }
 }
 /**
  End of File
-*/
+ */

@@ -12,9 +12,11 @@
 extern "C" {
 #endif
 
+    
+    // Deklaration
     int step(int, int);
     int stepping(int, int);
-    void schrittmotor(int, int);
+    void clock(int);
     
 
 
