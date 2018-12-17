@@ -16,7 +16,7 @@
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65.2
         Device            :  PIC16F1937
         Driver Version    :  2.00
-*/
+ */
 
 /*
     (c) 2018 Microchip Technology Inc. and its subsidiaries. 
@@ -39,25 +39,27 @@
     CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT 
     OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
     SOFTWARE.
-*/
-
-#include "mcc_generated_files/mcc.h"
-#include "lcd.h"
-#include "motor.h"
-
-/*
-                         Main application
  */
 
-uint16_t convertedValue = 0;
-uint8_t percent =0;
-char Buffer[] = {"InitalizeValue"};
-char sint[3];
+#include "mcc_generated_files/mcc.h"
+#include "motor.h"
 
+/**
+ * Main Applikation.
+ * 
+ *  Systeminitialisierung
+ *  PWM auf 50%
+ *  Rechtslauf einstellen
+ *  Display resetten
+ *  Statischen Inhalt ausgeben.
+ *  Motorsteuerung ans Poti koppeln.
+ */
 
+uint16_t convertedValue = 0; //Variable für den ADC Wert
+uint8_t percent = 0; // Variable für die speicherung des % Werts.
+char sint[3];       // Array für die Wandlung von Int zu String.
 
-void main(void)
-{
+void main(void) {
     // initialize the device
     SYSTEM_Initialize();
 
@@ -75,18 +77,17 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-    
-    EPWM1_LoadDutyValue(511);
-    rechtslauf();
-    send_string("\033[H\033[J");
+
+    EPWM1_LoadDutyValue(511); //PWM Leistung auf 50% einstellen
+    rechtslauf();   // Rechtslauf einstellen.
+    send_string("\033[H\033[J");    // clear screen senden
     send_string("Motorsteuerung: \r\nLeistung: "); //für Modus: (1,17), für Leistung: (2,11)
 
-    while (1)
-    {
+    while (1) {
         convertedValue = ADC_GetConversion(POT); //Konvertierte Wert in Variablen "convertedValue" speichern
         motorsteuerung(convertedValue);
     }
 }
 /**
  End of File
-*/
+ */
