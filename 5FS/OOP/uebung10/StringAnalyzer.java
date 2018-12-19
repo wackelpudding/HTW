@@ -10,8 +10,6 @@ public class StringAnalyzer {
 
     public StringAnalyzer(String string) {
         this.setString(string);
-        this.countWords();
-        words = new ArrayList<>(Arrays.asList(this.getString().split("[\\W]]")));
     }
 
     public String getString() {
@@ -39,6 +37,9 @@ public class StringAnalyzer {
     }
 
     public void countWords(){
+
+        this.setWords(new ArrayList<>(Arrays.asList(this.getString().split("[\\W]"))));
+
         Map<String, Integer> tempWordCount = new HashMap<>();
         for (String word : words) {
             if (!tempWordCount.containsKey(word)) {
@@ -52,10 +53,15 @@ public class StringAnalyzer {
     }
 
     public int getCountOf(String word){
-        if (wordCount.containsKey(word)) {
-            return wordCount.get(word);
-        } else{
-            return 0;
+        try {
+            if(wordCount.containsKey(word)){
+                return wordCount.get(word);
+            } else {
+                return 0;
+            }
+
+        } catch (NullPointerException e){
+            return -1;
         }
     }
 }
