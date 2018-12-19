@@ -8,31 +8,22 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Downloader {
+class Downloader {
 
-    private String url;
     private String content;
 
-    public Downloader() {
+    Downloader() {
     }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public void setContent(String content) {
+    private void setContent(String content) {
         this.content = content;
     }
 
-    public String getUrl() {
-        return url;
-    }
-
-    public String getContent() {
+    private String getContent() {
         return content;
     }
 
-    public String download(String url_s) throws IOException {
+    String download(String url_s) throws IOException {
         URL url = new URL(url_s);
         int i;
         URLConnection conn = url.openConnection();

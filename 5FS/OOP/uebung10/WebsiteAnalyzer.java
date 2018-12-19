@@ -1,11 +1,12 @@
 package oop.uebung10;
 
 import java.io.IOException;
+import java.util.Map;
 import java.util.Scanner;
 
 public class WebsiteAnalyzer {
 
-    static Scanner scan = new Scanner(System.in);
+    private static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
         String userInput, dlContent;
@@ -22,15 +23,15 @@ public class WebsiteAnalyzer {
 
             // Test ob ordentliche Daten geladen werden.
 
-            /*
-            for (Map.Entry<String, Integer> entry : salyzer.getWordCount().entrySet()){
-                System.out.print("Key: " + entry.getKey() + " Value: ");
+
+            for (Map.Entry<String, Integer> entry : salyzer.getWordCount().entrySet()) {
+                System.out.printf("Key: %s Value: ", entry.getKey());
                 System.out.println(entry.getValue());
             }
-            */
+
 
             // Standarttest
-            System.out.println("\nDas Wort 'objektorientierte' kommt so oft vor: " + salyzer.getCountOf("objektorientierte") + "\n");
+            System.out.println("\nDas Wort 'objektorientierte' kommt '" + salyzer.getCountOf("objektorientierte") + "' mal vor.\n");
 
             //Customtest
             System.out.print("Nach welchen Wort soll gesucht werden? : ");
