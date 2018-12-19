@@ -27,8 +27,7 @@ public class Paar<X, Y> {
 	}
 
 	public Paar<Y, X> flip() {
-		Paar<Y, X> flipped = new Paar<Y, X>(ding2, ding1);
-		return flipped;
+		return new Paar<Y, X>(ding2, ding1);
 	}
 	
 	public static void main(String[] args) {
@@ -36,15 +35,15 @@ public class Paar<X, Y> {
 		//Test Paar class
 		System.out.println("Paar erstellen: '7' und 'hallo'");
 		Paar<Integer, String> test = new Paar<Integer, String>(7,"hallo");
-		System.out.println(Integer.toString(test.getFirst()) + " und " + test.getSecond());
+		System.out.println(test.getFirst() + " und " + test.getSecond());
 		Paar<String, Integer> test2 = test.flip();
 		System.out.println("Tauschen..");
-		System.out.println(test2.getFirst() + " und " + Integer.toString(test2.getSecond()));
+		System.out.println(test2.getFirst() + " und " + test2.getSecond());
 		
 		// Test Sentence class
-		Sentence testsatz = new Sentence("Menno Bla Bla Hallo Hallo Hallo das Hallo Hallo ist ein das Hallo Test. Bla Bla Bla Bla Bla Hallo");
+		Sentence testsatz = new Sentence("Menno Bla Bla hallo Hallo Hallo das Hallo Hallo ist ein das Hallo Test. Bla Bla Bla Bla Bla Hallo");
 		testsatz.findMostFrequentWord();
-		System.out.println("\n\t'" + testsatz.mostFrequentWord + "' -> Häufigkeit: " + Integer.toString(testsatz.numberOfMostFrequentOccurences));
+		System.out.println("\n\t'" + testsatz.mostFrequentWord + "' -> Häufigkeit: " + testsatz.numberOfMostFrequentOccurences);
 		
 	}
 

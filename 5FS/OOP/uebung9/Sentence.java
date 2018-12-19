@@ -19,7 +19,7 @@ public class Sentence {
 	}
 
 	public Paar<String, Integer> findMostFrequentWord() {
-		Paar<String, Integer> winner = new Paar<String, Integer>("", 0);
+		Paar<String, Integer> winner = new Paar<>("", 0);
 
 		words = new ArrayList<>(Arrays.asList(sentence.split(" ")));
 
@@ -31,13 +31,10 @@ public class Sentence {
 				ocurredWords.put(word, ocurredWords.get(word) + 1);
 			}
 		}
-		Set<Entry<String, Integer>> set = ocurredWords.entrySet();
-		Iterator<Entry<String, Integer>> iterator = set.iterator();
-		while (iterator.hasNext()) {
-			Map.Entry<String, Integer> mentry = (Entry<String, Integer>) iterator.next();
-			if (mentry.getValue() > winner.getSecond()) {
-				winner.setFirst(mentry.getKey());
-				winner.setSecond(mentry.getValue());
+		for (Map.Entry<String, Integer> entry : ocurredWords.entrySet()){
+			if (entry.getValue() > winner.getSecond()) {
+				winner.setFirst(entry.getKey());
+				winner.setSecond(entry.getValue());
 			}
 		}
 		mostFrequentWord = winner.getFirst();
