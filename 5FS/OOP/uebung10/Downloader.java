@@ -1,8 +1,10 @@
 package oop.uebung10;
 
-import java.io.*;
-import java.net.URLConnection;
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,8 +46,8 @@ public class Downloader {
         streamB.close();
         char[] result = new char[cList.size()];
 
-        for (i = 0 ; i < cList.size(); i++){
-           result[i] = cList.get(i);
+        for (i = 0; i < cList.size(); i++) {
+            result[i] = cList.get(i);
         }
 
         this.setContent(new String(result));

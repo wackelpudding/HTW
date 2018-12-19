@@ -1,16 +1,16 @@
 package oop.uebung10;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.Scanner;
 
 public class WebsiteAnalyzer {
 
     static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String userInput,dlContent;
+        String userInput, dlContent;
 
-        System.out.println("Bitte geben Sie eine URL ein.");
+        System.out.print("Bitte geben Sie eine URL ein: ");
 
         userInput = scan.nextLine();
 
@@ -22,20 +22,24 @@ public class WebsiteAnalyzer {
 
             // Test ob ordentliche Daten geladen werden.
 
+            /*
             for (Map.Entry<String, Integer> entry : salyzer.getWordCount().entrySet()){
                 System.out.print("Key: " + entry.getKey() + " Value: ");
                 System.out.println(entry.getValue());
             }
+            */
 
-            System.out.println("Das Wort 'objektorientierte' kommt so oft vor: " + salyzer.getCountOf("objektorientierte"));
+            // Standarttest
+            System.out.println("\nDas Wort 'objektorientierte' kommt so oft vor: " + salyzer.getCountOf("objektorientierte") + "\n");
 
+            //Customtest
+            System.out.print("Nach welchen Wort soll gesucht werden? : ");
+            userInput = scan.nextLine();
+            System.out.print("Das Wort '" + userInput + "' kommt '" + salyzer.getCountOf(userInput) + "' mal vor.\n");
 
-
-        }catch (IOException ioe){
+        } catch (IOException ioe) {
             System.out.println("Bitte geben Sie eine gültige URL ein!");
         }
-
-
 
 
     }

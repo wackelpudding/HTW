@@ -36,7 +36,7 @@ public class StringAnalyzer {
         this.words = words;
     }
 
-    public void countWords(){
+    public void countWords() {
 
         this.setWords(new ArrayList<>(Arrays.asList(this.getString().split("[\\W]"))));
 
@@ -52,15 +52,15 @@ public class StringAnalyzer {
         this.setWordCount(tempWordCount);
     }
 
-    public int getCountOf(String word){
+    public int getCountOf(String word) {
         try {
-            if(wordCount.containsKey(word)){
+            if (wordCount.containsKey(word)) {
                 return wordCount.get(word);
             } else {
                 return 0;
             }
 
-        } catch (NullPointerException e){
+        } catch (NullPointerException e) {
             return -1;
         }
     }
