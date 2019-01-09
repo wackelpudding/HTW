@@ -31,10 +31,12 @@ public class BankAccount {
 		}
 	}
 	
-	public void withdraw(double amount) {
+	public boolean withdraw(double amount) {
 		if (amount > 0 && amount <= balance+dispo) {
 			balance -= amount;
+			return true;
 		}
+		return false;
 	}
 
 	public int getNumber() {
@@ -42,8 +44,7 @@ public class BankAccount {
 	}
 	
 	public static void transfer(BankAccount sender, BankAccount receiver, double amount) {
-		if (sender.getBalance() + sender.getDispo() >= amount && amount > 0) {
-			sender.withdraw(amount);
+		if (sender.withdraw(amount)) {
 			receiver.deposit(amount);
 		}
 	}
