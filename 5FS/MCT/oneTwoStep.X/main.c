@@ -45,10 +45,10 @@
 #include "step.h"
 
 
-#define STEPSIZE 4096/2
+#define STEPSIZE 4096/2  //360° 
 
-int16_t curStep = 1; //schritte gelaufen (1-4)
-int16_t toStep = 0;
+int16_t curStep = 1; //aktueller Schritt (1-4)
+int16_t toStep = 0; 
 uint16_t convertedValue = 0;
 uint8_t temp = 0;
 

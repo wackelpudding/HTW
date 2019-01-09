@@ -62,29 +62,29 @@ void send_string(const char *x) {
 
 /**
  * Bekommt ein bis zu 3 stelligen integer und konvertiert ihn zu einem 3 stelligen String.
+ * Führende nullen werden zu Leerzeichen konvertiert.
  * 
  * @param integer
  *  zu konvertierender Integer (3- stellig)
  */
 void conv_int_to_string(uint8_t integer) {
-    char result[3] = "";
+    char result[3] = ""; //initialisierung return char-array
     uint8_t rest;
-    for (uint8_t i = 0; i < 3; i++) {
-        rest = integer % 10;
-        integer = integer / 10;
-        result[2 - i] = rest + 48;
+    for (uint8_t i = 0; i < 3; i++) { //loop für alle 3 stellen
+        rest = integer % 10; //modulo rest für die letzte Stelle
+        integer = integer / 10; //restzahl ganzzahlig durch 10 teilen
+        result[2 - i] = rest + 48; //result array rückwärts befüllen
     }
-    if (result[0] == 48) {
+    if (result[0] == 48) { // wenn Stelle H null ist mit dem ACSII Wert für Leerzeichen ersetzen.
         result[0] = 32;
-        if (result[1] == 48) {
+        if (result[1] == 48) { // wenn Stelle Z null ist mit dem ACSII Wert für Leerzeichen ersetzen.
             result[1] = 32;
         }
     }
-    for (uint8_t i = 0; i < 3; i++) {
+    for (uint8_t i = 0; i < 3; i++) {//schreibe das Ergebnis nach EUSART.
         EUSART_Write(result[i]);
     }
 
-    //return result;
 }
 
 /**
