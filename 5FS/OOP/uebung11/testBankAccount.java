@@ -2,33 +2,86 @@ package oop.uebung11;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static oop.uebung11.BankAccount.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class testBankAccount {
+public class TestBankAccount {
 
-	@Test
-	public void testWithdrawValid() {
-		BankAccount a = new BankAccount(123, 300.0);
-		a.deposit(100.0);
-		a.withdraw(200.0);
-		assertTrue(a.getBalance() == -100.0);
-	}
-	
-	@Test
-	public void testDepositValid() {
-		BankAccount a = new BankAccount(123, 0.0);
-		a.deposit(100.0);
-		assertTrue(a.getBalance() == 100.0);
-	}
-	
-	@Test
-	public void testTransferValid() {
-		BankAccount a = new BankAccount(123, 0.0);
-		BankAccount b = new BankAccount(456, 0.0);
-		a.deposit(100.0);
-		BankAccount.transfer(a, b, 50.0);
-		assertTrue(a.getBalance() == 50.0);
-		assertTrue(b.getBalance() == 50.0);
-	}
+
+    @Test
+    void testDeposit(){
+        BankAccount a = new BankAccount(0, 0);
+        a.deposit(100);
+        assertEquals(true, a.getBalance() == 100);
+    }
+
+    @Test
+    void testWithdraw(){
+        BankAccount b = new BankAccount(0, 0);
+        b.deposit(100);
+        b.withdraw(1);
+        assertEquals(true, b.getBalance() == 99);
+    }
+
+    @Test
+    void testTransfer(){
+        BankAccount c = new BankAccount(0, 2000);
+        BankAccount d = new BankAccount(1,300);
+        transfer(c,d,200);
+        assertEquals(true, c.getBalance()== -200);
+        assertEquals(true, d.getBalance()== 200);
+    }
+
+    @Test
+    void testNegativeWithdraw(){
+        BankAccount e = new BankAccount(0, 0);
+        e.withdraw(-20);
+        assertEquals(true, e.getBalance() == 0);
+    }
+
+    @Test
+    void testNegativeDeposit(){
+        BankAccount f = new BankAccount(0, 0);
+        f.deposit(-20);
+        assertTrue(f.getBalance() == 0);
+    }
+
+    @Test
+    void testBalanceExceededFromWithdraw(){
+        BankAccount g = new BankAccount(0, 0);
+        g.withdraw(2);
+        assertTrue(g.getBalance() == 0);
+    }
+
+    @Test
+    void testBalanceExceededFromTransfer(){
+        BankAccount h = new BankAccount(0, 0);
+        BankAccount j = new BankAccount(1,0);
+        transfer(h,j, 2);
+        assertTrue(h.getBalance()== 0);
+        assertTrue(j.getBalance() == 0);
+    }
+
+    @Test
+    void testCreateNegativeDispo(){
+        BankAccount k = new BankAccount(0, -500);
+        assertTrue(k.getDispo() == 0);
+    }
+
+    @Test
+    void testNegativeTransfer(){
+        BankAccount l = new BankAccount(0, 50);
+        BankAccount m = new BankAccount(1,0);
+        transfer(l,m, -50);
+        assertTrue(l.getBalance()== 0);
+        assertTrue(m.getBalance() == 0);
+    }
+
+    @Test
+    void testCreateNegativeAccountNumber(){
+        BankAccount o = new BankAccount(-1,0);
+        assertTrue(o.getNumber() == 0);
+    }
+
 
 }

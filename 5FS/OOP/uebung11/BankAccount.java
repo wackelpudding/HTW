@@ -7,8 +7,14 @@ public class BankAccount {
 	private double dispo;
 
 	public BankAccount(int number, double dispo) {
-		this.number = number;
-		this.dispo = dispo;
+		if (number >= 0 && dispo >= 0){
+			this.number = number;
+			this.dispo = dispo;
+		} else {
+			this.number = 0;
+			this.dispo = 0;
+		}
+
 	}
 	
 	public double getBalance() {
@@ -20,15 +26,25 @@ public class BankAccount {
 	}
 
 	public void deposit(double amount) {
-		balance += amount;
+		if( amount > 0){
+			balance += amount;
+		}
 	}
 	
 	public void withdraw(double amount) {
-		balance -= amount;
+		if (amount > 0 && amount <= balance+dispo) {
+			balance -= amount;
+		}
+	}
+
+	public int getNumber() {
+		return this.number ;
 	}
 	
 	public static void transfer(BankAccount sender, BankAccount receiver, double amount) {
-		sender.withdraw(amount);
-		receiver.deposit(amount);
+		if (sender.getBalance() + sender.getDispo() >= amount && amount > 0) {
+			sender.withdraw(amount);
+			receiver.deposit(amount);
+		}
 	}
 }
