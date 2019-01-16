@@ -1,0 +1,27 @@
+#butred {
+    -fx-background-color: red;
+}
+
+#butfat {
+    -fx-font-weight: bold;
+}
+
+#butyellow {
+    -fx-background-color: yellow;
+}
+
+#butmarg {
+    -fx-padding: 1px;
+    -fx-border-insets: 1px;
+    -fx-background-insets: 1px;
+    -fx-border-color: blue;
+}
+
+
+.button:hover {
+    -fx-cursor: hand;
+}
+
+
+
+
