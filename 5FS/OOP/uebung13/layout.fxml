@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="216.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="216.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="oop.uebung13.ConWebsiteAnalyzer">
    <children>
       <GridPane alignment="CENTER">
         <columnConstraints>
@@ -22,7 +21,7 @@
         </rowConstraints>
          <children>
             <Text boundsType="VISUAL" strokeType="OUTSIDE" strokeWidth="0.0" text="Das ist ein tolles Tool für den Website Analyser" wrappingWidth="607.69482421875" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-            <Button id="ebutton" mnemonicParsing="false" text="exit" GridPane.halignment="RIGHT">
+            <Button id="ebutton" fx:id="closeButton" mnemonicParsing="false" onAction="#exit" text="exit" GridPane.halignment="RIGHT">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
@@ -51,7 +50,7 @@
                         <Insets left="20.0" top="7.0" />
                      </HBox.margin>
                   </Text>
-                  <TextField id="urlfield" prefHeight="27.0" prefWidth="511.0">
+                  <TextField id="urlfield" fx:id="inputUrl" prefHeight="27.0" prefWidth="511.0">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
@@ -65,19 +64,19 @@
                         <Insets left="20.0" top="7.0" />
                      </HBox.margin>
                   </Text>
-                  <TextField id="searchitem" prefHeight="27.0" prefWidth="227.0">
+                  <TextField id="searchitem" fx:id="inputSearch" prefHeight="27.0" prefWidth="227.0">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
                   </TextField>
-                  <Button id="sbutton" mnemonicParsing="false" text="suchen">
+                  <Button id="sbutton" fx:id="searchButton" mnemonicParsing="false" onAction="#search" text="suchen">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
                   </Button>
                </children>
             </HBox>
-            <Text id="sresult" strokeType="OUTSIDE" strokeWidth="0.0" text="Hier steht dann das Ergebnis ihrer Suche..." GridPane.halignment="CENTER" GridPane.rowIndex="4">
+            <Text id="sresult" fx:id="resultField" strokeType="OUTSIDE" strokeWidth="0.0" text="Hier steht dann das Ergebnis ihrer Suche..." GridPane.halignment="CENTER" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets bottom="5.0" />
                </GridPane.margin>

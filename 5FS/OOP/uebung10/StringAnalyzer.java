@@ -8,7 +8,7 @@ public class StringAnalyzer {
     private Map<String, Integer> wordCount;
     private List<String> words;
 
-    StringAnalyzer(String string) {
+    public StringAnalyzer(String string) {
         this.setString(string);
     }
 
@@ -16,7 +16,7 @@ public class StringAnalyzer {
         return this.string;
     }
 
-    Map<String, Integer> getWordCount() {
+    public Map<String, Integer> getWordCount() {
         return wordCount;
     }
 
@@ -32,7 +32,7 @@ public class StringAnalyzer {
         this.words = words;
     }
 
-    void countWords() {
+    public void countWords() {
 
         this.setWords(new ArrayList<>(Arrays.asList(this.getString().split("[\\W]"))));
 
@@ -48,7 +48,7 @@ public class StringAnalyzer {
         this.setWordCount(tempWordCount);
     }
 
-    int getCountOf(String word) {
+    public int getCountOf(String word) {
         try {
             return wordCount.getOrDefault(word, 0);
 

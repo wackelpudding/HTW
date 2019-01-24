@@ -8,11 +8,11 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
-class Downloader {
+public class Downloader {
 
     private String content;
 
-    Downloader() {
+    public Downloader() {
     }
 
     private void setContent(String content) {
@@ -23,7 +23,7 @@ class Downloader {
         return content;
     }
 
-    String download(String url_s) throws IOException {
+    public String download(String url_s) throws IOException {
         URL url = new URL(url_s);
         int i;
         URLConnection conn = url.openConnection();
